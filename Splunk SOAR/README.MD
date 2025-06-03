@@ -26,7 +26,7 @@ _See [Basic Playbook Configuration in Splunk SOAR](#basic-playbook-configuration
 
 _The following configuration steps apply to both the **Close DTM Alerts** and **Close ASM Issues** playbooks:_
 
-After importing the playbook, make sure to:
+After importing the playbook (tgz), make sure to:
 
 1. **Select the Asset:**
     - In the playbook editor, locate the action block (`update dtm alert status` or `update asm issue status`).
