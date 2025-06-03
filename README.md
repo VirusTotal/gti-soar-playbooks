@@ -1,1 +1,1 @@
-# gti-soar-playbooks
+This repository contains SOAR  playbooks for Google Threat Intelligence integration across different SOAR products.
