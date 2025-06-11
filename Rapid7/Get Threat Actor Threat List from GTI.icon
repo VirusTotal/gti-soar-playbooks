@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:56:07.165670155Z",
+    "workflowVersions": [
+      {
+        "name": "Get Threat Actor Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "5405353e-9c45-4fea-a99b-801685a8faf9": {
+              "id": "5405353e-9c45-4fea-a99b-801685a8faf9",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "b9359d98-52d2-49f2-8990-ca9aef683a1c",
+              "toNodeId": "34239619-fd2d-42c5-8fcb-beed935d58f0"
+            },
+            "896859d1-0e61-4d34-a10a-4e17a109d9ff": {
+              "id": "896859d1-0e61-4d34-a10a-4e17a109d9ff",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "80214373-151e-407e-9c15-82c89bd7e025",
+              "toNodeId": "a43ca2b2-585a-4a9e-93d1-b92d85563b5e"
+            },
+            "e57d6b1a-0981-418f-857d-8ffbf4d8aadb": {
+              "id": "e57d6b1a-0981-418f-857d-8ffbf4d8aadb",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "80214373-151e-407e-9c15-82c89bd7e025",
+              "toNodeId": ""
+            },
+            "f001672c-02e8-43c2-8ebc-20af5bc453c0": {
+              "id": "f001672c-02e8-43c2-8ebc-20af5bc453c0",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "a43ca2b2-585a-4a9e-93d1-b92d85563b5e",
+              "toNodeId": ""
+            },
+            "fb207054-c1a1-47d6-8fee-ee64638e6d7d": {
+              "id": "fb207054-c1a1-47d6-8fee-ee64638e6d7d",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "34239619-fd2d-42c5-8fcb-beed935d58f0",
+              "toNodeId": "80214373-151e-407e-9c15-82c89bd7e025"
+            }
+          },
+          "nodes": {
+            "34239619-fd2d-42c5-8fcb-beed935d58f0": {
+              "id": "34239619-fd2d-42c5-8fcb-beed935d58f0",
+              "parentNodeId": ""
+            },
+            "80214373-151e-407e-9c15-82c89bd7e025": {
+              "id": "80214373-151e-407e-9c15-82c89bd7e025",
+              "parentNodeId": ""
+            },
+            "a43ca2b2-585a-4a9e-93d1-b92d85563b5e": {
+              "id": "a43ca2b2-585a-4a9e-93d1-b92d85563b5e",
+              "parentNodeId": ""
+            },
+            "b9359d98-52d2-49f2-8990-ca9aef683a1c": {
+              "id": "b9359d98-52d2-49f2-8990-ca9aef683a1c",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "34239619-fd2d-42c5-8fcb-beed935d58f0": {
+            "nodeId": "34239619-fd2d-42c5-8fcb-beed935d58f0",
+            "name": "Threat Actor Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "threat_actor_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[b9359d98-52d2-49f2-8990-ca9aef683a1c].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "threat_actor_threat_list_response": {
+                  "description": "Threat actor threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Threat Actor Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "threat_actor_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/threat_actor_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "threat_actor_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "threat_actor_threat_list_response": {
+                  "$ref": "#/definitions/threat_actor_threat_list_response",
+                  "description": "Threat actor threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Threat Actor Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "80214373-151e-407e-9c15-82c89bd7e025": {
+            "nodeId": "80214373-151e-407e-9c15-82c89bd7e025",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "e57d6b1a-0981-418f-857d-8ffbf4d8aadb",
+              "stepControlParams": [
+                {
+                  "edgeId": "896859d1-0e61-4d34-a10a-4e17a109d9ff",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "34239619-fd2d-42c5-8fcb-beed935d58f0.threat_actor_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[34239619-fd2d-42c5-8fcb-beed935d58f0].[threat_actor_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "e57d6b1a-0981-418f-857d-8ffbf4d8aadb",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "a43ca2b2-585a-4a9e-93d1-b92d85563b5e": {
+            "nodeId": "a43ca2b2-585a-4a9e-93d1-b92d85563b5e",
+            "name": "Send Threat Actor Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[34239619-fd2d-42c5-8fcb-beed935d58f0].[threat_actor_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "b9359d98-52d2-49f2-8990-ca9aef683a1c": {
+            "nodeId": "b9359d98-52d2-49f2-8990-ca9aef683a1c",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "3a043d51-1670-4ba4-967a-663d4243c4a4",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Threat Actor",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves IOCs that Google TI experts have linked to specific Threat Actors."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "3a043d51-1670-4ba4-967a-663d4243c4a4",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

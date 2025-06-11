@@ -1,0 +1,4472 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:56:04.616888925Z",
+    "workflowVersions": [
+      {
+        "name": "Legacy Detection Rule Based IOC Enrichment and Threat Contextualization using GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "070d781f-398c-4888-aa21-3355a122bc69": {
+              "id": "070d781f-398c-4888-aa21-3355a122bc69",
+              "name": "",
+              "description": "",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "fromNodeId": "929f3c78-c07d-4ef6-aa1c-b30c1de44d41",
+              "toNodeId": ""
+            },
+            "1af6b988-89d4-4640-8d4e-c3cb14a9dea1": {
+              "id": "1af6b988-89d4-4640-8d4e-c3cb14a9dea1",
+              "name": "",
+              "description": "",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "fromNodeId": "212dc04e-16d2-418f-8336-007269e7fba1",
+              "toNodeId": "94a16e12-6c54-45ba-9ba8-f055d57a32bb"
+            },
+            "1f2cd59a-c292-4ae7-ae56-2de355c8fa41": {
+              "id": "1f2cd59a-c292-4ae7-ae56-2de355c8fa41",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "fromNodeId": "94a16e12-6c54-45ba-9ba8-f055d57a32bb",
+              "toNodeId": "3c51a57d-d6ba-45ca-a089-17c203db920b"
+            },
+            "202ea1f2-dc55-434e-a7c1-bbf60602ad9e": {
+              "id": "202ea1f2-dc55-434e-a7c1-bbf60602ad9e",
+              "name": "",
+              "description": "",
+              "parentNodeId": "9d5040d0-2887-4d61-a585-32ae76b7aeaa",
+              "fromNodeId": "9d5040d0-2887-4d61-a585-32ae76b7aeaa",
+              "toNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "2691d75a-4f77-4e94-bb71-61d61c2d9f02": {
+              "id": "2691d75a-4f77-4e94-bb71-61d61c2d9f02",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "toNodeId": "9d5040d0-2887-4d61-a585-32ae76b7aeaa"
+            },
+            "2fad60cf-5335-4322-9c4d-da80f6f6c594": {
+              "id": "2fad60cf-5335-4322-9c4d-da80f6f6c594",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "9c7b6efd-da27-4092-bb5b-3792b1b5aea6",
+              "toNodeId": ""
+            },
+            "311f4aa3-9a4a-4db3-852e-37e23d70bd44": {
+              "id": "311f4aa3-9a4a-4db3-852e-37e23d70bd44",
+              "name": "",
+              "description": "",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "fromNodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "toNodeId": "ebe81b70-7419-456a-8297-90182eb9a3b4"
+            },
+            "39487b12-cc14-4059-934c-a5a4ac4f1873": {
+              "id": "39487b12-cc14-4059-934c-a5a4ac4f1873",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "e6d4abf4-a866-4a27-9f1d-6ede7998398d",
+              "toNodeId": "1ed97287-2626-4a81-adfb-fed4a99ef2a7"
+            },
+            "40957136-bffb-4231-8f17-28f91c5319af": {
+              "id": "40957136-bffb-4231-8f17-28f91c5319af",
+              "name": "",
+              "description": "",
+              "parentNodeId": "9d5040d0-2887-4d61-a585-32ae76b7aeaa",
+              "fromNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "toNodeId": ""
+            },
+            "457263fa-ad61-4640-93e5-3f3b15dc1fe4": {
+              "id": "457263fa-ad61-4640-93e5-3f3b15dc1fe4",
+              "name": "",
+              "description": "",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "fromNodeId": "b5fb66a3-0c19-440c-a307-85e3ee89ab69",
+              "toNodeId": "46ec0fa3-609d-422e-a2c5-3331bbbe95fb"
+            },
+            "46b6bb75-061f-4991-af00-76cf4fc89e5b": {
+              "id": "46b6bb75-061f-4991-af00-76cf4fc89e5b",
+              "name": "",
+              "description": "",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "fromNodeId": "974758bb-24a9-4cfa-8247-08fe47e7da92",
+              "toNodeId": "67a6b461-fc80-4984-96e5-d390f4a6904b"
+            },
+            "4deec9e8-dcac-4330-9bec-aba36f2146b9": {
+              "id": "4deec9e8-dcac-4330-9bec-aba36f2146b9",
+              "name": "",
+              "description": "",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "fromNodeId": "67a6b461-fc80-4984-96e5-d390f4a6904b",
+              "toNodeId": "4993520f-ecb9-4e43-a4df-21a8a59fbcc6"
+            },
+            "55390f52-49f0-474c-ad04-6cea32a431fb": {
+              "id": "55390f52-49f0-474c-ad04-6cea32a431fb",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "d0fbdf7c-63f8-4c1d-b6c1-00da0ac2dcb7",
+              "toNodeId": "ca162dc5-88de-45e2-9c57-b1b7cc448534"
+            },
+            "662e66ac-199b-454b-97ae-6e37a8bfc3d4": {
+              "id": "662e66ac-199b-454b-97ae-6e37a8bfc3d4",
+              "name": "",
+              "description": "",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "fromNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "toNodeId": "1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4"
+            },
+            "84bf0fe4-35a1-4148-8378-645783fba801": {
+              "id": "84bf0fe4-35a1-4148-8378-645783fba801",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "1ed97287-2626-4a81-adfb-fed4a99ef2a7",
+              "toNodeId": "c6ed40f8-34fa-4300-8b7e-e08791f56458"
+            },
+            "882f833a-83e6-4dc7-8260-ae642ec8e091": {
+              "id": "882f833a-83e6-4dc7-8260-ae642ec8e091",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "toNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935"
+            },
+            "8c9ccc89-61e5-4229-b18f-6fbb2615bc37": {
+              "id": "8c9ccc89-61e5-4229-b18f-6fbb2615bc37",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "toNodeId": "339cfc19-d917-46cd-8631-a35f658be42a"
+            },
+            "8e76a8d8-c037-45d6-aeee-af91d19c29ad": {
+              "id": "8e76a8d8-c037-45d6-aeee-af91d19c29ad",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "fromNodeId": "4993520f-ecb9-4e43-a4df-21a8a59fbcc6",
+              "toNodeId": ""
+            },
+            "8ff7f125-b71f-41c9-8671-f0f789eccc34": {
+              "id": "8ff7f125-b71f-41c9-8671-f0f789eccc34",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "9d5040d0-2887-4d61-a585-32ae76b7aeaa",
+              "toNodeId": ""
+            },
+            "9366d393-65ca-48ab-9bae-25aad35a31ca": {
+              "id": "9366d393-65ca-48ab-9bae-25aad35a31ca",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "fromNodeId": "46ec0fa3-609d-422e-a2c5-3331bbbe95fb",
+              "toNodeId": ""
+            },
+            "95a8d855-892d-4728-99ad-da1c51b03ae7": {
+              "id": "95a8d855-892d-4728-99ad-da1c51b03ae7",
+              "name": "",
+              "description": "",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "fromNodeId": "ebe81b70-7419-456a-8297-90182eb9a3b4",
+              "toNodeId": "212dc04e-16d2-418f-8336-007269e7fba1"
+            },
+            "975b6123-005a-4c37-bbc1-8b292601bff4": {
+              "id": "975b6123-005a-4c37-bbc1-8b292601bff4",
+              "name": "",
+              "description": "",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "fromNodeId": "1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4",
+              "toNodeId": "b5fb66a3-0c19-440c-a307-85e3ee89ab69"
+            },
+            "97fe87c5-012c-434a-a548-10bd66a992aa": {
+              "id": "97fe87c5-012c-434a-a548-10bd66a992aa",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "ec68d93d-d155-4344-8305-a6dd24a34952",
+              "toNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53"
+            },
+            "a8bf2847-7063-4c7d-915e-f186d6545c57": {
+              "id": "a8bf2847-7063-4c7d-915e-f186d6545c57",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "92f6c98c-e04f-4cfe-b644-0d6603e7389c",
+              "toNodeId": "9c7b6efd-da27-4092-bb5b-3792b1b5aea6"
+            },
+            "ad6801b7-02ac-4c54-a1b7-a61976efd002": {
+              "id": "ad6801b7-02ac-4c54-a1b7-a61976efd002",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "fromNodeId": "94a16e12-6c54-45ba-9ba8-f055d57a32bb",
+              "toNodeId": ""
+            },
+            "b4575afd-777f-46fb-9c52-c371a2ed682f": {
+              "id": "b4575afd-777f-46fb-9c52-c371a2ed682f",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "d0fbdf7c-63f8-4c1d-b6c1-00da0ac2dcb7",
+              "toNodeId": ""
+            },
+            "b5019cfd-fd9d-4629-bbda-44ba6129ca13": {
+              "id": "b5019cfd-fd9d-4629-bbda-44ba6129ca13",
+              "name": "",
+              "description": "",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "fromNodeId": "3c51a57d-d6ba-45ca-a089-17c203db920b",
+              "toNodeId": ""
+            },
+            "bb3534ba-d5a9-47bb-bb45-c855a86872b8": {
+              "id": "bb3534ba-d5a9-47bb-bb45-c855a86872b8",
+              "name": "",
+              "description": "",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "fromNodeId": "479c5a70-6194-4410-9337-b186ac1dfd31",
+              "toNodeId": ""
+            },
+            "bc76fed6-09f1-4cde-beb2-8e4fc8a2c934": {
+              "id": "bc76fed6-09f1-4cde-beb2-8e4fc8a2c934",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "c6ed40f8-34fa-4300-8b7e-e08791f56458",
+              "toNodeId": "1e37f98f-7419-4cd0-8943-6935798e7584"
+            },
+            "be90100e-34fc-4e4e-b109-9c7e0c3fc8da": {
+              "id": "be90100e-34fc-4e4e-b109-9c7e0c3fc8da",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "fromNodeId": "4993520f-ecb9-4e43-a4df-21a8a59fbcc6",
+              "toNodeId": "479c5a70-6194-4410-9337-b186ac1dfd31"
+            },
+            "c600ae66-3958-41da-bef0-b779c2acab74": {
+              "id": "c600ae66-3958-41da-bef0-b779c2acab74",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "c6ed40f8-34fa-4300-8b7e-e08791f56458",
+              "toNodeId": "d0fbdf7c-63f8-4c1d-b6c1-00da0ac2dcb7"
+            },
+            "c83fa6b5-0b31-4c6a-a00e-b4ba247b968a": {
+              "id": "c83fa6b5-0b31-4c6a-a00e-b4ba247b968a",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "1e37f98f-7419-4cd0-8943-6935798e7584",
+              "toNodeId": "92f6c98c-e04f-4cfe-b644-0d6603e7389c"
+            },
+            "d02a25b1-1015-4fa5-af65-5011bf17040b": {
+              "id": "d02a25b1-1015-4fa5-af65-5011bf17040b",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "toNodeId": "e6d4abf4-a866-4a27-9f1d-6ede7998398d"
+            },
+            "d073381d-3010-4b19-9fa6-08783bb335cb": {
+              "id": "d073381d-3010-4b19-9fa6-08783bb335cb",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "92f6c98c-e04f-4cfe-b644-0d6603e7389c",
+              "toNodeId": ""
+            },
+            "e04a1c32-e77d-43e7-ae97-cd48e04aef9d": {
+              "id": "e04a1c32-e77d-43e7-ae97-cd48e04aef9d",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "fromNodeId": "46ec0fa3-609d-422e-a2c5-3331bbbe95fb",
+              "toNodeId": "929f3c78-c07d-4ef6-aa1c-b30c1de44d41"
+            },
+            "e2ec7367-2115-465b-a12a-2190f40d121f": {
+              "id": "e2ec7367-2115-465b-a12a-2190f40d121f",
+              "name": "",
+              "description": "",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "fromNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "toNodeId": "974758bb-24a9-4cfa-8247-08fe47e7da92"
+            },
+            "fe74e0dc-c2a4-47bc-b83d-c4a5593ef78d": {
+              "id": "fe74e0dc-c2a4-47bc-b83d-c4a5593ef78d",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "fromNodeId": "ca162dc5-88de-45e2-9c57-b1b7cc448534",
+              "toNodeId": ""
+            }
+          },
+          "nodes": {
+            "1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4": {
+              "id": "1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935"
+            },
+            "1e37f98f-7419-4cd0-8943-6935798e7584": {
+              "id": "1e37f98f-7419-4cd0-8943-6935798e7584",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "1ed97287-2626-4a81-adfb-fed4a99ef2a7": {
+              "id": "1ed97287-2626-4a81-adfb-fed4a99ef2a7",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "212dc04e-16d2-418f-8336-007269e7fba1": {
+              "id": "212dc04e-16d2-418f-8336-007269e7fba1",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a"
+            },
+            "339cfc19-d917-46cd-8631-a35f658be42a": {
+              "id": "339cfc19-d917-46cd-8631-a35f658be42a",
+              "parentNodeId": ""
+            },
+            "3c51a57d-d6ba-45ca-a089-17c203db920b": {
+              "id": "3c51a57d-d6ba-45ca-a089-17c203db920b",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a"
+            },
+            "46ec0fa3-609d-422e-a2c5-3331bbbe95fb": {
+              "id": "46ec0fa3-609d-422e-a2c5-3331bbbe95fb",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935"
+            },
+            "479c5a70-6194-4410-9337-b186ac1dfd31": {
+              "id": "479c5a70-6194-4410-9337-b186ac1dfd31",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53"
+            },
+            "4993520f-ecb9-4e43-a4df-21a8a59fbcc6": {
+              "id": "4993520f-ecb9-4e43-a4df-21a8a59fbcc6",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53"
+            },
+            "4f087a98-35c3-4d96-b382-c0354c12c3df": {
+              "id": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+              "parentNodeId": "9d5040d0-2887-4d61-a585-32ae76b7aeaa"
+            },
+            "67a6b461-fc80-4984-96e5-d390f4a6904b": {
+              "id": "67a6b461-fc80-4984-96e5-d390f4a6904b",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53"
+            },
+            "929f3c78-c07d-4ef6-aa1c-b30c1de44d41": {
+              "id": "929f3c78-c07d-4ef6-aa1c-b30c1de44d41",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935"
+            },
+            "92f6c98c-e04f-4cfe-b644-0d6603e7389c": {
+              "id": "92f6c98c-e04f-4cfe-b644-0d6603e7389c",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "9377acd7-51c6-4f79-a910-24766f4c4935": {
+              "id": "9377acd7-51c6-4f79-a910-24766f4c4935",
+              "parentNodeId": ""
+            },
+            "94a16e12-6c54-45ba-9ba8-f055d57a32bb": {
+              "id": "94a16e12-6c54-45ba-9ba8-f055d57a32bb",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a"
+            },
+            "974758bb-24a9-4cfa-8247-08fe47e7da92": {
+              "id": "974758bb-24a9-4cfa-8247-08fe47e7da92",
+              "parentNodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53"
+            },
+            "9c7b6efd-da27-4092-bb5b-3792b1b5aea6": {
+              "id": "9c7b6efd-da27-4092-bb5b-3792b1b5aea6",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "9d5040d0-2887-4d61-a585-32ae76b7aeaa": {
+              "id": "9d5040d0-2887-4d61-a585-32ae76b7aeaa",
+              "parentNodeId": ""
+            },
+            "b5fb66a3-0c19-440c-a307-85e3ee89ab69": {
+              "id": "b5fb66a3-0c19-440c-a307-85e3ee89ab69",
+              "parentNodeId": "9377acd7-51c6-4f79-a910-24766f4c4935"
+            },
+            "be33cb7b-31bc-4c4f-ac9f-441f40906b53": {
+              "id": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+              "parentNodeId": ""
+            },
+            "c6ed40f8-34fa-4300-8b7e-e08791f56458": {
+              "id": "c6ed40f8-34fa-4300-8b7e-e08791f56458",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "ca162dc5-88de-45e2-9c57-b1b7cc448534": {
+              "id": "ca162dc5-88de-45e2-9c57-b1b7cc448534",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "d0fbdf7c-63f8-4c1d-b6c1-00da0ac2dcb7": {
+              "id": "d0fbdf7c-63f8-4c1d-b6c1-00da0ac2dcb7",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "e6d4abf4-a866-4a27-9f1d-6ede7998398d": {
+              "id": "e6d4abf4-a866-4a27-9f1d-6ede7998398d",
+              "parentNodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df"
+            },
+            "ebe81b70-7419-456a-8297-90182eb9a3b4": {
+              "id": "ebe81b70-7419-456a-8297-90182eb9a3b4",
+              "parentNodeId": "339cfc19-d917-46cd-8631-a35f658be42a"
+            },
+            "ec68d93d-d155-4344-8305-a6dd24a34952": {
+              "id": "ec68d93d-d155-4344-8305-a6dd24a34952",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4": {
+            "nodeId": "1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4",
+            "name": "Get Domain Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_domain_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "domain": "{{[9377acd7-51c6-4f79-a910-24766f4c4935].[$item]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "domain": {
+                  "description": "Domain that need to be analysed",
+                  "order": 1,
+                  "title": "Domain",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "domain"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "cert_signature": {
+                  "properties": {
+                    "issuer": {
+                      "description": "Certificate's issuer data",
+                      "order": 3,
+                      "title": "Issuer",
+                      "type": "object"
+                    },
+                    "signature": {
+                      "description": "Signature hexdump",
+                      "order": 1,
+                      "title": "Signature",
+                      "type": "string"
+                    },
+                    "signature_algorithm": {
+                      "description": "Used algorithm",
+                      "order": 2,
+                      "title": "Signature Algorithm",
+                      "type": "string"
+                    },
+                    "validity": {
+                      "description": "Certificate's validity period",
+                      "order": 5,
+                      "title": "Validity",
+                      "type": "object"
+                    },
+                    "version": {
+                      "description": "Certificate's version",
+                      "order": 4,
+                      "title": "Version",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cert Signature",
+                  "type": "object"
+                },
+                "domain_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "Mapping that relates categorisation services with the category it assigns the domain to. These services are, among others like Alexa, BitDefender, TrendMicro, Websense ThreatSeeker, etc",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "creation_date": {
+                      "description": "Creation date extracted from the Domain's whois (UTC timestamp)",
+                      "order": 2,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the domain's favicon. Only available for premium users",
+                      "order": 3,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scan",
+                      "order": 5,
+                      "title": "Last Analysis Statistics",
+                      "type": "object"
+                    },
+                    "last_https_certificate": {
+                      "$ref": "#/definitions/ssl_certificate",
+                      "description": "SSL certificate object retrieved last time the domain was analyzed",
+                      "order": 6,
+                      "title": "Last HTTPS Certificate"
+                    },
+                    "last_https_certificate_date": {
+                      "description": "Date when the certificate was retrieved by GTI (UTC timestamp)",
+                      "order": 7,
+                      "title": "Last HTTPS Certificate Date",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the domain's information was last updated",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_update_date": {
+                      "description": "Updated date extracted from WHOIS (UTC timestamp)",
+                      "order": 9,
+                      "title": "Last Update Date",
+                      "type": "string"
+                    },
+                    "registrar": {
+                      "description": "Company that registered the domain",
+                      "order": 10,
+                      "title": "Registrar",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Domain's score calculated from the votes of the GTI's community",
+                      "order": 11,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 12,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 13,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided in harmless and malicious",
+                      "order": 14,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "whois_date": {
+                      "description": "Date of the last update of the WHOIS record in VirusTotal",
+                      "order": 15,
+                      "title": "WHOIS Date",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Domain Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "ssl_certificate": {
+                  "properties": {
+                    "cert_signature": {
+                      "$ref": "#/definitions/cert_signature",
+                      "description": "Dictionary containing certificate's signature and algorithm",
+                      "order": 1,
+                      "title": "Certificate Signature"
+                    }
+                  },
+                  "title": "Ssl Certificate",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "domain_report": {
+                  "$ref": "#/definitions/domain_report",
+                  "description": "Domain Enrichment Report",
+                  "order": 1,
+                  "title": "Domain Report"
+                },
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to domains",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "cert_signature": {
+                  "properties": {
+                    "issuer": {
+                      "description": "Certificate's issuer data",
+                      "order": 3,
+                      "title": "Issuer",
+                      "type": "object"
+                    },
+                    "signature": {
+                      "description": "Signature hexdump",
+                      "order": 1,
+                      "title": "Signature",
+                      "type": "string"
+                    },
+                    "signature_algorithm": {
+                      "description": "Used algorithm",
+                      "order": 2,
+                      "title": "Signature Algorithm",
+                      "type": "string"
+                    },
+                    "validity": {
+                      "description": "Certificate's validity period",
+                      "order": 5,
+                      "title": "Validity",
+                      "type": "object"
+                    },
+                    "version": {
+                      "description": "Certificate's version",
+                      "order": 4,
+                      "title": "Version",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cert Signature",
+                  "type": "object"
+                },
+                "domain_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "Mapping that relates categorisation services with the category it assigns the domain to. These services are, among others like Alexa, BitDefender, TrendMicro, Websense ThreatSeeker, etc",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "creation_date": {
+                      "description": "Creation date extracted from the Domain's whois (UTC timestamp)",
+                      "order": 2,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the domain's favicon. Only available for premium users",
+                      "order": 3,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scan",
+                      "order": 5,
+                      "title": "Last Analysis Statistics",
+                      "type": "object"
+                    },
+                    "last_https_certificate": {
+                      "$ref": "#/definitions/ssl_certificate",
+                      "description": "SSL certificate object retrieved last time the domain was analyzed",
+                      "order": 6,
+                      "title": "Last HTTPS Certificate"
+                    },
+                    "last_https_certificate_date": {
+                      "description": "Date when the certificate was retrieved by GTI (UTC timestamp)",
+                      "order": 7,
+                      "title": "Last HTTPS Certificate Date",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the domain's information was last updated",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_update_date": {
+                      "description": "Updated date extracted from WHOIS (UTC timestamp)",
+                      "order": 9,
+                      "title": "Last Update Date",
+                      "type": "string"
+                    },
+                    "registrar": {
+                      "description": "Company that registered the domain",
+                      "order": 10,
+                      "title": "Registrar",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Domain's score calculated from the votes of the GTI's community",
+                      "order": 11,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 12,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 13,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided in harmless and malicious",
+                      "order": 14,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "whois_date": {
+                      "description": "Date of the last update of the WHOIS record in VirusTotal",
+                      "order": 15,
+                      "title": "WHOIS Date",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Domain Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "ssl_certificate": {
+                  "properties": {
+                    "cert_signature": {
+                      "$ref": "#/definitions/cert_signature",
+                      "description": "Dictionary containing certificate's signature and algorithm",
+                      "order": 1,
+                      "title": "Certificate Signature"
+                    }
+                  },
+                  "title": "Ssl Certificate",
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "properties": {
+                    "threat_contextualization_report": {
+                      "items": {
+                        "$ref": "#/definitions/threat_contextualization_report_threat_contextualization_report"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "threat_contextualization_report_threat_contextualization_report": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "domain_report": {
+                  "$ref": "#/definitions/domain_report",
+                  "description": "Domain Enrichment Report",
+                  "order": 1,
+                  "title": "Domain Report"
+                },
+                "threat_contextualization_report": {
+                  "$ref": "#/definitions/threat_contextualization_report",
+                  "description": "Provides information on adversaries related to domains",
+                  "order": 2,
+                  "title": "Threat Contextualization Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "1e37f98f-7419-4cd0-8943-6935798e7584": {
+            "nodeId": "1e37f98f-7419-4cd0-8943-6935798e7584",
+            "name": "Send File Threat Contextualization Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[e6d4abf4-a866-4a27-9f1d-6ede7998398d].[threat_contextualization_report].[threat_contextualization_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "1ed97287-2626-4a81-adfb-fed4a99ef2a7": {
+            "nodeId": "1ed97287-2626-4a81-adfb-fed4a99ef2a7",
+            "name": "Send File Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[e6d4abf4-a866-4a27-9f1d-6ede7998398d].[file_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "212dc04e-16d2-418f-8336-007269e7fba1": {
+            "nodeId": "212dc04e-16d2-418f-8336-007269e7fba1",
+            "name": "Send URL Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[ebe81b70-7419-456a-8297-90182eb9a3b4].[url_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "339cfc19-d917-46cd-8631-a35f658be42a": {
+            "nodeId": "339cfc19-d917-46cd-8631-a35f658be42a",
+            "name": "URLs Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "311f4aa3-9a4a-4db3-852e-37e23d70bd44",
+              "nextEdgeId": "2691d75a-4f77-4e94-bb71-61d61c2d9f02",
+              "repeatVariable": "{{[ec68d93d-d155-4344-8305-a6dd24a34952].[contents].[urls]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "3c51a57d-d6ba-45ca-a089-17c203db920b": {
+            "nodeId": "3c51a57d-d6ba-45ca-a089-17c203db920b",
+            "name": "Send URL Threat Contextualization Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[ebe81b70-7419-456a-8297-90182eb9a3b4].[threat_contextualization_report].[threat_contextualization_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "46ec0fa3-609d-422e-a2c5-3331bbbe95fb": {
+            "nodeId": "46ec0fa3-609d-422e-a2c5-3331bbbe95fb",
+            "name": "Domain Threat Contextualization Report Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "9366d393-65ca-48ab-9bae-25aad35a31ca",
+              "stepControlParams": [
+                {
+                  "edgeId": "9366d393-65ca-48ab-9bae-25aad35a31ca",
+                  "expression": {},
+                  "expressionText": ""
+                },
+                {
+                  "edgeId": "e04a1c32-e77d-43e7-ae97-cd48e04aef9d",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4.threat_contextualization_report.threat_contextualization_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4].[threat_contextualization_report].[threat_contextualization_report]}})>0"
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "479c5a70-6194-4410-9337-b186ac1dfd31": {
+            "nodeId": "479c5a70-6194-4410-9337-b186ac1dfd31",
+            "name": "Send IP Address Threat Contextualization Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[974758bb-24a9-4cfa-8247-08fe47e7da92].[threat_contextualization_report].[threat_contextualization_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "4993520f-ecb9-4e43-a4df-21a8a59fbcc6": {
+            "nodeId": "4993520f-ecb9-4e43-a4df-21a8a59fbcc6",
+            "name": "IP Address Threat Contextualization Report Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "8e76a8d8-c037-45d6-aeee-af91d19c29ad",
+              "stepControlParams": [
+                {
+                  "edgeId": "8e76a8d8-c037-45d6-aeee-af91d19c29ad",
+                  "expression": {},
+                  "expressionText": ""
+                },
+                {
+                  "edgeId": "be90100e-34fc-4e4e-b109-9c7e0c3fc8da",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "974758bb-24a9-4cfa-8247-08fe47e7da92.threat_contextualization_report.threat_contextualization_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[974758bb-24a9-4cfa-8247-08fe47e7da92].[threat_contextualization_report].[threat_contextualization_report]}})>0"
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "4f087a98-35c3-4d96-b382-c0354c12c3df": {
+            "nodeId": "4f087a98-35c3-4d96-b382-c0354c12c3df",
+            "name": "File Hashes Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "d02a25b1-1015-4fa5-af65-5011bf17040b",
+              "nextEdgeId": "40957136-bffb-4231-8f17-28f91c5319af",
+              "repeatVariable": "{{[9d5040d0-2887-4d61-a585-32ae76b7aeaa].[$item].[hashes]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "67a6b461-fc80-4984-96e5-d390f4a6904b": {
+            "nodeId": "67a6b461-fc80-4984-96e5-d390f4a6904b",
+            "name": "Send IP Address Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[974758bb-24a9-4cfa-8247-08fe47e7da92].[ip_address_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "929f3c78-c07d-4ef6-aa1c-b30c1de44d41": {
+            "nodeId": "929f3c78-c07d-4ef6-aa1c-b30c1de44d41",
+            "name": "Send Domain Threat Contextualization Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4].[threat_contextualization_report].[threat_contextualization_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "92f6c98c-e04f-4cfe-b644-0d6603e7389c": {
+            "nodeId": "92f6c98c-e04f-4cfe-b644-0d6603e7389c",
+            "name": "File Mitre Attack Data Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "d073381d-3010-4b19-9fa6-08783bb335cb",
+              "stepControlParams": [
+                {
+                  "edgeId": "a8bf2847-7063-4c7d-915e-f186d6545c57",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "e6d4abf4-a866-4a27-9f1d-6ede7998398d.mitre_attack_report.mitre_attack_data",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[e6d4abf4-a866-4a27-9f1d-6ede7998398d].[mitre_attack_report].[mitre_attack_data]}})>0"
+                },
+                {
+                  "edgeId": "d073381d-3010-4b19-9fa6-08783bb335cb",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "9377acd7-51c6-4f79-a910-24766f4c4935": {
+            "nodeId": "9377acd7-51c6-4f79-a910-24766f4c4935",
+            "name": "Domains Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "662e66ac-199b-454b-97ae-6e37a8bfc3d4",
+              "nextEdgeId": "8c9ccc89-61e5-4229-b18f-6fbb2615bc37",
+              "repeatVariable": "{{[ec68d93d-d155-4344-8305-a6dd24a34952].[contents].[domains]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "94a16e12-6c54-45ba-9ba8-f055d57a32bb": {
+            "nodeId": "94a16e12-6c54-45ba-9ba8-f055d57a32bb",
+            "name": "URL Threat Contextualization Report Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "ad6801b7-02ac-4c54-a1b7-a61976efd002",
+              "stepControlParams": [
+                {
+                  "edgeId": "1f2cd59a-c292-4ae7-ae56-2de355c8fa41",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "ebe81b70-7419-456a-8297-90182eb9a3b4.threat_contextualization_report.threat_contextualization_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[ebe81b70-7419-456a-8297-90182eb9a3b4].[threat_contextualization_report].[threat_contextualization_report]}})>0"
+                },
+                {
+                  "edgeId": "ad6801b7-02ac-4c54-a1b7-a61976efd002",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "974758bb-24a9-4cfa-8247-08fe47e7da92": {
+            "nodeId": "974758bb-24a9-4cfa-8247-08fe47e7da92",
+            "name": "Get IP Address Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_ip_address_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "ip_address": "{{[be33cb7b-31bc-4c4f-ac9f-441f40906b53].[$item].[ip]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "ip_address": {
+                  "description": "IP address that need to be analysed",
+                  "order": 1,
+                  "title": "IP Address",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ip_address"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "cert_signature": {
+                  "properties": {
+                    "issuer": {
+                      "description": "Certificate's issuer data",
+                      "order": 3,
+                      "title": "Issuer",
+                      "type": "object"
+                    },
+                    "signature": {
+                      "description": "Signature hexdump",
+                      "order": 1,
+                      "title": "Signature",
+                      "type": "string"
+                    },
+                    "signature_algorithm": {
+                      "description": "Used algorithm",
+                      "order": 2,
+                      "title": "Signature Algorithm",
+                      "type": "string"
+                    },
+                    "validity": {
+                      "description": "Certificate's validity period",
+                      "order": 5,
+                      "title": "Validity",
+                      "type": "object"
+                    },
+                    "version": {
+                      "description": "Certificate's version",
+                      "order": 4,
+                      "title": "Version",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cert Signature",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "ip_address_report": {
+                  "properties": {
+                    "as_owner": {
+                      "description": "Owner of the Autonomous System to which the IP belongs",
+                      "order": 1,
+                      "title": "As Owner",
+                      "type": "string"
+                    },
+                    "asn": {
+                      "description": "Autonomous System Number to which the IP belongs",
+                      "order": 2,
+                      "title": "ASN",
+                      "type": "string"
+                    },
+                    "continent": {
+                      "description": "Continent where the IP is placed (ISO-3166 continent code)",
+                      "order": 3,
+                      "title": "Continent",
+                      "type": "string"
+                    },
+                    "country": {
+                      "description": "Country where the IP is placed (ISO-3166 country code)",
+                      "order": 4,
+                      "title": "Country",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from these scans",
+                      "order": 6,
+                      "title": "Last Analysis Statistics",
+                      "type": "object"
+                    },
+                    "last_https_certificate": {
+                      "$ref": "#/definitions/ssl_certificate",
+                      "description": "SSL Certificate object retrieved the last time the IP was analyzed",
+                      "order": 7,
+                      "title": "Last HTTPS Certificate"
+                    },
+                    "last_https_certificate_date": {
+                      "description": "Date when the certificate was retrieved by GTI (UTC timestamp)",
+                      "order": 8,
+                      "title": "Last HTTPS Certificate Date",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the IP's information was last updated (UTC timestamp)",
+                      "order": 9,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "network": {
+                      "description": "IPv4 network range to which the IP belongs",
+                      "order": 10,
+                      "title": "Network",
+                      "type": "string"
+                    },
+                    "regional_internet_registry": {
+                      "description": "RIR (one of the current RIRs are AFRINIC, ARIN, APNIC, LACNIC or RIPE NCC)",
+                      "order": 11,
+                      "title": "Regional Internet Registry",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "IP's score calculated from the votes of the GTI's community",
+                      "order": 12,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 13,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into harmless and malicious",
+                      "order": 14,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "whois_date": {
+                      "description": "Date when the WHOIS information was last retrieved (UTC timestamp)",
+                      "order": 15,
+                      "title": "WHOIS Date",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Ip Address Report",
+                  "type": "object"
+                },
+                "ssl_certificate": {
+                  "properties": {
+                    "cert_signature": {
+                      "$ref": "#/definitions/cert_signature",
+                      "description": "Dictionary containing certificate's signature and algorithm",
+                      "order": 1,
+                      "title": "Certificate Signature"
+                    }
+                  },
+                  "title": "Ssl Certificate",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "ip_address_report": {
+                  "$ref": "#/definitions/ip_address_report",
+                  "description": "IP address Enrichment Report",
+                  "order": 1,
+                  "title": "IP Address Report"
+                },
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to ip addresses",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "cert_signature": {
+                  "properties": {
+                    "issuer": {
+                      "description": "Certificate's issuer data",
+                      "order": 3,
+                      "title": "Issuer",
+                      "type": "object"
+                    },
+                    "signature": {
+                      "description": "Signature hexdump",
+                      "order": 1,
+                      "title": "Signature",
+                      "type": "string"
+                    },
+                    "signature_algorithm": {
+                      "description": "Used algorithm",
+                      "order": 2,
+                      "title": "Signature Algorithm",
+                      "type": "string"
+                    },
+                    "validity": {
+                      "description": "Certificate's validity period",
+                      "order": 5,
+                      "title": "Validity",
+                      "type": "object"
+                    },
+                    "version": {
+                      "description": "Certificate's version",
+                      "order": 4,
+                      "title": "Version",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cert Signature",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "ip_address_report": {
+                  "properties": {
+                    "as_owner": {
+                      "description": "Owner of the Autonomous System to which the IP belongs",
+                      "order": 1,
+                      "title": "As Owner",
+                      "type": "string"
+                    },
+                    "asn": {
+                      "description": "Autonomous System Number to which the IP belongs",
+                      "order": 2,
+                      "title": "ASN",
+                      "type": "string"
+                    },
+                    "continent": {
+                      "description": "Continent where the IP is placed (ISO-3166 continent code)",
+                      "order": 3,
+                      "title": "Continent",
+                      "type": "string"
+                    },
+                    "country": {
+                      "description": "Country where the IP is placed (ISO-3166 country code)",
+                      "order": 4,
+                      "title": "Country",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from these scans",
+                      "order": 6,
+                      "title": "Last Analysis Statistics",
+                      "type": "object"
+                    },
+                    "last_https_certificate": {
+                      "$ref": "#/definitions/ssl_certificate",
+                      "description": "SSL Certificate object retrieved the last time the IP was analyzed",
+                      "order": 7,
+                      "title": "Last HTTPS Certificate"
+                    },
+                    "last_https_certificate_date": {
+                      "description": "Date when the certificate was retrieved by GTI (UTC timestamp)",
+                      "order": 8,
+                      "title": "Last HTTPS Certificate Date",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the IP's information was last updated (UTC timestamp)",
+                      "order": 9,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "network": {
+                      "description": "IPv4 network range to which the IP belongs",
+                      "order": 10,
+                      "title": "Network",
+                      "type": "string"
+                    },
+                    "regional_internet_registry": {
+                      "description": "RIR (one of the current RIRs are AFRINIC, ARIN, APNIC, LACNIC or RIPE NCC)",
+                      "order": 11,
+                      "title": "Regional Internet Registry",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "IP's score calculated from the votes of the GTI's community",
+                      "order": 12,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 13,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into harmless and malicious",
+                      "order": 14,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "whois_date": {
+                      "description": "Date when the WHOIS information was last retrieved (UTC timestamp)",
+                      "order": 15,
+                      "title": "WHOIS Date",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Ip Address Report",
+                  "type": "object"
+                },
+                "ssl_certificate": {
+                  "properties": {
+                    "cert_signature": {
+                      "$ref": "#/definitions/cert_signature",
+                      "description": "Dictionary containing certificate's signature and algorithm",
+                      "order": 1,
+                      "title": "Certificate Signature"
+                    }
+                  },
+                  "title": "Ssl Certificate",
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "properties": {
+                    "threat_contextualization_report": {
+                      "items": {
+                        "$ref": "#/definitions/threat_contextualization_report_threat_contextualization_report"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "threat_contextualization_report_threat_contextualization_report": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "ip_address_report": {
+                  "$ref": "#/definitions/ip_address_report",
+                  "description": "IP address Enrichment Report",
+                  "order": 1,
+                  "title": "IP Address Report"
+                },
+                "threat_contextualization_report": {
+                  "$ref": "#/definitions/threat_contextualization_report",
+                  "description": "Provides information on adversaries related to ip addresses",
+                  "order": 2,
+                  "title": "Threat Contextualization Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "9c7b6efd-da27-4092-bb5b-3792b1b5aea6": {
+            "nodeId": "9c7b6efd-da27-4092-bb5b-3792b1b5aea6",
+            "name": "Send File Mitre Attack Data to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[e6d4abf4-a866-4a27-9f1d-6ede7998398d].[mitre_attack_report].[mitre_attack_data]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "9d5040d0-2887-4d61-a585-32ae76b7aeaa": {
+            "nodeId": "9d5040d0-2887-4d61-a585-32ae76b7aeaa",
+            "name": "Processes Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "202ea1f2-dc55-434e-a7c1-bbf60602ad9e",
+              "nextEdgeId": "8ff7f125-b71f-41c9-8671-f0f789eccc34",
+              "repeatVariable": "{{[ec68d93d-d155-4344-8305-a6dd24a34952].[contents].[processes]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "b5fb66a3-0c19-440c-a307-85e3ee89ab69": {
+            "nodeId": "b5fb66a3-0c19-440c-a307-85e3ee89ab69",
+            "name": "Send Domain Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[1b1e6fbf-ceec-4293-b4fa-d659c5f91fa4].[domain_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "be33cb7b-31bc-4c4f-ac9f-441f40906b53": {
+            "nodeId": "be33cb7b-31bc-4c4f-ac9f-441f40906b53",
+            "name": "IP Addresses Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "e2ec7367-2115-465b-a12a-2190f40d121f",
+              "nextEdgeId": "882f833a-83e6-4dc7-8260-ae642ec8e091",
+              "repeatVariable": "{{[ec68d93d-d155-4344-8305-a6dd24a34952].[contents].[ipAddresses]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c6ed40f8-34fa-4300-8b7e-e08791f56458": {
+            "nodeId": "c6ed40f8-34fa-4300-8b7e-e08791f56458",
+            "name": "File Threat Contextualization Report Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "c600ae66-3958-41da-bef0-b779c2acab74",
+              "stepControlParams": [
+                {
+                  "edgeId": "bc76fed6-09f1-4cde-beb2-8e4fc8a2c934",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "e6d4abf4-a866-4a27-9f1d-6ede7998398d.threat_contextualization_report.threat_contextualization_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[e6d4abf4-a866-4a27-9f1d-6ede7998398d].[threat_contextualization_report].[threat_contextualization_report]}})>0"
+                },
+                {
+                  "edgeId": "c600ae66-3958-41da-bef0-b779c2acab74",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ca162dc5-88de-45e2-9c57-b1b7cc448534": {
+            "nodeId": "ca162dc5-88de-45e2-9c57-b1b7cc448534",
+            "name": "Send File Mitre Attack Data to IDR ",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_url_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "url": "{{[e6d4abf4-a866-4a27-9f1d-6ede7998398d].[mitre_attack_report].[mitre_attack_data]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "url": {
+                  "description": "URL that need to be analysed",
+                  "order": 1,
+                  "title": "URL",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "url"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "url_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "String, with the key as the partner who categorized the URL and the value as the URL's category according to that partner",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the URL's favicon. Only returned in premium API",
+                      "order": 2,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "first_submission_date": {
+                      "description": "UTC timestamp of the date when the URL was first submitted to GTI",
+                      "order": 3,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "UTC timestamp representing last time the URL was scanned",
+                      "order": 5,
+                      "title": "Last Analysis Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scans",
+                      "order": 6,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_final_url": {
+                      "description": "Final URL in URL redirections",
+                      "order": 7,
+                      "title": "Last Final URL",
+                      "type": "string"
+                    },
+                    "last_http_response_code": {
+                      "description": "HTTP response code of the last response",
+                      "order": 8,
+                      "title": "Last HTTP Response Code",
+                      "type": "string"
+                    },
+                    "last_http_response_content_length": {
+                      "description": "Length in bytes of the content received",
+                      "order": 9,
+                      "title": "Last HTTP Response Content Length",
+                      "type": "string"
+                    },
+                    "last_http_response_content_sha256": {
+                      "description": "URL response body's SHA256 hash",
+                      "order": 10,
+                      "title": "Last HTTP Response Content SHA256",
+                      "type": "string"
+                    },
+                    "last_http_response_cookies": {
+                      "description": "Dictionary containing the website's cookies",
+                      "order": 11,
+                      "title": "Last HTTP Response Cookies",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "UTC timestamp representing last modification date",
+                      "order": 12,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "UTC timestamp representing last time it was sent to be analyzed",
+                      "order": 13,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Value of votes from GTI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 15,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "targeted_brand": {
+                      "description": "Targeted brand info extracted from phishing engines",
+                      "order": 16,
+                      "title": "Targeted Brand",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times that URL has been checked",
+                      "order": 17,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 18,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Containing the number of positive (harmless) and negative (malicious) votes received from VirusTotal community",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "url": {
+                      "description": "Original URL to be scanned",
+                      "order": 21,
+                      "title": "URL",
+                      "type": "string"
+                    },
+                    "webpage_title": {
+                      "description": "Webpage title",
+                      "order": 19,
+                      "title": "Webpage Title",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Url Report",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to urls",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                },
+                "url_report": {
+                  "$ref": "#/definitions/url_report",
+                  "description": "URL Enrichment Report",
+                  "order": 1,
+                  "title": "URL Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "d0fbdf7c-63f8-4c1d-b6c1-00da0ac2dcb7": {
+            "nodeId": "d0fbdf7c-63f8-4c1d-b6c1-00da0ac2dcb7",
+            "name": "File Mitre Attack Data Found ? ",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "b4575afd-777f-46fb-9c52-c371a2ed682f",
+              "stepControlParams": [
+                {
+                  "edgeId": "55390f52-49f0-474c-ad04-6cea32a431fb",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "e6d4abf4-a866-4a27-9f1d-6ede7998398d.mitre_attack_report.mitre_attack_data",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[e6d4abf4-a866-4a27-9f1d-6ede7998398d].[mitre_attack_report].[mitre_attack_data]}})>0"
+                },
+                {
+                  "edgeId": "b4575afd-777f-46fb-9c52-c371a2ed682f",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e6d4abf4-a866-4a27-9f1d-6ede7998398d": {
+            "nodeId": "e6d4abf4-a866-4a27-9f1d-6ede7998398d",
+            "name": "Get File Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_file_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "file_hash": "{{[4f087a98-35c3-4d96-b382-c0354c12c3df].[$item].[hash]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "file_hash": {
+                  "description": "MD5/SHA1/SHA256 hash to be analysed",
+                  "order": 1,
+                  "title": "File Hash",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "file_hash"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "file_report": {
+                  "properties": {
+                    "creation_date": {
+                      "description": "Extracted when possible from the file's metadata. Indicates when it was built or compiled. It can also be faked by malware creators. UTC timestamp",
+                      "order": 1,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "crowdsourced_ai_results": {
+                      "description": "A summary of all crowdsourced AI results",
+                      "order": 27,
+                      "title": "Crowdsourced AI Results",
+                      "type": "string"
+                    },
+                    "crowdsourced_yara_results": {
+                      "description": "YARA matches from crowdsourced rules.",
+                      "order": 2,
+                      "title": "CrowdSourced Yara Results Count",
+                      "type": "string"
+                    },
+                    "downloadable": {
+                      "description": "True if the file can be downloaded, false otherwise. Only available for Premium API users",
+                      "order": 3,
+                      "title": "Downloadable",
+                      "type": "boolean"
+                    },
+                    "first_submission_date": {
+                      "description": "Date when the file was first seen in Google TI. UTC timestamp",
+                      "order": 4,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 6,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 7,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when the object itself was last modified. UTC timestamp",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "Most recent date the file was posted to Google TI. UTC timestamp",
+                      "order": 9,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "main_icon": {
+                      "description": "Icon's relevant hashes",
+                      "order": 10,
+                      "title": "Main Icon",
+                      "type": "object"
+                    },
+                    "md5": {
+                      "description": "File's MD5 Hash",
+                      "order": 11,
+                      "title": "MD5 Hash",
+                      "type": "string"
+                    },
+                    "meaningful_name": {
+                      "description": "The most interesting name out of all file's names",
+                      "order": 12,
+                      "title": "MeaningFull Name",
+                      "type": "string"
+                    },
+                    "popular_threat_classification_label": {
+                      "description": "Extracts human readable names extracted from AV verdicts and clustering hashes",
+                      "order": 13,
+                      "title": "Popular Threat Classification Label",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "File's score calculated from all votes posted by the Google TI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "sha1": {
+                      "description": "File's SHA1 hash",
+                      "order": 15,
+                      "title": "SHA1 Hash",
+                      "type": "string"
+                    },
+                    "sha256": {
+                      "description": "File's SHA256 hash",
+                      "order": 16,
+                      "title": "SHA256 Hash",
+                      "type": "string"
+                    },
+                    "size": {
+                      "description": "File size in bytes",
+                      "order": 17,
+                      "title": "Size",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 18,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "threat_severity": {
+                      "description": "Threat severity classification",
+                      "order": 28,
+                      "title": "Threat Severity",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times the file has been posted to Google TI",
+                      "order": 19,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into \"harmless\" and \"malicious\"",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "type_description": {
+                      "description": "Describes the file type",
+                      "order": 21,
+                      "title": "Type Description",
+                      "type": "string"
+                    },
+                    "type_extension": {
+                      "description": "Specifies file extension",
+                      "order": 22,
+                      "title": "Type Extension",
+                      "type": "string"
+                    },
+                    "type_tag": {
+                      "description": "Tag representing the file type. Can be used to filter by file type in Google TI intelligence searches",
+                      "order": 23,
+                      "title": "Type Tag",
+                      "type": "string"
+                    },
+                    "type_tags": {
+                      "description": "Broader tags related to the specific file type, used to filter in Google TI intelligence searches",
+                      "order": 24,
+                      "title": "Type Tags",
+                      "type": "string"
+                    },
+                    "unique_sources": {
+                      "description": "Indicates how many different sources the file has been posted from",
+                      "order": 25,
+                      "title": "Unique Sources",
+                      "type": "string"
+                    },
+                    "vhash": {
+                      "description": "In-house similarity clustering algorithm value used to find similar files",
+                      "order": 26,
+                      "title": "Vhash",
+                      "type": "string"
+                    }
+                  },
+                  "title": "File Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "file_report": {
+                  "$ref": "#/definitions/file_report",
+                  "description": "File Enrichment Report",
+                  "order": 1,
+                  "title": "File Report"
+                },
+                "mitre_attack_report": {
+                  "description": "Provides summary of MITRE ATT&CK tactics and techniques observed in each of the sandbox reports of a file",
+                  "order": 3,
+                  "title": "Mitre Attack Report",
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to hashes",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "file_report": {
+                  "properties": {
+                    "creation_date": {
+                      "description": "Extracted when possible from the file's metadata. Indicates when it was built or compiled. It can also be faked by malware creators. UTC timestamp",
+                      "order": 1,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "crowdsourced_ai_results": {
+                      "description": "A summary of all crowdsourced AI results",
+                      "order": 27,
+                      "title": "Crowdsourced AI Results",
+                      "type": "string"
+                    },
+                    "crowdsourced_yara_results": {
+                      "description": "YARA matches from crowdsourced rules.",
+                      "order": 2,
+                      "title": "CrowdSourced Yara Results Count",
+                      "type": "string"
+                    },
+                    "downloadable": {
+                      "description": "True if the file can be downloaded, false otherwise. Only available for Premium API users",
+                      "order": 3,
+                      "title": "Downloadable",
+                      "type": "boolean"
+                    },
+                    "first_submission_date": {
+                      "description": "Date when the file was first seen in Google TI. UTC timestamp",
+                      "order": 4,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 6,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 7,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when the object itself was last modified. UTC timestamp",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "Most recent date the file was posted to Google TI. UTC timestamp",
+                      "order": 9,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "main_icon": {
+                      "description": "Icon's relevant hashes",
+                      "order": 10,
+                      "title": "Main Icon",
+                      "type": "object"
+                    },
+                    "md5": {
+                      "description": "File's MD5 Hash",
+                      "order": 11,
+                      "title": "MD5 Hash",
+                      "type": "string"
+                    },
+                    "meaningful_name": {
+                      "description": "The most interesting name out of all file's names",
+                      "order": 12,
+                      "title": "MeaningFull Name",
+                      "type": "string"
+                    },
+                    "popular_threat_classification_label": {
+                      "description": "Extracts human readable names extracted from AV verdicts and clustering hashes",
+                      "order": 13,
+                      "title": "Popular Threat Classification Label",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "File's score calculated from all votes posted by the Google TI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "sha1": {
+                      "description": "File's SHA1 hash",
+                      "order": 15,
+                      "title": "SHA1 Hash",
+                      "type": "string"
+                    },
+                    "sha256": {
+                      "description": "File's SHA256 hash",
+                      "order": 16,
+                      "title": "SHA256 Hash",
+                      "type": "string"
+                    },
+                    "size": {
+                      "description": "File size in bytes",
+                      "order": 17,
+                      "title": "Size",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 18,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "threat_severity": {
+                      "description": "Threat severity classification",
+                      "order": 28,
+                      "title": "Threat Severity",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times the file has been posted to Google TI",
+                      "order": 19,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into \"harmless\" and \"malicious\"",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "type_description": {
+                      "description": "Describes the file type",
+                      "order": 21,
+                      "title": "Type Description",
+                      "type": "string"
+                    },
+                    "type_extension": {
+                      "description": "Specifies file extension",
+                      "order": 22,
+                      "title": "Type Extension",
+                      "type": "string"
+                    },
+                    "type_tag": {
+                      "description": "Tag representing the file type. Can be used to filter by file type in Google TI intelligence searches",
+                      "order": 23,
+                      "title": "Type Tag",
+                      "type": "string"
+                    },
+                    "type_tags": {
+                      "description": "Broader tags related to the specific file type, used to filter in Google TI intelligence searches",
+                      "order": 24,
+                      "title": "Type Tags",
+                      "type": "string"
+                    },
+                    "unique_sources": {
+                      "description": "Indicates how many different sources the file has been posted from",
+                      "order": 25,
+                      "title": "Unique Sources",
+                      "type": "string"
+                    },
+                    "vhash": {
+                      "description": "In-house similarity clustering algorithm value used to find similar files",
+                      "order": 26,
+                      "title": "Vhash",
+                      "type": "string"
+                    }
+                  },
+                  "title": "File Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "mitre_attack_report": {
+                  "properties": {
+                    "mitre_attack_data": {
+                      "items": {
+                        "$ref": "#/definitions/mitre_attack_report_mitre_attack_data"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "mitre_attack_report_mitre_attack_data": {
+                  "properties": {},
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "properties": {
+                    "threat_contextualization_report": {
+                      "items": {
+                        "$ref": "#/definitions/threat_contextualization_report_threat_contextualization_report"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                },
+                "threat_contextualization_report_threat_contextualization_report": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "file_report": {
+                  "$ref": "#/definitions/file_report",
+                  "description": "File Enrichment Report",
+                  "order": 1,
+                  "title": "File Report"
+                },
+                "mitre_attack_report": {
+                  "$ref": "#/definitions/mitre_attack_report",
+                  "description": "Provides summary of MITRE ATT&CK tactics and techniques observed in each of the sandbox reports of a file",
+                  "order": 3,
+                  "title": "Mitre Attack Report"
+                },
+                "threat_contextualization_report": {
+                  "$ref": "#/definitions/threat_contextualization_report",
+                  "description": "Provides information on adversaries related to hashes",
+                  "order": 2,
+                  "title": "Threat Contextualization Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ebe81b70-7419-456a-8297-90182eb9a3b4": {
+            "nodeId": "ebe81b70-7419-456a-8297-90182eb9a3b4",
+            "name": "Get URL Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_url_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "url": "{{[339cfc19-d917-46cd-8631-a35f658be42a].[$item]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "url": {
+                  "description": "URL that need to be analysed",
+                  "order": 1,
+                  "title": "URL",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "url"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "url_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "String, with the key as the partner who categorized the URL and the value as the URL's category according to that partner",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the URL's favicon. Only returned in premium API",
+                      "order": 2,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "first_submission_date": {
+                      "description": "UTC timestamp of the date when the URL was first submitted to GTI",
+                      "order": 3,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "UTC timestamp representing last time the URL was scanned",
+                      "order": 5,
+                      "title": "Last Analysis Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scans",
+                      "order": 6,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_final_url": {
+                      "description": "Final URL in URL redirections",
+                      "order": 7,
+                      "title": "Last Final URL",
+                      "type": "string"
+                    },
+                    "last_http_response_code": {
+                      "description": "HTTP response code of the last response",
+                      "order": 8,
+                      "title": "Last HTTP Response Code",
+                      "type": "string"
+                    },
+                    "last_http_response_content_length": {
+                      "description": "Length in bytes of the content received",
+                      "order": 9,
+                      "title": "Last HTTP Response Content Length",
+                      "type": "string"
+                    },
+                    "last_http_response_content_sha256": {
+                      "description": "URL response body's SHA256 hash",
+                      "order": 10,
+                      "title": "Last HTTP Response Content SHA256",
+                      "type": "string"
+                    },
+                    "last_http_response_cookies": {
+                      "description": "Dictionary containing the website's cookies",
+                      "order": 11,
+                      "title": "Last HTTP Response Cookies",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "UTC timestamp representing last modification date",
+                      "order": 12,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "UTC timestamp representing last time it was sent to be analyzed",
+                      "order": 13,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Value of votes from GTI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 15,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "targeted_brand": {
+                      "description": "Targeted brand info extracted from phishing engines",
+                      "order": 16,
+                      "title": "Targeted Brand",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times that URL has been checked",
+                      "order": 17,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 18,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Containing the number of positive (harmless) and negative (malicious) votes received from VirusTotal community",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "url": {
+                      "description": "Original URL to be scanned",
+                      "order": 21,
+                      "title": "URL",
+                      "type": "string"
+                    },
+                    "webpage_title": {
+                      "description": "Webpage title",
+                      "order": 19,
+                      "title": "Webpage Title",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Url Report",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to urls",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                },
+                "url_report": {
+                  "$ref": "#/definitions/url_report",
+                  "description": "URL Enrichment Report",
+                  "order": 1,
+                  "title": "URL Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "properties": {
+                    "threat_contextualization_report": {
+                      "items": {
+                        "$ref": "#/definitions/threat_contextualization_report_threat_contextualization_report"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "threat_contextualization_report_threat_contextualization_report": {
+                  "properties": {},
+                  "type": "object"
+                },
+                "url_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "String, with the key as the partner who categorized the URL and the value as the URL's category according to that partner",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the URL's favicon. Only returned in premium API",
+                      "order": 2,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "first_submission_date": {
+                      "description": "UTC timestamp of the date when the URL was first submitted to GTI",
+                      "order": 3,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "UTC timestamp representing last time the URL was scanned",
+                      "order": 5,
+                      "title": "Last Analysis Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scans",
+                      "order": 6,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_final_url": {
+                      "description": "Final URL in URL redirections",
+                      "order": 7,
+                      "title": "Last Final URL",
+                      "type": "string"
+                    },
+                    "last_http_response_code": {
+                      "description": "HTTP response code of the last response",
+                      "order": 8,
+                      "title": "Last HTTP Response Code",
+                      "type": "string"
+                    },
+                    "last_http_response_content_length": {
+                      "description": "Length in bytes of the content received",
+                      "order": 9,
+                      "title": "Last HTTP Response Content Length",
+                      "type": "string"
+                    },
+                    "last_http_response_content_sha256": {
+                      "description": "URL response body's SHA256 hash",
+                      "order": 10,
+                      "title": "Last HTTP Response Content SHA256",
+                      "type": "string"
+                    },
+                    "last_http_response_cookies": {
+                      "description": "Dictionary containing the website's cookies",
+                      "order": 11,
+                      "title": "Last HTTP Response Cookies",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "UTC timestamp representing last modification date",
+                      "order": 12,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "UTC timestamp representing last time it was sent to be analyzed",
+                      "order": 13,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Value of votes from GTI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 15,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "targeted_brand": {
+                      "description": "Targeted brand info extracted from phishing engines",
+                      "order": 16,
+                      "title": "Targeted Brand",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times that URL has been checked",
+                      "order": 17,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 18,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Containing the number of positive (harmless) and negative (malicious) votes received from VirusTotal community",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "url": {
+                      "description": "Original URL to be scanned",
+                      "order": 21,
+                      "title": "URL",
+                      "type": "string"
+                    },
+                    "webpage_title": {
+                      "description": "Webpage title",
+                      "order": 19,
+                      "title": "Webpage Title",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Url Report",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "threat_contextualization_report": {
+                  "$ref": "#/definitions/threat_contextualization_report",
+                  "description": "Provides information on adversaries related to urls",
+                  "order": 2,
+                  "title": "Threat Contextualization Report"
+                },
+                "url_report": {
+                  "$ref": "#/definitions/url_report",
+                  "description": "URL Enrichment Report",
+                  "order": 1,
+                  "title": "URL Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ec68d93d-d155-4344-8305-a6dd24a34952": {
+            "nodeId": "ec68d93d-d155-4344-8305-a6dd24a34952",
+            "name": "Legacy Detection Rule",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "9f6a3523-086b-4864-95f0-45ac28863e15",
+            "defaultInputJSONSchema": {
+              "definitions": {
+                "actor": {
+                  "properties": {
+                    "assets": {
+                      "description": "The assets that are part of the investigation",
+                      "items": {
+                        "$ref": "#/definitions/asset"
+                      },
+                      "order": 2,
+                      "title": "Assets",
+                      "type": "array"
+                    },
+                    "users": {
+                      "description": "The users that are part of the investigation",
+                      "items": {
+                        "$ref": "#/definitions/user"
+                      },
+                      "order": 1,
+                      "title": "Users",
+                      "type": "array"
+                    }
+                  },
+                  "title": "Actor",
+                  "type": "object"
+                },
+                "asset": {
+                  "properties": {
+                    "assetId": {
+                      "description": "the ID of the asset",
+                      "order": 1,
+                      "title": "AssetId",
+                      "type": "string"
+                    },
+                    "fqdn": {
+                      "description": "The fully qualified domain name",
+                      "order": 3,
+                      "title": "Fqdn",
+                      "type": "string"
+                    },
+                    "shortname": {
+                      "description": "shortname of the asset",
+                      "order": 2,
+                      "title": "Shortname",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "shortname",
+                    "assetId"
+                  ],
+                  "title": "Asset",
+                  "type": "object"
+                },
+                "content": {
+                  "properties": {
+                    "domains": {
+                      "description": "A list of domains to check",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 2,
+                      "title": "Domains",
+                      "type": "array"
+                    },
+                    "ipAddresses": {
+                      "description": "A list of ip addresses to check",
+                      "items": {
+                        "$ref": "#/definitions/ipAddress"
+                      },
+                      "order": 3,
+                      "title": "IpAddresses",
+                      "type": "array"
+                    },
+                    "processes": {
+                      "description": "A list of processes to check",
+                      "items": {
+                        "$ref": "#/definitions/process"
+                      },
+                      "order": 4,
+                      "title": "Processes",
+                      "type": "array"
+                    },
+                    "urls": {
+                      "description": "A list of URLs to check",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 1,
+                      "title": "Urls",
+                      "type": "array"
+                    }
+                  },
+                  "title": "Content",
+                  "type": "object"
+                },
+                "hash": {
+                  "properties": {
+                    "hash": {
+                      "description": "The actual hash",
+                      "order": 1,
+                      "title": "Hash",
+                      "type": "string"
+                    },
+                    "type": {
+                      "description": "The algorithm used to generate the hash",
+                      "order": 2,
+                      "title": "Type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "hash",
+                    "type"
+                  ],
+                  "title": "Hash",
+                  "type": "object"
+                },
+                "ipAddress": {
+                  "properties": {
+                    "ip": {
+                      "description": "The raw IP",
+                      "order": 1,
+                      "title": "Ip",
+                      "type": "string"
+                    },
+                    "type": {
+                      "description": "Denotes if an IP is internal or external",
+                      "order": 2,
+                      "title": "Type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ip",
+                    "type"
+                  ],
+                  "title": "IPAddress",
+                  "type": "object"
+                },
+                "process": {
+                  "properties": {
+                    "assetId": {
+                      "description": "The asset id associated with the process",
+                      "order": 1,
+                      "title": "AssetId",
+                      "type": "string"
+                    },
+                    "cmdLine": {
+                      "description": "The raw value of the command line call used to invoke the process",
+                      "order": 5,
+                      "title": "CmdLine",
+                      "type": "string"
+                    },
+                    "hashes": {
+                      "description": "The list of hashes to check",
+                      "items": {
+                        "$ref": "#/definitions/hash"
+                      },
+                      "order": 3,
+                      "title": "Hashes",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "The name of the process",
+                      "order": 4,
+                      "title": "Name",
+                      "type": "string"
+                    },
+                    "processId": {
+                      "description": "The PID from the running process on the asset",
+                      "order": 2,
+                      "title": "ProcessId",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "assetId",
+                    "processId"
+                  ],
+                  "title": "Process",
+                  "type": "object"
+                },
+                "user": {
+                  "properties": {
+                    "distinguishedName": {
+                      "description": "The Active Directory distinguished name of the user",
+                      "order": 2,
+                      "title": "DistinguishedName",
+                      "type": "string"
+                    },
+                    "emails": {
+                      "description": "The email addresses associated with the user",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 3,
+                      "title": "Emails",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "The name of the user, as '<firstname> <lastname>' if available, or account name otherwise",
+                      "order": 1,
+                      "title": "Name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "emails"
+                  ],
+                  "title": "User",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "actors": {
+                  "$ref": "#/definitions/actor",
+                  "description": "The insightIDR actors that are part of the investigation",
+                  "order": 7,
+                  "title": "Actors"
+                },
+                "contents": {
+                  "$ref": "#/definitions/content",
+                  "description": "The contents to enrich",
+                  "order": 8,
+                  "title": "Contents"
+                },
+                "description": {
+                  "description": "The description of the alert",
+                  "order": 4,
+                  "title": "Description",
+                  "type": "string"
+                },
+                "investigationId": {
+                  "description": "The investigation id",
+                  "order": 6,
+                  "title": "InvestigationId",
+                  "type": "string"
+                },
+                "link": {
+                  "description": "The deep link to the investigation in insightIDR",
+                  "order": 5,
+                  "title": "Link",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "The human-readable name of the alert",
+                  "order": 3,
+                  "title": "Name",
+                  "type": "string"
+                },
+                "timestamp": {
+                  "description": "The time the alert was triggered in ISO 8601 extended timestamp format",
+                  "order": 1,
+                  "title": "Timestamp",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The type of alert",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "investigationId",
+                "actors",
+                "timestamp",
+                "type",
+                "name",
+                "description",
+                "link"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "actor": {
+                  "properties": {
+                    "assets": {
+                      "description": "The assets that are part of the investigation",
+                      "items": {
+                        "$ref": "#/definitions/asset"
+                      },
+                      "order": 2,
+                      "title": "Assets",
+                      "type": "array"
+                    },
+                    "users": {
+                      "description": "The users that are part of the investigation",
+                      "items": {
+                        "$ref": "#/definitions/user"
+                      },
+                      "order": 1,
+                      "title": "Users",
+                      "type": "array"
+                    }
+                  },
+                  "title": "Actor",
+                  "type": "object"
+                },
+                "asset": {
+                  "properties": {
+                    "assetId": {
+                      "description": "the ID of the asset",
+                      "order": 1,
+                      "title": "AssetId",
+                      "type": "string"
+                    },
+                    "fqdn": {
+                      "description": "The fully qualified domain name",
+                      "order": 3,
+                      "title": "Fqdn",
+                      "type": "string"
+                    },
+                    "shortname": {
+                      "description": "shortname of the asset",
+                      "order": 2,
+                      "title": "Shortname",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "shortname",
+                    "assetId"
+                  ],
+                  "title": "Asset",
+                  "type": "object"
+                },
+                "content": {
+                  "properties": {
+                    "domains": {
+                      "description": "A list of domains to check",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 2,
+                      "title": "Domains",
+                      "type": "array"
+                    },
+                    "ipAddresses": {
+                      "description": "A list of ip addresses to check",
+                      "items": {
+                        "$ref": "#/definitions/ipAddress"
+                      },
+                      "order": 3,
+                      "title": "IpAddresses",
+                      "type": "array"
+                    },
+                    "processes": {
+                      "description": "A list of processes to check",
+                      "items": {
+                        "$ref": "#/definitions/process"
+                      },
+                      "order": 4,
+                      "title": "Processes",
+                      "type": "array"
+                    },
+                    "urls": {
+                      "description": "A list of URLs to check",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 1,
+                      "title": "Urls",
+                      "type": "array"
+                    }
+                  },
+                  "title": "Content",
+                  "type": "object"
+                },
+                "hash": {
+                  "properties": {
+                    "hash": {
+                      "description": "The actual hash",
+                      "order": 1,
+                      "title": "Hash",
+                      "type": "string"
+                    },
+                    "type": {
+                      "description": "The algorithm used to generate the hash",
+                      "order": 2,
+                      "title": "Type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "hash",
+                    "type"
+                  ],
+                  "title": "Hash",
+                  "type": "object"
+                },
+                "ipAddress": {
+                  "properties": {
+                    "ip": {
+                      "description": "The raw IP",
+                      "order": 1,
+                      "title": "Ip",
+                      "type": "string"
+                    },
+                    "type": {
+                      "description": "Denotes if an IP is internal or external",
+                      "order": 2,
+                      "title": "Type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ip",
+                    "type"
+                  ],
+                  "title": "IPAddress",
+                  "type": "object"
+                },
+                "process": {
+                  "properties": {
+                    "assetId": {
+                      "description": "The asset id associated with the process",
+                      "order": 1,
+                      "title": "AssetId",
+                      "type": "string"
+                    },
+                    "cmdLine": {
+                      "description": "The raw value of the command line call used to invoke the process",
+                      "order": 5,
+                      "title": "CmdLine",
+                      "type": "string"
+                    },
+                    "hashes": {
+                      "description": "The list of hashes to check",
+                      "items": {
+                        "$ref": "#/definitions/hash"
+                      },
+                      "order": 3,
+                      "title": "Hashes",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "The name of the process",
+                      "order": 4,
+                      "title": "Name",
+                      "type": "string"
+                    },
+                    "processId": {
+                      "description": "The PID from the running process on the asset",
+                      "order": 2,
+                      "title": "ProcessId",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "assetId",
+                    "processId"
+                  ],
+                  "title": "Process",
+                  "type": "object"
+                },
+                "user": {
+                  "properties": {
+                    "distinguishedName": {
+                      "description": "The Active Directory distinguished name of the user",
+                      "order": 2,
+                      "title": "DistinguishedName",
+                      "type": "string"
+                    },
+                    "emails": {
+                      "description": "The email addresses associated with the user",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 3,
+                      "title": "Emails",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "The name of the user, as '<firstname> <lastname>' if available, or account name otherwise",
+                      "order": 1,
+                      "title": "Name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "emails"
+                  ],
+                  "title": "User",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "actors": {
+                  "$ref": "#/definitions/actor",
+                  "description": "The insightIDR actors that are part of the investigation",
+                  "order": 7,
+                  "title": "Actors"
+                },
+                "contents": {
+                  "$ref": "#/definitions/content",
+                  "description": "The contents to enrich",
+                  "order": 8,
+                  "title": "Contents"
+                },
+                "description": {
+                  "description": "The description of the alert",
+                  "order": 4,
+                  "title": "Description",
+                  "type": "string"
+                },
+                "investigationId": {
+                  "description": "The investigation id",
+                  "order": 6,
+                  "title": "InvestigationId",
+                  "type": "string"
+                },
+                "link": {
+                  "description": "The deep link to the investigation in insightIDR",
+                  "order": 5,
+                  "title": "Link",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "The human-readable name of the alert",
+                  "order": 3,
+                  "title": "Name",
+                  "type": "string"
+                },
+                "timestamp": {
+                  "description": "The time the alert was triggered in ISO 8601 extended timestamp format",
+                  "order": 1,
+                  "title": "Timestamp",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The type of alert",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "investigationId",
+                "actors",
+                "timestamp",
+                "type",
+                "name",
+                "description",
+                "link"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api-idr.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "IOC Enrichment",
+          "Legacy Detection Rule",
+          "Threat Contextualization"
+        ],
+        "humanCostSeconds": 7800,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Retrieves detailed information on a given IOC from Google Threat Intelligence platform."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "9f6a3523-086b-4864-95f0-45ac28863e15",
+        "name": "Legacy Detection Rule",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {
+            "actor": {
+              "properties": {
+                "assets": {
+                  "description": "The assets that are part of the investigation",
+                  "items": {
+                    "$ref": "#/definitions/asset"
+                  },
+                  "order": 2,
+                  "title": "Assets",
+                  "type": "array"
+                },
+                "users": {
+                  "description": "The users that are part of the investigation",
+                  "items": {
+                    "$ref": "#/definitions/user"
+                  },
+                  "order": 1,
+                  "title": "Users",
+                  "type": "array"
+                }
+              },
+              "title": "Actor",
+              "type": "object"
+            },
+            "asset": {
+              "properties": {
+                "assetId": {
+                  "description": "the ID of the asset",
+                  "order": 1,
+                  "title": "AssetId",
+                  "type": "string"
+                },
+                "fqdn": {
+                  "description": "The fully qualified domain name",
+                  "order": 3,
+                  "title": "Fqdn",
+                  "type": "string"
+                },
+                "shortname": {
+                  "description": "shortname of the asset",
+                  "order": 2,
+                  "title": "Shortname",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shortname",
+                "assetId"
+              ],
+              "title": "Asset",
+              "type": "object"
+            },
+            "content": {
+              "properties": {
+                "domains": {
+                  "description": "A list of domains to check",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 2,
+                  "title": "Domains",
+                  "type": "array"
+                },
+                "ipAddresses": {
+                  "description": "A list of ip addresses to check",
+                  "items": {
+                    "$ref": "#/definitions/ipAddress"
+                  },
+                  "order": 3,
+                  "title": "IpAddresses",
+                  "type": "array"
+                },
+                "processes": {
+                  "description": "A list of processes to check",
+                  "items": {
+                    "$ref": "#/definitions/process"
+                  },
+                  "order": 4,
+                  "title": "Processes",
+                  "type": "array"
+                },
+                "urls": {
+                  "description": "A list of URLs to check",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 1,
+                  "title": "Urls",
+                  "type": "array"
+                }
+              },
+              "title": "Content",
+              "type": "object"
+            },
+            "hash": {
+              "properties": {
+                "hash": {
+                  "description": "The actual hash",
+                  "order": 1,
+                  "title": "Hash",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The algorithm used to generate the hash",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "hash",
+                "type"
+              ],
+              "title": "Hash",
+              "type": "object"
+            },
+            "ipAddress": {
+              "properties": {
+                "ip": {
+                  "description": "The raw IP",
+                  "order": 1,
+                  "title": "Ip",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "Denotes if an IP is internal or external",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ip",
+                "type"
+              ],
+              "title": "IPAddress",
+              "type": "object"
+            },
+            "process": {
+              "properties": {
+                "assetId": {
+                  "description": "The asset id associated with the process",
+                  "order": 1,
+                  "title": "AssetId",
+                  "type": "string"
+                },
+                "cmdLine": {
+                  "description": "The raw value of the command line call used to invoke the process",
+                  "order": 5,
+                  "title": "CmdLine",
+                  "type": "string"
+                },
+                "hashes": {
+                  "description": "The list of hashes to check",
+                  "items": {
+                    "$ref": "#/definitions/hash"
+                  },
+                  "order": 3,
+                  "title": "Hashes",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "The name of the process",
+                  "order": 4,
+                  "title": "Name",
+                  "type": "string"
+                },
+                "processId": {
+                  "description": "The PID from the running process on the asset",
+                  "order": 2,
+                  "title": "ProcessId",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "assetId",
+                "processId"
+              ],
+              "title": "Process",
+              "type": "object"
+            },
+            "user": {
+              "properties": {
+                "distinguishedName": {
+                  "description": "The Active Directory distinguished name of the user",
+                  "order": 2,
+                  "title": "DistinguishedName",
+                  "type": "string"
+                },
+                "emails": {
+                  "description": "The email addresses associated with the user",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 3,
+                  "title": "Emails",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "The name of the user, as '<firstname> <lastname>' if available, or account name otherwise",
+                  "order": 1,
+                  "title": "Name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "emails"
+              ],
+              "title": "User",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "actors": {
+              "$ref": "#/definitions/actor",
+              "description": "The insightIDR actors that are part of the investigation",
+              "order": 7,
+              "title": "Actors"
+            },
+            "contents": {
+              "$ref": "#/definitions/content",
+              "description": "The contents to enrich",
+              "order": 8,
+              "title": "Contents"
+            },
+            "description": {
+              "description": "The description of the alert",
+              "order": 4,
+              "title": "Description",
+              "type": "string"
+            },
+            "investigationId": {
+              "description": "The investigation id",
+              "order": 6,
+              "title": "InvestigationId",
+              "type": "string"
+            },
+            "link": {
+              "description": "The deep link to the investigation in insightIDR",
+              "order": 5,
+              "title": "Link",
+              "type": "string"
+            },
+            "name": {
+              "description": "The human-readable name of the alert",
+              "order": 3,
+              "title": "Name",
+              "type": "string"
+            },
+            "timestamp": {
+              "description": "The time the alert was triggered in ISO 8601 extended timestamp format",
+              "order": 1,
+              "title": "Timestamp",
+              "type": "string"
+            },
+            "type": {
+              "description": "The type of alert",
+              "order": 2,
+              "title": "Type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "investigationId",
+            "actors",
+            "timestamp",
+            "type",
+            "name",
+            "description",
+            "link"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {
+            "actor": {
+              "properties": {
+                "assets": {
+                  "description": "The assets that are part of the investigation",
+                  "items": {
+                    "$ref": "#/definitions/asset"
+                  },
+                  "order": 2,
+                  "title": "Assets",
+                  "type": "array"
+                },
+                "users": {
+                  "description": "The users that are part of the investigation",
+                  "items": {
+                    "$ref": "#/definitions/user"
+                  },
+                  "order": 1,
+                  "title": "Users",
+                  "type": "array"
+                }
+              },
+              "title": "Actor",
+              "type": "object"
+            },
+            "asset": {
+              "properties": {
+                "assetId": {
+                  "description": "the ID of the asset",
+                  "order": 1,
+                  "title": "AssetId",
+                  "type": "string"
+                },
+                "fqdn": {
+                  "description": "The fully qualified domain name",
+                  "order": 3,
+                  "title": "Fqdn",
+                  "type": "string"
+                },
+                "shortname": {
+                  "description": "shortname of the asset",
+                  "order": 2,
+                  "title": "Shortname",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shortname",
+                "assetId"
+              ],
+              "title": "Asset",
+              "type": "object"
+            },
+            "content": {
+              "properties": {
+                "domains": {
+                  "description": "A list of domains to check",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 2,
+                  "title": "Domains",
+                  "type": "array"
+                },
+                "ipAddresses": {
+                  "description": "A list of ip addresses to check",
+                  "items": {
+                    "$ref": "#/definitions/ipAddress"
+                  },
+                  "order": 3,
+                  "title": "IpAddresses",
+                  "type": "array"
+                },
+                "processes": {
+                  "description": "A list of processes to check",
+                  "items": {
+                    "$ref": "#/definitions/process"
+                  },
+                  "order": 4,
+                  "title": "Processes",
+                  "type": "array"
+                },
+                "urls": {
+                  "description": "A list of URLs to check",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 1,
+                  "title": "Urls",
+                  "type": "array"
+                }
+              },
+              "title": "Content",
+              "type": "object"
+            },
+            "hash": {
+              "properties": {
+                "hash": {
+                  "description": "The actual hash",
+                  "order": 1,
+                  "title": "Hash",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The algorithm used to generate the hash",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "hash",
+                "type"
+              ],
+              "title": "Hash",
+              "type": "object"
+            },
+            "ipAddress": {
+              "properties": {
+                "ip": {
+                  "description": "The raw IP",
+                  "order": 1,
+                  "title": "Ip",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "Denotes if an IP is internal or external",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ip",
+                "type"
+              ],
+              "title": "IPAddress",
+              "type": "object"
+            },
+            "process": {
+              "properties": {
+                "assetId": {
+                  "description": "The asset id associated with the process",
+                  "order": 1,
+                  "title": "AssetId",
+                  "type": "string"
+                },
+                "cmdLine": {
+                  "description": "The raw value of the command line call used to invoke the process",
+                  "order": 5,
+                  "title": "CmdLine",
+                  "type": "string"
+                },
+                "hashes": {
+                  "description": "The list of hashes to check",
+                  "items": {
+                    "$ref": "#/definitions/hash"
+                  },
+                  "order": 3,
+                  "title": "Hashes",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "The name of the process",
+                  "order": 4,
+                  "title": "Name",
+                  "type": "string"
+                },
+                "processId": {
+                  "description": "The PID from the running process on the asset",
+                  "order": 2,
+                  "title": "ProcessId",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "assetId",
+                "processId"
+              ],
+              "title": "Process",
+              "type": "object"
+            },
+            "user": {
+              "properties": {
+                "distinguishedName": {
+                  "description": "The Active Directory distinguished name of the user",
+                  "order": 2,
+                  "title": "DistinguishedName",
+                  "type": "string"
+                },
+                "emails": {
+                  "description": "The email addresses associated with the user",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 3,
+                  "title": "Emails",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "The name of the user, as '<firstname> <lastname>' if available, or account name otherwise",
+                  "order": 1,
+                  "title": "Name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "emails"
+              ],
+              "title": "User",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "actors": {
+              "$ref": "#/definitions/actor",
+              "description": "The insightIDR actors that are part of the investigation",
+              "order": 7,
+              "title": "Actors"
+            },
+            "contents": {
+              "$ref": "#/definitions/content",
+              "description": "The contents to enrich",
+              "order": 8,
+              "title": "Contents"
+            },
+            "description": {
+              "description": "The description of the alert",
+              "order": 4,
+              "title": "Description",
+              "type": "string"
+            },
+            "investigationId": {
+              "description": "The investigation id",
+              "order": 6,
+              "title": "InvestigationId",
+              "type": "string"
+            },
+            "link": {
+              "description": "The deep link to the investigation in insightIDR",
+              "order": 5,
+              "title": "Link",
+              "type": "string"
+            },
+            "name": {
+              "description": "The human-readable name of the alert",
+              "order": 3,
+              "title": "Name",
+              "type": "string"
+            },
+            "timestamp": {
+              "description": "The time the alert was triggered in ISO 8601 extended timestamp format",
+              "order": 1,
+              "title": "Timestamp",
+              "type": "string"
+            },
+            "type": {
+              "description": "The type of alert",
+              "order": 2,
+              "title": "Type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "investigationId",
+            "actors",
+            "timestamp",
+            "type",
+            "name",
+            "description",
+            "link"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api_idr"
+      }
+    ]
+  }
+}

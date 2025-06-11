@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:19.485981281Z",
+    "workflowVersions": [
+      {
+        "name": "Get Internet of Things Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "24f7d4ad-8506-4926-a9b2-5c4bba51ee3d": {
+              "id": "24f7d4ad-8506-4926-a9b2-5c4bba51ee3d",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "cf10703f-9d5d-4db1-9f1d-326be9267e7f",
+              "toNodeId": "3145f5aa-441f-46d2-8fe3-6584999f1bd6"
+            },
+            "2faec44e-6aee-46db-b89c-16a07d22e93f": {
+              "id": "2faec44e-6aee-46db-b89c-16a07d22e93f",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "6b687aae-666f-4ff6-85a8-2618db2a8c57",
+              "toNodeId": ""
+            },
+            "b627dae4-508a-48c2-877c-215a15c9fda9": {
+              "id": "b627dae4-508a-48c2-877c-215a15c9fda9",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "3145f5aa-441f-46d2-8fe3-6584999f1bd6",
+              "toNodeId": "6b687aae-666f-4ff6-85a8-2618db2a8c57"
+            },
+            "d78f2690-23d4-425c-ac35-a893c670bfd2": {
+              "id": "d78f2690-23d4-425c-ac35-a893c670bfd2",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "6b687aae-666f-4ff6-85a8-2618db2a8c57",
+              "toNodeId": "b00d58a1-6bfe-4a3e-bc76-57539aa18140"
+            },
+            "f3ed4b79-5f6a-4a5a-aa48-8e5b5dce0c02": {
+              "id": "f3ed4b79-5f6a-4a5a-aa48-8e5b5dce0c02",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "b00d58a1-6bfe-4a3e-bc76-57539aa18140",
+              "toNodeId": ""
+            }
+          },
+          "nodes": {
+            "3145f5aa-441f-46d2-8fe3-6584999f1bd6": {
+              "id": "3145f5aa-441f-46d2-8fe3-6584999f1bd6",
+              "parentNodeId": ""
+            },
+            "6b687aae-666f-4ff6-85a8-2618db2a8c57": {
+              "id": "6b687aae-666f-4ff6-85a8-2618db2a8c57",
+              "parentNodeId": ""
+            },
+            "b00d58a1-6bfe-4a3e-bc76-57539aa18140": {
+              "id": "b00d58a1-6bfe-4a3e-bc76-57539aa18140",
+              "parentNodeId": ""
+            },
+            "cf10703f-9d5d-4db1-9f1d-326be9267e7f": {
+              "id": "cf10703f-9d5d-4db1-9f1d-326be9267e7f",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "3145f5aa-441f-46d2-8fe3-6584999f1bd6": {
+            "nodeId": "3145f5aa-441f-46d2-8fe3-6584999f1bd6",
+            "name": "Internet of Things Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "internet_of_things_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[cf10703f-9d5d-4db1-9f1d-326be9267e7f].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "internet_of_things_threat_list_response": {
+                  "description": "Internet of Things threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Internet of Things Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "internet_of_things_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/internet_of_things_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "internet_of_things_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "internet_of_things_threat_list_response": {
+                  "$ref": "#/definitions/internet_of_things_threat_list_response",
+                  "description": "Internet of Things threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Internet of Things Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "6b687aae-666f-4ff6-85a8-2618db2a8c57": {
+            "nodeId": "6b687aae-666f-4ff6-85a8-2618db2a8c57",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "2faec44e-6aee-46db-b89c-16a07d22e93f",
+              "stepControlParams": [
+                {
+                  "edgeId": "d78f2690-23d4-425c-ac35-a893c670bfd2",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "3145f5aa-441f-46d2-8fe3-6584999f1bd6.internet_of_things_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[3145f5aa-441f-46d2-8fe3-6584999f1bd6].[internet_of_things_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "2faec44e-6aee-46db-b89c-16a07d22e93f",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "b00d58a1-6bfe-4a3e-bc76-57539aa18140": {
+            "nodeId": "b00d58a1-6bfe-4a3e-bc76-57539aa18140",
+            "name": "Send Internet of Things Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[3145f5aa-441f-46d2-8fe3-6584999f1bd6].[internet_of_things_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "cf10703f-9d5d-4db1-9f1d-326be9267e7f": {
+            "nodeId": "cf10703f-9d5d-4db1-9f1d-326be9267e7f",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "f3e0c09a-de61-418d-9138-6138831d9d37",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Internet of Things",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves IOT files that have been identified as malware by Google Threat Intelligence security engine partners."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "f3e0c09a-de61-418d-9138-6138831d9d37",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

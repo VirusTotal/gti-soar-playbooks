@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:28.081452411Z",
+    "workflowVersions": [
+      {
+        "name": "Get Malicious Network Infrastructure Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "3917363a-6918-467e-9ca0-a0ac67942ed9": {
+              "id": "3917363a-6918-467e-9ca0-a0ac67942ed9",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "7e6f0211-8aab-4314-92c6-6f6037968cf6",
+              "toNodeId": ""
+            },
+            "51ceab7e-1a6c-4f49-93c3-66f6bf562976": {
+              "id": "51ceab7e-1a6c-4f49-93c3-66f6bf562976",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "131a761d-956b-40d7-a37e-994c92b38782",
+              "toNodeId": "7e6f0211-8aab-4314-92c6-6f6037968cf6"
+            },
+            "55eecb9e-4cb7-4b83-b2a5-f2feffb0e128": {
+              "id": "55eecb9e-4cb7-4b83-b2a5-f2feffb0e128",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "2136fdb7-ec02-4f90-b312-4672408ddb3b",
+              "toNodeId": "131a761d-956b-40d7-a37e-994c92b38782"
+            },
+            "6fe76d0c-910f-49a5-bc87-14eb2216d14a": {
+              "id": "6fe76d0c-910f-49a5-bc87-14eb2216d14a",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "131a761d-956b-40d7-a37e-994c92b38782",
+              "toNodeId": ""
+            },
+            "e62b6d8d-516c-4921-b996-25931614e9c0": {
+              "id": "e62b6d8d-516c-4921-b996-25931614e9c0",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "3c76534f-c9f3-4bff-b552-29d347b71d96",
+              "toNodeId": "2136fdb7-ec02-4f90-b312-4672408ddb3b"
+            }
+          },
+          "nodes": {
+            "131a761d-956b-40d7-a37e-994c92b38782": {
+              "id": "131a761d-956b-40d7-a37e-994c92b38782",
+              "parentNodeId": ""
+            },
+            "2136fdb7-ec02-4f90-b312-4672408ddb3b": {
+              "id": "2136fdb7-ec02-4f90-b312-4672408ddb3b",
+              "parentNodeId": ""
+            },
+            "3c76534f-c9f3-4bff-b552-29d347b71d96": {
+              "id": "3c76534f-c9f3-4bff-b552-29d347b71d96",
+              "parentNodeId": ""
+            },
+            "7e6f0211-8aab-4314-92c6-6f6037968cf6": {
+              "id": "7e6f0211-8aab-4314-92c6-6f6037968cf6",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "131a761d-956b-40d7-a37e-994c92b38782": {
+            "nodeId": "131a761d-956b-40d7-a37e-994c92b38782",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "6fe76d0c-910f-49a5-bc87-14eb2216d14a",
+              "stepControlParams": [
+                {
+                  "edgeId": "51ceab7e-1a6c-4f49-93c3-66f6bf562976",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "2136fdb7-ec02-4f90-b312-4672408ddb3b.malicious_network_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[2136fdb7-ec02-4f90-b312-4672408ddb3b].[malicious_network_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "6fe76d0c-910f-49a5-bc87-14eb2216d14a",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "2136fdb7-ec02-4f90-b312-4672408ddb3b": {
+            "nodeId": "2136fdb7-ec02-4f90-b312-4672408ddb3b",
+            "name": "Malicious Network Infrastructure Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "malicious_network_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[3c76534f-c9f3-4bff-b552-29d347b71d96].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "malicious_network_threat_list_response": {
+                  "description": "Malicious network infrastructure threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Malicious Network Infrastructure Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "malicious_network_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/malicious_network_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "malicious_network_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "malicious_network_threat_list_response": {
+                  "$ref": "#/definitions/malicious_network_threat_list_response",
+                  "description": "Malicious network infrastructure threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Malicious Network Infrastructure Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "3c76534f-c9f3-4bff-b552-29d347b71d96": {
+            "nodeId": "3c76534f-c9f3-4bff-b552-29d347b71d96",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "a74fa7a7-814b-4193-a835-69f00e8b03e8",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "7e6f0211-8aab-4314-92c6-6f6037968cf6": {
+            "nodeId": "7e6f0211-8aab-4314-92c6-6f6037968cf6",
+            "name": "Send Malicious Network Infrastructure Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[2136fdb7-ec02-4f90-b312-4672408ddb3b].[malicious_network_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Malicious Network Infrastructure",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves network related IOCs which have been related with Malware Infrastructure by Google TI experts."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "a74fa7a7-814b-4193-a835-69f00e8b03e8",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

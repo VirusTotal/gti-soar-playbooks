@@ -1,0 +1,346 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:54:36.532021761Z",
+    "workflowVersions": [
+      {
+        "name": "Get CVE Sources using GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "1e74bd24-b9b3-40fe-adf6-0fa9139634f9": {
+              "id": "1e74bd24-b9b3-40fe-adf6-0fa9139634f9",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "c8981897-4f77-473f-9bae-ff9cf9c99949",
+              "toNodeId": "1735626b-cdc5-4ce9-8ef7-afe40a2c6fad"
+            },
+            "8e6e3373-6c2e-4a54-aad7-aa5ae71cef99": {
+              "id": "8e6e3373-6c2e-4a54-aad7-aa5ae71cef99",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "81bcdd88-4b1c-4d86-92bb-87e05137fd7b",
+              "toNodeId": "c8981897-4f77-473f-9bae-ff9cf9c99949"
+            },
+            "9aaee984-e80d-40d0-b203-5ed091bfa0c4": {
+              "id": "9aaee984-e80d-40d0-b203-5ed091bfa0c4",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "1735626b-cdc5-4ce9-8ef7-afe40a2c6fad",
+              "toNodeId": ""
+            },
+            "e2b39749-7f46-4956-9bd0-b38e1f5c8871": {
+              "id": "e2b39749-7f46-4956-9bd0-b38e1f5c8871",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "1735626b-cdc5-4ce9-8ef7-afe40a2c6fad",
+              "toNodeId": "7c8c18dd-ca39-4046-ad41-4324566cc37f"
+            },
+            "fe1cdd6b-15e6-46b9-a787-83d4307f8640": {
+              "id": "fe1cdd6b-15e6-46b9-a787-83d4307f8640",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "7c8c18dd-ca39-4046-ad41-4324566cc37f",
+              "toNodeId": ""
+            }
+          },
+          "nodes": {
+            "1735626b-cdc5-4ce9-8ef7-afe40a2c6fad": {
+              "id": "1735626b-cdc5-4ce9-8ef7-afe40a2c6fad",
+              "parentNodeId": ""
+            },
+            "7c8c18dd-ca39-4046-ad41-4324566cc37f": {
+              "id": "7c8c18dd-ca39-4046-ad41-4324566cc37f",
+              "parentNodeId": ""
+            },
+            "81bcdd88-4b1c-4d86-92bb-87e05137fd7b": {
+              "id": "81bcdd88-4b1c-4d86-92bb-87e05137fd7b",
+              "parentNodeId": ""
+            },
+            "c8981897-4f77-473f-9bae-ff9cf9c99949": {
+              "id": "c8981897-4f77-473f-9bae-ff9cf9c99949",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "1735626b-cdc5-4ce9-8ef7-afe40a2c6fad": {
+            "nodeId": "1735626b-cdc5-4ce9-8ef7-afe40a2c6fad",
+            "name": "CVE Sources Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "9aaee984-e80d-40d0-b203-5ed091bfa0c4",
+              "stepControlParams": [
+                {
+                  "edgeId": "e2b39749-7f46-4956-9bd0-b38e1f5c8871",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "c8981897-4f77-473f-9bae-ff9cf9c99949.cve_sources",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[c8981897-4f77-473f-9bae-ff9cf9c99949].[cve_sources]}}) > 0"
+                },
+                {
+                  "edgeId": "9aaee984-e80d-40d0-b203-5ed091bfa0c4",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "7c8c18dd-ca39-4046-ad41-4324566cc37f": {
+            "nodeId": "7c8c18dd-ca39-4046-ad41-4324566cc37f",
+            "name": "Send CVE Sources to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[c8981897-4f77-473f-9bae-ff9cf9c99949].[cve_sources]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "81bcdd88-4b1c-4d86-92bb-87e05137fd7b": {
+            "nodeId": "81bcdd88-4b1c-4d86-92bb-87e05137fd7b",
+            "name": "API Trigger",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "ea8a34e1-10d9-4ef5-a0bb-b9cfd41bf71a",
+            "defaultInputJSONSchema": {
+              "definitions": {},
+              "properties": {},
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {},
+              "properties": {},
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c8981897-4f77-473f-9bae-ff9cf9c99949": {
+            "nodeId": "c8981897-4f77-473f-9bae-ff9cf9c99949",
+            "name": "Get CVE Sources",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_cve_sources",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "vulnerability_id": "vulnerability--CVE-2025-5377"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "vulnerability_id": {
+                  "description": "A unique identifier of the vulnerability for which source information is to be retrieved. Example:\"vulnerability--cve-2022-30190\"",
+                  "order": 1,
+                  "title": "Vulnerability ID",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "vulnerability_id"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "cve_source": {
+                  "properties": {
+                    "cvss": {
+                      "description": "The cvss field provides vulnerability severity scores using different versions of the CVSS standard",
+                      "order": 9,
+                      "title": "CVSS",
+                      "type": "object"
+                    },
+                    "md5": {
+                      "description": "MD5 of url / pdf of the source of the information when it was collected",
+                      "order": 4,
+                      "title": "MD5",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Supplier's name",
+                      "order": 2,
+                      "title": "Name",
+                      "type": "string"
+                    },
+                    "published_date": {
+                      "description": "Datetime when the information was first published",
+                      "order": 7,
+                      "title": "Published Date",
+                      "type": "string"
+                    },
+                    "source_description": {
+                      "description": "The description of the url / pdf from where the information was collected",
+                      "order": 6,
+                      "title": "Source Description",
+                      "type": "string"
+                    },
+                    "title": {
+                      "description": "The title of the url / pdf from where the information was collected",
+                      "order": 5,
+                      "title": "Title",
+                      "type": "string"
+                    },
+                    "unique_id": {
+                      "description": "Unique identifier provided by the supplier",
+                      "order": 3,
+                      "title": "Unique ID",
+                      "type": "string"
+                    },
+                    "url": {
+                      "description": "the URL of the source of the information",
+                      "order": 8,
+                      "title": "URL",
+                      "type": "string"
+                    },
+                    "vulnerability_id": {
+                      "description": "Vulnerability ID",
+                      "order": 1,
+                      "title": "Vulnerability ID",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cve Source",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "cve_sources": {
+                  "description": "A list of source entries with metadata like name, title, URL, source description and publish date",
+                  "items": {
+                    "$ref": "#/definitions/cve_source"
+                  },
+                  "order": 1,
+                  "title": "CVE Sources",
+                  "type": "array"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "CVE Sources"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "A list of information suppliers that provide original context, metadata, and references related to a vulnerability."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "ea8a34e1-10d9-4ef5-a0bb-b9cfd41bf71a",
+        "name": "API Trigger",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {},
+          "properties": {},
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {},
+          "properties": {},
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api",
+        "options": {
+          "webhookEnabled": true
+        }
+      }
+    ]
+  }
+}

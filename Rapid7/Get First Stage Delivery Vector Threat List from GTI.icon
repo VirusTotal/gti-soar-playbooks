@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:54:59.204373122Z",
+    "workflowVersions": [
+      {
+        "name": "Get First Stage Delivery Vector Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "0d467f77-6192-4e46-a535-66b89748a565": {
+              "id": "0d467f77-6192-4e46-a535-66b89748a565",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "87994c6c-1f68-4904-a0e2-b88c35fa6ce1",
+              "toNodeId": "9513d2e7-472b-493f-a6a2-77970b1eef94"
+            },
+            "2a217343-602d-427a-a1c0-28a84f4d76ff": {
+              "id": "2a217343-602d-427a-a1c0-28a84f4d76ff",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "39c9d058-80ac-4679-ab09-1d6bd4d06ba4",
+              "toNodeId": ""
+            },
+            "635a2bd8-ef36-403c-80da-68e4a4e42931": {
+              "id": "635a2bd8-ef36-403c-80da-68e4a4e42931",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "57eb0cb3-f4db-4256-a710-fc9899cc4d8e",
+              "toNodeId": ""
+            },
+            "85f4d4f2-f3c7-41ce-8239-5c7c46b7632b": {
+              "id": "85f4d4f2-f3c7-41ce-8239-5c7c46b7632b",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "9513d2e7-472b-493f-a6a2-77970b1eef94",
+              "toNodeId": "39c9d058-80ac-4679-ab09-1d6bd4d06ba4"
+            },
+            "ec2d9902-5963-41ad-83b8-563c8b6141d1": {
+              "id": "ec2d9902-5963-41ad-83b8-563c8b6141d1",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "39c9d058-80ac-4679-ab09-1d6bd4d06ba4",
+              "toNodeId": "57eb0cb3-f4db-4256-a710-fc9899cc4d8e"
+            }
+          },
+          "nodes": {
+            "39c9d058-80ac-4679-ab09-1d6bd4d06ba4": {
+              "id": "39c9d058-80ac-4679-ab09-1d6bd4d06ba4",
+              "parentNodeId": ""
+            },
+            "57eb0cb3-f4db-4256-a710-fc9899cc4d8e": {
+              "id": "57eb0cb3-f4db-4256-a710-fc9899cc4d8e",
+              "parentNodeId": ""
+            },
+            "87994c6c-1f68-4904-a0e2-b88c35fa6ce1": {
+              "id": "87994c6c-1f68-4904-a0e2-b88c35fa6ce1",
+              "parentNodeId": ""
+            },
+            "9513d2e7-472b-493f-a6a2-77970b1eef94": {
+              "id": "9513d2e7-472b-493f-a6a2-77970b1eef94",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "39c9d058-80ac-4679-ab09-1d6bd4d06ba4": {
+            "nodeId": "39c9d058-80ac-4679-ab09-1d6bd4d06ba4",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "2a217343-602d-427a-a1c0-28a84f4d76ff",
+              "stepControlParams": [
+                {
+                  "edgeId": "ec2d9902-5963-41ad-83b8-563c8b6141d1",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "9513d2e7-472b-493f-a6a2-77970b1eef94.first_stage_delivery_vectors_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[9513d2e7-472b-493f-a6a2-77970b1eef94].[first_stage_delivery_vectors_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "2a217343-602d-427a-a1c0-28a84f4d76ff",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "57eb0cb3-f4db-4256-a710-fc9899cc4d8e": {
+            "nodeId": "57eb0cb3-f4db-4256-a710-fc9899cc4d8e",
+            "name": "Send First Stage Delivery Vector Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[9513d2e7-472b-493f-a6a2-77970b1eef94].[first_stage_delivery_vectors_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "87994c6c-1f68-4904-a0e2-b88c35fa6ce1": {
+            "nodeId": "87994c6c-1f68-4904-a0e2-b88c35fa6ce1",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "11124ec2-5edf-42db-b0c8-165d07f6d089",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "9513d2e7-472b-493f-a6a2-77970b1eef94": {
+            "nodeId": "9513d2e7-472b-493f-a6a2-77970b1eef94",
+            "name": "First Stage Delivery Vector Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "first_stage_delivery_vectors_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[87994c6c-1f68-4904-a0e2-b88c35fa6ce1].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "first_stage_delivery_vectors_threat_list_response": {
+                  "description": "First stage delivery vectors threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "First Stage Delivery Vectors Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "first_stage_delivery_vectors_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/first_stage_delivery_vectors_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "first_stage_delivery_vectors_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "first_stage_delivery_vectors_threat_list_response": {
+                  "$ref": "#/definitions/first_stage_delivery_vectors_threat_list_response",
+                  "description": "First stage delivery vectors threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "First Stage Delivery Vectors Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "First Stage Delivery Vector",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves emails attachments and files served by URLs, that have been identified as malware by Google Threat Intelligence security engine partners."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "11124ec2-5edf-42db-b0c8-165d07f6d089",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

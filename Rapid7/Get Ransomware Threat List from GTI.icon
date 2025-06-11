@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:53:58.119269527Z",
+    "workflowVersions": [
+      {
+        "name": "Get Ransomware Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "89015661-d85c-410e-b4e3-bd13faee575c": {
+              "id": "89015661-d85c-410e-b4e3-bd13faee575c",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "bbac7642-ccf2-41eb-a81d-86f993b19a12",
+              "toNodeId": "c4cbfd41-326f-4d91-b61e-5837493ee9f7"
+            },
+            "92dca1f6-eb72-4420-9dbf-8308bbda43d7": {
+              "id": "92dca1f6-eb72-4420-9dbf-8308bbda43d7",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "c34f21b9-4194-4b26-8229-d3b5d490817f",
+              "toNodeId": ""
+            },
+            "db8390f3-8df2-4769-86bd-470e67949c37": {
+              "id": "db8390f3-8df2-4769-86bd-470e67949c37",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "e9bd1baf-ad83-4d68-91f9-15837aa63ab8",
+              "toNodeId": "bbac7642-ccf2-41eb-a81d-86f993b19a12"
+            },
+            "ecea55f9-a459-49a1-982d-4337cd35a571": {
+              "id": "ecea55f9-a459-49a1-982d-4337cd35a571",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "c4cbfd41-326f-4d91-b61e-5837493ee9f7",
+              "toNodeId": ""
+            },
+            "f2c0a192-b0b9-417d-b7f6-aaa681a58c3b": {
+              "id": "f2c0a192-b0b9-417d-b7f6-aaa681a58c3b",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "c4cbfd41-326f-4d91-b61e-5837493ee9f7",
+              "toNodeId": "c34f21b9-4194-4b26-8229-d3b5d490817f"
+            }
+          },
+          "nodes": {
+            "bbac7642-ccf2-41eb-a81d-86f993b19a12": {
+              "id": "bbac7642-ccf2-41eb-a81d-86f993b19a12",
+              "parentNodeId": ""
+            },
+            "c34f21b9-4194-4b26-8229-d3b5d490817f": {
+              "id": "c34f21b9-4194-4b26-8229-d3b5d490817f",
+              "parentNodeId": ""
+            },
+            "c4cbfd41-326f-4d91-b61e-5837493ee9f7": {
+              "id": "c4cbfd41-326f-4d91-b61e-5837493ee9f7",
+              "parentNodeId": ""
+            },
+            "e9bd1baf-ad83-4d68-91f9-15837aa63ab8": {
+              "id": "e9bd1baf-ad83-4d68-91f9-15837aa63ab8",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "bbac7642-ccf2-41eb-a81d-86f993b19a12": {
+            "nodeId": "bbac7642-ccf2-41eb-a81d-86f993b19a12",
+            "name": "Ransomware Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "ransomware_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[e9bd1baf-ad83-4d68-91f9-15837aa63ab8].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "ransomware_threat_list_response": {
+                  "description": "Ransomware threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Ransomware Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "ransomware_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/ransomware_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "ransomware_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "ransomware_threat_list_response": {
+                  "$ref": "#/definitions/ransomware_threat_list_response",
+                  "description": "Ransomware threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Ransomware Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c34f21b9-4194-4b26-8229-d3b5d490817f": {
+            "nodeId": "c34f21b9-4194-4b26-8229-d3b5d490817f",
+            "name": "Send Ransomware Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[bbac7642-ccf2-41eb-a81d-86f993b19a12].[ransomware_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c4cbfd41-326f-4d91-b61e-5837493ee9f7": {
+            "nodeId": "c4cbfd41-326f-4d91-b61e-5837493ee9f7",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "ecea55f9-a459-49a1-982d-4337cd35a571",
+              "stepControlParams": [
+                {
+                  "edgeId": "f2c0a192-b0b9-417d-b7f6-aaa681a58c3b",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "bbac7642-ccf2-41eb-a81d-86f993b19a12.ransomware_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[bbac7642-ccf2-41eb-a81d-86f993b19a12].[ransomware_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "ecea55f9-a459-49a1-982d-4337cd35a571",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e9bd1baf-ad83-4d68-91f9-15837aa63ab8": {
+            "nodeId": "e9bd1baf-ad83-4d68-91f9-15837aa63ab8",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "5ea6b6a8-3dfd-4502-bf05-644f00f1dc8f",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Ransomware",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves IOCs categorized as ransomware by Google Threat Intelligence security engine partners or Google TI experts."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "5ea6b6a8-3dfd-4502-bf05-644f00f1dc8f",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

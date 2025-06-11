@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:10.445947196Z",
+    "workflowVersions": [
+      {
+        "name": "Get Daily Top Trending Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "29c00392-0fc5-4348-9e04-dbf2e76b8c5b": {
+              "id": "29c00392-0fc5-4348-9e04-dbf2e76b8c5b",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "5915c5cc-96ba-4588-906d-4379df0ad03c",
+              "toNodeId": "e5bfaef7-81c2-46fc-9a0f-1f8ec329ab06"
+            },
+            "a04432e6-6e01-4217-9352-65c401a98e4a": {
+              "id": "a04432e6-6e01-4217-9352-65c401a98e4a",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "c6fa2ba0-0203-471b-afde-cdcdcfc52b53",
+              "toNodeId": ""
+            },
+            "b6f10270-6ca4-41cd-b352-492310eeeddf": {
+              "id": "b6f10270-6ca4-41cd-b352-492310eeeddf",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "e5bfaef7-81c2-46fc-9a0f-1f8ec329ab06",
+              "toNodeId": ""
+            },
+            "c16cfbbe-009a-43ef-8dc4-7ca4dacb6bb3": {
+              "id": "c16cfbbe-009a-43ef-8dc4-7ca4dacb6bb3",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "e5bfaef7-81c2-46fc-9a0f-1f8ec329ab06",
+              "toNodeId": "c6fa2ba0-0203-471b-afde-cdcdcfc52b53"
+            },
+            "d0139140-129f-474d-80ce-01ce6435a4a4": {
+              "id": "d0139140-129f-474d-80ce-01ce6435a4a4",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "53ce6415-9e4e-4855-b784-3fa681356361",
+              "toNodeId": "5915c5cc-96ba-4588-906d-4379df0ad03c"
+            }
+          },
+          "nodes": {
+            "53ce6415-9e4e-4855-b784-3fa681356361": {
+              "id": "53ce6415-9e4e-4855-b784-3fa681356361",
+              "parentNodeId": ""
+            },
+            "5915c5cc-96ba-4588-906d-4379df0ad03c": {
+              "id": "5915c5cc-96ba-4588-906d-4379df0ad03c",
+              "parentNodeId": ""
+            },
+            "c6fa2ba0-0203-471b-afde-cdcdcfc52b53": {
+              "id": "c6fa2ba0-0203-471b-afde-cdcdcfc52b53",
+              "parentNodeId": ""
+            },
+            "e5bfaef7-81c2-46fc-9a0f-1f8ec329ab06": {
+              "id": "e5bfaef7-81c2-46fc-9a0f-1f8ec329ab06",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "53ce6415-9e4e-4855-b784-3fa681356361": {
+            "nodeId": "53ce6415-9e4e-4855-b784-3fa681356361",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "123690aa-0601-46d7-a092-a69bdbee9359",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "5915c5cc-96ba-4588-906d-4379df0ad03c": {
+            "nodeId": "5915c5cc-96ba-4588-906d-4379df0ad03c",
+            "name": "Daily Top Trending Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "daily_top_trending_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[53ce6415-9e4e-4855-b784-3fa681356361].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "daily_top_trending_threat_list_response": {
+                  "description": "Daily top trending threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Daily Top Trending Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "daily_top_trending_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/daily_top_trending_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "daily_top_trending_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "daily_top_trending_threat_list_response": {
+                  "$ref": "#/definitions/daily_top_trending_threat_list_response",
+                  "description": "Daily top trending threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Daily Top Trending Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c6fa2ba0-0203-471b-afde-cdcdcfc52b53": {
+            "nodeId": "c6fa2ba0-0203-471b-afde-cdcdcfc52b53",
+            "name": "Send Daily Top Trending Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[5915c5cc-96ba-4588-906d-4379df0ad03c].[daily_top_trending_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e5bfaef7-81c2-46fc-9a0f-1f8ec329ab06": {
+            "nodeId": "e5bfaef7-81c2-46fc-9a0f-1f8ec329ab06",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "b6f10270-6ca4-41cd-b352-492310eeeddf",
+              "stepControlParams": [
+                {
+                  "edgeId": "c16cfbbe-009a-43ef-8dc4-7ca4dacb6bb3",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "5915c5cc-96ba-4588-906d-4379df0ad03c.daily_top_trending_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[5915c5cc-96ba-4588-906d-4379df0ad03c].[daily_top_trending_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "b6f10270-6ca4-41cd-b352-492310eeeddf",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Daily Top Trending",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves Top Trending IOCs based on daily lookups and relevance from Google Threat Intelligence."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "123690aa-0601-46d7-a092-a69bdbee9359",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}
