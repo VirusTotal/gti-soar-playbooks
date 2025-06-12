@@ -42,9 +42,9 @@ In Rapid7 InsightConnect, as a user, you can leverage workflows to automate task
 
 20. **Delete IOC Comment on GTI** – If the user wishes to delete any comment that they have previously added for any IP Address, Domain, URL, or File Hash, on Google Threat Intelligence platform, then they can delete it with the help of this workflow.
 
-21. **Legacy Detection Rule Based Get Vulnerability Associations Analysis using GTI** – This workflow is using Legacy Detection rule as the trigger, meaning it will be executed automatically whenever any suspicious activity is detected by the InsightIDR detection rule engine and related vulnerabilities will be retrieved for all the detected IOCs.
+21. **Legacy Detection Rule Based Vulnerability Associations Analysis using GTI** – This workflow is using Legacy Detection rule as the trigger, meaning it will be executed automatically whenever any suspicious activity is detected by the InsightIDR detection rule engine and related vulnerabilities will be retrieved for all the detected IOCs.
 
-22. **IDR Alert Based Get Vulnerability Associations Analysis using GTI** – With the help of IDR Alert as the trigger, this workflow will be executed automatically whenever any suspicious activity is detected by the user-defined detection rule and related vulnerabilities will be retrieved for all the detected IOCs.
+22. **IDR Alert Based Vulnerability Associations Analysis using GTI** – With the help of IDR Alert as the trigger, this workflow will be executed automatically whenever any suspicious activity is detected by the user-defined detection rule and related vulnerabilities will be retrieved for all the detected IOCs.
 
 23. **Legacy Detection Rule Based File Sandbox Analysis using GTI** – This workflow is using Legacy Detection rule as the trigger, meaning it will be executed automatically whenever any suspicious activity is detected by the InsightIDR detection rule engine and File Hash Sandbox report will be retrieved for all the detected file hashes.
 
@@ -72,12 +72,12 @@ In Rapid7 InsightConnect, as a user, you can leverage workflows to automate task
 
 1. **Automatic Workflows**:  
    1. IDR Alert based Workflows: These are automatic workflows triggered on the basis of configured **Basic Detection Rule** also known as **IDR Alert**. Users need to create basic detection rule based on which these workflows will get executed.  
-      1. IDR Alert Based Get Vulnerability Associations Analysis using GTI  
+      1. IDR Alert Based Vulnerability Associations Analysis using GTI  
       2. IDR Alert Based File Sandbox Analysis using GTI  
       3. IDR Alert Based Passive DNS Data Analysis using GTI  
       4. IDR Alert Based IOC Enrichment and Threat Contextualization using GTI  
    2. Legacy Rule based Workflow: These are automatic workflows triggered on the basis of **Legacy Detection Rules**.  
-      1. Legacy Detection Rule Based Get Vulnerability Associations Analysis using GTI  
+      1. Legacy Detection Rule Based Vulnerability Associations Analysis using GTI  
       2. Legacy Detection Rule Based File Sandbox Analysis using GTI  
       3. Legacy Detection Rule Based Passive DNS Data Analysis using GTI  
       4. Legacy Detection Rule Based IOC Enrichment and Threat Contextualization using GTI  
