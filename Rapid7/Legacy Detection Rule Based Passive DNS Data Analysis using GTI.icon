@@ -1,0 +1,1776 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:52.724789778Z",
+    "workflowVersions": [
+      {
+        "name": "Legacy Detection Rule Based Passive DNS Data Analysis using GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "19043b8e-a9da-45cc-bb98-b7ac1a0466c4": {
+              "id": "19043b8e-a9da-45cc-bb98-b7ac1a0466c4",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+              "toNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1"
+            },
+            "27179554-40f4-433b-8bc2-92dcb26aac00": {
+              "id": "27179554-40f4-433b-8bc2-92dcb26aac00",
+              "name": "",
+              "description": "",
+              "parentNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+              "fromNodeId": "f490db25-0f09-4285-bfb1-a13e4f4a61f3",
+              "toNodeId": "ada7e9be-4c32-4537-8119-0c2ac279dd4e"
+            },
+            "275b5f30-2b60-42b9-a67b-692a4dfb2aca": {
+              "id": "275b5f30-2b60-42b9-a67b-692a4dfb2aca",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+              "fromNodeId": "3984c92a-52ae-4e74-a762-b8c56a4fa725",
+              "toNodeId": "53da1922-7aa1-4cc2-8bc9-47c19d271832"
+            },
+            "2969d172-08fc-47e0-962b-61c14ea91255": {
+              "id": "2969d172-08fc-47e0-962b-61c14ea91255",
+              "name": "",
+              "description": "",
+              "parentNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+              "fromNodeId": "73a15cd8-f996-41f3-8192-fae71eeb3fc2",
+              "toNodeId": ""
+            },
+            "3a715c86-0795-4bb8-b861-1ab487964928": {
+              "id": "3a715c86-0795-4bb8-b861-1ab487964928",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+              "fromNodeId": "53da1922-7aa1-4cc2-8bc9-47c19d271832",
+              "toNodeId": ""
+            },
+            "58413e3f-3797-4722-9ac2-fedbd46936d4": {
+              "id": "58413e3f-3797-4722-9ac2-fedbd46936d4",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+              "fromNodeId": "3984c92a-52ae-4e74-a762-b8c56a4fa725",
+              "toNodeId": ""
+            },
+            "7a4ba865-8300-4189-af7a-eb1e156996df": {
+              "id": "7a4ba865-8300-4189-af7a-eb1e156996df",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+              "toNodeId": ""
+            },
+            "7e0e1a2f-aea4-47d7-894f-d8c3fe77818e": {
+              "id": "7e0e1a2f-aea4-47d7-894f-d8c3fe77818e",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "348c0037-9a4a-409d-b5ee-3d83499df649",
+              "toNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe"
+            },
+            "a240422d-da28-43c7-bee4-3a1415a1aafc": {
+              "id": "a240422d-da28-43c7-bee4-3a1415a1aafc",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+              "fromNodeId": "e6003a1d-327c-430e-809f-f0dc506aaf91",
+              "toNodeId": "3984c92a-52ae-4e74-a762-b8c56a4fa725"
+            },
+            "b3ad5f5e-b67b-4bfe-8c6d-471d0d0a30c9": {
+              "id": "b3ad5f5e-b67b-4bfe-8c6d-471d0d0a30c9",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+              "fromNodeId": "ada7e9be-4c32-4537-8119-0c2ac279dd4e",
+              "toNodeId": "73a15cd8-f996-41f3-8192-fae71eeb3fc2"
+            },
+            "b3f378d8-e0d8-4e34-b5bf-dc0aa0a2be62": {
+              "id": "b3f378d8-e0d8-4e34-b5bf-dc0aa0a2be62",
+              "name": "",
+              "description": "",
+              "parentNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+              "fromNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+              "toNodeId": "e6003a1d-327c-430e-809f-f0dc506aaf91"
+            },
+            "b6239483-a0c6-4f9c-89f7-a0b4f7f6fbb8": {
+              "id": "b6239483-a0c6-4f9c-89f7-a0b4f7f6fbb8",
+              "name": "",
+              "description": "",
+              "parentNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+              "fromNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+              "toNodeId": "f490db25-0f09-4285-bfb1-a13e4f4a61f3"
+            },
+            "e60ccf8f-df0f-4bb1-a74f-aea31a011a9f": {
+              "id": "e60ccf8f-df0f-4bb1-a74f-aea31a011a9f",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+              "fromNodeId": "ada7e9be-4c32-4537-8119-0c2ac279dd4e",
+              "toNodeId": ""
+            }
+          },
+          "nodes": {
+            "348c0037-9a4a-409d-b5ee-3d83499df649": {
+              "id": "348c0037-9a4a-409d-b5ee-3d83499df649",
+              "parentNodeId": ""
+            },
+            "3984c92a-52ae-4e74-a762-b8c56a4fa725": {
+              "id": "3984c92a-52ae-4e74-a762-b8c56a4fa725",
+              "parentNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe"
+            },
+            "4215067c-744f-43a8-bf8b-6b4f3df56afe": {
+              "id": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+              "parentNodeId": ""
+            },
+            "53da1922-7aa1-4cc2-8bc9-47c19d271832": {
+              "id": "53da1922-7aa1-4cc2-8bc9-47c19d271832",
+              "parentNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe"
+            },
+            "73a15cd8-f996-41f3-8192-fae71eeb3fc2": {
+              "id": "73a15cd8-f996-41f3-8192-fae71eeb3fc2",
+              "parentNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1"
+            },
+            "a8185c77-3e08-4cae-867f-d2cbfad563a1": {
+              "id": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+              "parentNodeId": ""
+            },
+            "ada7e9be-4c32-4537-8119-0c2ac279dd4e": {
+              "id": "ada7e9be-4c32-4537-8119-0c2ac279dd4e",
+              "parentNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1"
+            },
+            "e6003a1d-327c-430e-809f-f0dc506aaf91": {
+              "id": "e6003a1d-327c-430e-809f-f0dc506aaf91",
+              "parentNodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe"
+            },
+            "f490db25-0f09-4285-bfb1-a13e4f4a61f3": {
+              "id": "f490db25-0f09-4285-bfb1-a13e4f4a61f3",
+              "parentNodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1"
+            }
+          }
+        },
+        "steps": {
+          "348c0037-9a4a-409d-b5ee-3d83499df649": {
+            "nodeId": "348c0037-9a4a-409d-b5ee-3d83499df649",
+            "name": "Legacy Detection Rule",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "46cb530a-9676-42f5-8eb9-8adc17d51288",
+            "defaultInputJSONSchema": {
+              "definitions": {
+                "actor": {
+                  "properties": {
+                    "assets": {
+                      "description": "The assets that are part of the investigation",
+                      "items": {
+                        "$ref": "#/definitions/asset"
+                      },
+                      "order": 2,
+                      "title": "Assets",
+                      "type": "array"
+                    },
+                    "users": {
+                      "description": "The users that are part of the investigation",
+                      "items": {
+                        "$ref": "#/definitions/user"
+                      },
+                      "order": 1,
+                      "title": "Users",
+                      "type": "array"
+                    }
+                  },
+                  "title": "Actor",
+                  "type": "object"
+                },
+                "asset": {
+                  "properties": {
+                    "assetId": {
+                      "description": "the ID of the asset",
+                      "order": 1,
+                      "title": "AssetId",
+                      "type": "string"
+                    },
+                    "fqdn": {
+                      "description": "The fully qualified domain name",
+                      "order": 3,
+                      "title": "Fqdn",
+                      "type": "string"
+                    },
+                    "shortname": {
+                      "description": "shortname of the asset",
+                      "order": 2,
+                      "title": "Shortname",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "shortname",
+                    "assetId"
+                  ],
+                  "title": "Asset",
+                  "type": "object"
+                },
+                "content": {
+                  "properties": {
+                    "domains": {
+                      "description": "A list of domains to check",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 2,
+                      "title": "Domains",
+                      "type": "array"
+                    },
+                    "ipAddresses": {
+                      "description": "A list of ip addresses to check",
+                      "items": {
+                        "$ref": "#/definitions/ipAddress"
+                      },
+                      "order": 3,
+                      "title": "IpAddresses",
+                      "type": "array"
+                    },
+                    "processes": {
+                      "description": "A list of processes to check",
+                      "items": {
+                        "$ref": "#/definitions/process"
+                      },
+                      "order": 4,
+                      "title": "Processes",
+                      "type": "array"
+                    },
+                    "urls": {
+                      "description": "A list of URLs to check",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 1,
+                      "title": "Urls",
+                      "type": "array"
+                    }
+                  },
+                  "title": "Content",
+                  "type": "object"
+                },
+                "hash": {
+                  "properties": {
+                    "hash": {
+                      "description": "The actual hash",
+                      "order": 1,
+                      "title": "Hash",
+                      "type": "string"
+                    },
+                    "type": {
+                      "description": "The algorithm used to generate the hash",
+                      "order": 2,
+                      "title": "Type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "hash",
+                    "type"
+                  ],
+                  "title": "Hash",
+                  "type": "object"
+                },
+                "ipAddress": {
+                  "properties": {
+                    "ip": {
+                      "description": "The raw IP",
+                      "order": 1,
+                      "title": "Ip",
+                      "type": "string"
+                    },
+                    "type": {
+                      "description": "Denotes if an IP is internal or external",
+                      "order": 2,
+                      "title": "Type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ip",
+                    "type"
+                  ],
+                  "title": "IPAddress",
+                  "type": "object"
+                },
+                "process": {
+                  "properties": {
+                    "assetId": {
+                      "description": "The asset id associated with the process",
+                      "order": 1,
+                      "title": "AssetId",
+                      "type": "string"
+                    },
+                    "cmdLine": {
+                      "description": "The raw value of the command line call used to invoke the process",
+                      "order": 5,
+                      "title": "CmdLine",
+                      "type": "string"
+                    },
+                    "hashes": {
+                      "description": "The list of hashes to check",
+                      "items": {
+                        "$ref": "#/definitions/hash"
+                      },
+                      "order": 3,
+                      "title": "Hashes",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "The name of the process",
+                      "order": 4,
+                      "title": "Name",
+                      "type": "string"
+                    },
+                    "processId": {
+                      "description": "The PID from the running process on the asset",
+                      "order": 2,
+                      "title": "ProcessId",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "assetId",
+                    "processId"
+                  ],
+                  "title": "Process",
+                  "type": "object"
+                },
+                "user": {
+                  "properties": {
+                    "distinguishedName": {
+                      "description": "The Active Directory distinguished name of the user",
+                      "order": 2,
+                      "title": "DistinguishedName",
+                      "type": "string"
+                    },
+                    "emails": {
+                      "description": "The email addresses associated with the user",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 3,
+                      "title": "Emails",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "The name of the user, as '<firstname> <lastname>' if available, or account name otherwise",
+                      "order": 1,
+                      "title": "Name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "emails"
+                  ],
+                  "title": "User",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "actors": {
+                  "$ref": "#/definitions/actor",
+                  "description": "The insightIDR actors that are part of the investigation",
+                  "order": 7,
+                  "title": "Actors"
+                },
+                "contents": {
+                  "$ref": "#/definitions/content",
+                  "description": "The contents to enrich",
+                  "order": 8,
+                  "title": "Contents"
+                },
+                "description": {
+                  "description": "The description of the alert",
+                  "order": 4,
+                  "title": "Description",
+                  "type": "string"
+                },
+                "investigationId": {
+                  "description": "The investigation id",
+                  "order": 6,
+                  "title": "InvestigationId",
+                  "type": "string"
+                },
+                "link": {
+                  "description": "The deep link to the investigation in insightIDR",
+                  "order": 5,
+                  "title": "Link",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "The human-readable name of the alert",
+                  "order": 3,
+                  "title": "Name",
+                  "type": "string"
+                },
+                "timestamp": {
+                  "description": "The time the alert was triggered in ISO 8601 extended timestamp format",
+                  "order": 1,
+                  "title": "Timestamp",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The type of alert",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "investigationId",
+                "actors",
+                "timestamp",
+                "type",
+                "name",
+                "description",
+                "link"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "actor": {
+                  "properties": {
+                    "assets": {
+                      "description": "The assets that are part of the investigation",
+                      "items": {
+                        "$ref": "#/definitions/asset"
+                      },
+                      "order": 2,
+                      "title": "Assets",
+                      "type": "array"
+                    },
+                    "users": {
+                      "description": "The users that are part of the investigation",
+                      "items": {
+                        "$ref": "#/definitions/user"
+                      },
+                      "order": 1,
+                      "title": "Users",
+                      "type": "array"
+                    }
+                  },
+                  "title": "Actor",
+                  "type": "object"
+                },
+                "asset": {
+                  "properties": {
+                    "assetId": {
+                      "description": "the ID of the asset",
+                      "order": 1,
+                      "title": "AssetId",
+                      "type": "string"
+                    },
+                    "fqdn": {
+                      "description": "The fully qualified domain name",
+                      "order": 3,
+                      "title": "Fqdn",
+                      "type": "string"
+                    },
+                    "shortname": {
+                      "description": "shortname of the asset",
+                      "order": 2,
+                      "title": "Shortname",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "shortname",
+                    "assetId"
+                  ],
+                  "title": "Asset",
+                  "type": "object"
+                },
+                "content": {
+                  "properties": {
+                    "domains": {
+                      "description": "A list of domains to check",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 2,
+                      "title": "Domains",
+                      "type": "array"
+                    },
+                    "ipAddresses": {
+                      "description": "A list of ip addresses to check",
+                      "items": {
+                        "$ref": "#/definitions/ipAddress"
+                      },
+                      "order": 3,
+                      "title": "IpAddresses",
+                      "type": "array"
+                    },
+                    "processes": {
+                      "description": "A list of processes to check",
+                      "items": {
+                        "$ref": "#/definitions/process"
+                      },
+                      "order": 4,
+                      "title": "Processes",
+                      "type": "array"
+                    },
+                    "urls": {
+                      "description": "A list of URLs to check",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 1,
+                      "title": "Urls",
+                      "type": "array"
+                    }
+                  },
+                  "title": "Content",
+                  "type": "object"
+                },
+                "hash": {
+                  "properties": {
+                    "hash": {
+                      "description": "The actual hash",
+                      "order": 1,
+                      "title": "Hash",
+                      "type": "string"
+                    },
+                    "type": {
+                      "description": "The algorithm used to generate the hash",
+                      "order": 2,
+                      "title": "Type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "hash",
+                    "type"
+                  ],
+                  "title": "Hash",
+                  "type": "object"
+                },
+                "ipAddress": {
+                  "properties": {
+                    "ip": {
+                      "description": "The raw IP",
+                      "order": 1,
+                      "title": "Ip",
+                      "type": "string"
+                    },
+                    "type": {
+                      "description": "Denotes if an IP is internal or external",
+                      "order": 2,
+                      "title": "Type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "ip",
+                    "type"
+                  ],
+                  "title": "IPAddress",
+                  "type": "object"
+                },
+                "process": {
+                  "properties": {
+                    "assetId": {
+                      "description": "The asset id associated with the process",
+                      "order": 1,
+                      "title": "AssetId",
+                      "type": "string"
+                    },
+                    "cmdLine": {
+                      "description": "The raw value of the command line call used to invoke the process",
+                      "order": 5,
+                      "title": "CmdLine",
+                      "type": "string"
+                    },
+                    "hashes": {
+                      "description": "The list of hashes to check",
+                      "items": {
+                        "$ref": "#/definitions/hash"
+                      },
+                      "order": 3,
+                      "title": "Hashes",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "The name of the process",
+                      "order": 4,
+                      "title": "Name",
+                      "type": "string"
+                    },
+                    "processId": {
+                      "description": "The PID from the running process on the asset",
+                      "order": 2,
+                      "title": "ProcessId",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "assetId",
+                    "processId"
+                  ],
+                  "title": "Process",
+                  "type": "object"
+                },
+                "user": {
+                  "properties": {
+                    "distinguishedName": {
+                      "description": "The Active Directory distinguished name of the user",
+                      "order": 2,
+                      "title": "DistinguishedName",
+                      "type": "string"
+                    },
+                    "emails": {
+                      "description": "The email addresses associated with the user",
+                      "items": {
+                        "type": "string"
+                      },
+                      "order": 3,
+                      "title": "Emails",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "The name of the user, as '<firstname> <lastname>' if available, or account name otherwise",
+                      "order": 1,
+                      "title": "Name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "emails"
+                  ],
+                  "title": "User",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "actors": {
+                  "$ref": "#/definitions/actor",
+                  "description": "The insightIDR actors that are part of the investigation",
+                  "order": 7,
+                  "title": "Actors"
+                },
+                "contents": {
+                  "$ref": "#/definitions/content",
+                  "description": "The contents to enrich",
+                  "order": 8,
+                  "title": "Contents"
+                },
+                "description": {
+                  "description": "The description of the alert",
+                  "order": 4,
+                  "title": "Description",
+                  "type": "string"
+                },
+                "investigationId": {
+                  "description": "The investigation id",
+                  "order": 6,
+                  "title": "InvestigationId",
+                  "type": "string"
+                },
+                "link": {
+                  "description": "The deep link to the investigation in insightIDR",
+                  "order": 5,
+                  "title": "Link",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "The human-readable name of the alert",
+                  "order": 3,
+                  "title": "Name",
+                  "type": "string"
+                },
+                "timestamp": {
+                  "description": "The time the alert was triggered in ISO 8601 extended timestamp format",
+                  "order": 1,
+                  "title": "Timestamp",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The type of alert",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "investigationId",
+                "actors",
+                "timestamp",
+                "type",
+                "name",
+                "description",
+                "link"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api-idr.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "3984c92a-52ae-4e74-a762-b8c56a4fa725": {
+            "nodeId": "3984c92a-52ae-4e74-a762-b8c56a4fa725",
+            "name": "IP Address Passive DNS Data Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "58413e3f-3797-4722-9ac2-fedbd46936d4",
+              "stepControlParams": [
+                {
+                  "edgeId": "275b5f30-2b60-42b9-a67b-692a4dfb2aca",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "e6003a1d-327c-430e-809f-f0dc506aaf91.passive_dns_data",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[e6003a1d-327c-430e-809f-f0dc506aaf91].[passive_dns_data]}}) > 0"
+                },
+                {
+                  "edgeId": "58413e3f-3797-4722-9ac2-fedbd46936d4",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "4215067c-744f-43a8-bf8b-6b4f3df56afe": {
+            "nodeId": "4215067c-744f-43a8-bf8b-6b4f3df56afe",
+            "name": "IP Addresses Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "b3f378d8-e0d8-4e34-b5bf-dc0aa0a2be62",
+              "nextEdgeId": "19043b8e-a9da-45cc-bb98-b7ac1a0466c4",
+              "repeatVariable": "{{[348c0037-9a4a-409d-b5ee-3d83499df649].[contents].[ipAddresses]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "53da1922-7aa1-4cc2-8bc9-47c19d271832": {
+            "nodeId": "53da1922-7aa1-4cc2-8bc9-47c19d271832",
+            "name": "Send IP Address Passive DNS Data to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[e6003a1d-327c-430e-809f-f0dc506aaf91].[passive_dns_data]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "73a15cd8-f996-41f3-8192-fae71eeb3fc2": {
+            "nodeId": "73a15cd8-f996-41f3-8192-fae71eeb3fc2",
+            "name": "Send Domain Passive DNS Data to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[f490db25-0f09-4285-bfb1-a13e4f4a61f3].[passive_dns_data]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "a8185c77-3e08-4cae-867f-d2cbfad563a1": {
+            "nodeId": "a8185c77-3e08-4cae-867f-d2cbfad563a1",
+            "name": "Domains Loop ",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "b6239483-a0c6-4f9c-89f7-a0b4f7f6fbb8",
+              "nextEdgeId": "7a4ba865-8300-4189-af7a-eb1e156996df",
+              "repeatVariable": "{{[348c0037-9a4a-409d-b5ee-3d83499df649].[contents].[domains]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ada7e9be-4c32-4537-8119-0c2ac279dd4e": {
+            "nodeId": "ada7e9be-4c32-4537-8119-0c2ac279dd4e",
+            "name": "Domain Passive DNS Data Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "e60ccf8f-df0f-4bb1-a74f-aea31a011a9f",
+              "stepControlParams": [
+                {
+                  "edgeId": "b3ad5f5e-b67b-4bfe-8c6d-471d0d0a30c9",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "f490db25-0f09-4285-bfb1-a13e4f4a61f3.passive_dns_data",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[f490db25-0f09-4285-bfb1-a13e4f4a61f3].[passive_dns_data]}}) > 0"
+                },
+                {
+                  "edgeId": "e60ccf8f-df0f-4bb1-a74f-aea31a011a9f",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e6003a1d-327c-430e-809f-f0dc506aaf91": {
+            "nodeId": "e6003a1d-327c-430e-809f-f0dc506aaf91",
+            "name": "Get IP Address Passive DNS Data ",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_passive_dns_data",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "ioc_type": "IP Address",
+                "ioc_value": "{{[4215067c-744f-43a8-bf8b-6b4f3df56afe].[$item].[ip]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "ioc_type": {
+                  "description": "Select the type of IOC to retrieve passive DNS data for. Only \"IP Address\" and \"Domain\" are supported",
+                  "enum": [
+                    "IP Address",
+                    "Domain"
+                  ],
+                  "order": 1,
+                  "title": "IOC Type",
+                  "type": "string"
+                },
+                "ioc_value": {
+                  "description": "Provide the value of the IP address or domain to query for passive DNS data",
+                  "order": 2,
+                  "title": "IOC Value",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ioc_type",
+                "ioc_value"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "passive_dns_data": {
+                  "properties": {
+                    "date": {
+                      "description": "Date when the resolution was made",
+                      "order": 3,
+                      "title": "Date",
+                      "type": "string"
+                    },
+                    "host_name": {
+                      "description": "Domain or subdomain requested to the resolver",
+                      "order": 6,
+                      "title": "Host Name",
+                      "type": "string"
+                    },
+                    "host_name_last_analysis_stats": {
+                      "description": "Last detection stats from the resolution's domain. Similar to the domains's last_analysis_stats attribute",
+                      "order": 5,
+                      "title": "Host Name Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "id": {
+                      "description": "Resolutions id",
+                      "order": 1,
+                      "title": "ID",
+                      "type": "string"
+                    },
+                    "ip_address": {
+                      "description": "IP address the domain was resolved to",
+                      "order": 2,
+                      "title": "IP Address",
+                      "type": "string"
+                    },
+                    "ip_address_last_analysis_stats": {
+                      "description": "Last detection stats from the resolution's IP address. Similar to the IP address' last_analysis_stats attribute",
+                      "order": 4,
+                      "title": "Ip Address Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "resolver": {
+                      "description": "Source of the resolution",
+                      "order": 7,
+                      "title": "Resolver",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Passive Dns Data",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "passive_dns_data": {
+                  "description": "Contains passive DNS resolution details, including domain lookups, associated metadata, and analysis stats from Google Threat Intelligence",
+                  "items": {
+                    "$ref": "#/definitions/passive_dns_data"
+                  },
+                  "order": 1,
+                  "title": "Passive DNS Data",
+                  "type": "array"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "f490db25-0f09-4285-bfb1-a13e4f4a61f3": {
+            "nodeId": "f490db25-0f09-4285-bfb1-a13e4f4a61f3",
+            "name": "Get Domain Passive DNS Data ",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_passive_dns_data",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "ioc_type": "Domain",
+                "ioc_value": "{{[a8185c77-3e08-4cae-867f-d2cbfad563a1].[$item]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "ioc_type": {
+                  "description": "Select the type of IOC to retrieve passive DNS data for. Only \"IP Address\" and \"Domain\" are supported",
+                  "enum": [
+                    "IP Address",
+                    "Domain"
+                  ],
+                  "order": 1,
+                  "title": "IOC Type",
+                  "type": "string"
+                },
+                "ioc_value": {
+                  "description": "Provide the value of the IP address or domain to query for passive DNS data",
+                  "order": 2,
+                  "title": "IOC Value",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ioc_type",
+                "ioc_value"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "passive_dns_data": {
+                  "properties": {
+                    "date": {
+                      "description": "Date when the resolution was made",
+                      "order": 3,
+                      "title": "Date",
+                      "type": "string"
+                    },
+                    "host_name": {
+                      "description": "Domain or subdomain requested to the resolver",
+                      "order": 6,
+                      "title": "Host Name",
+                      "type": "string"
+                    },
+                    "host_name_last_analysis_stats": {
+                      "description": "Last detection stats from the resolution's domain. Similar to the domains's last_analysis_stats attribute",
+                      "order": 5,
+                      "title": "Host Name Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "id": {
+                      "description": "Resolutions id",
+                      "order": 1,
+                      "title": "ID",
+                      "type": "string"
+                    },
+                    "ip_address": {
+                      "description": "IP address the domain was resolved to",
+                      "order": 2,
+                      "title": "IP Address",
+                      "type": "string"
+                    },
+                    "ip_address_last_analysis_stats": {
+                      "description": "Last detection stats from the resolution's IP address. Similar to the IP address' last_analysis_stats attribute",
+                      "order": 4,
+                      "title": "Ip Address Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "resolver": {
+                      "description": "Source of the resolution",
+                      "order": 7,
+                      "title": "Resolver",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Passive Dns Data",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "passive_dns_data": {
+                  "description": "Contains passive DNS resolution details, including domain lookups, associated metadata, and analysis stats from Google Threat Intelligence",
+                  "items": {
+                    "$ref": "#/definitions/passive_dns_data"
+                  },
+                  "order": 1,
+                  "title": "Passive DNS Data",
+                  "type": "array"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Legacy Detection Rule",
+          "Passive DNS Data"
+        ],
+        "humanCostSeconds": 2700,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Retrieves passive DNS data for a specific IP address or domain from Google Threat Intelligence, providing historical DNS resolution information."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "46cb530a-9676-42f5-8eb9-8adc17d51288",
+        "name": "Legacy Detection Rule",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {
+            "actor": {
+              "properties": {
+                "assets": {
+                  "description": "The assets that are part of the investigation",
+                  "items": {
+                    "$ref": "#/definitions/asset"
+                  },
+                  "order": 2,
+                  "title": "Assets",
+                  "type": "array"
+                },
+                "users": {
+                  "description": "The users that are part of the investigation",
+                  "items": {
+                    "$ref": "#/definitions/user"
+                  },
+                  "order": 1,
+                  "title": "Users",
+                  "type": "array"
+                }
+              },
+              "title": "Actor",
+              "type": "object"
+            },
+            "asset": {
+              "properties": {
+                "assetId": {
+                  "description": "the ID of the asset",
+                  "order": 1,
+                  "title": "AssetId",
+                  "type": "string"
+                },
+                "fqdn": {
+                  "description": "The fully qualified domain name",
+                  "order": 3,
+                  "title": "Fqdn",
+                  "type": "string"
+                },
+                "shortname": {
+                  "description": "shortname of the asset",
+                  "order": 2,
+                  "title": "Shortname",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shortname",
+                "assetId"
+              ],
+              "title": "Asset",
+              "type": "object"
+            },
+            "content": {
+              "properties": {
+                "domains": {
+                  "description": "A list of domains to check",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 2,
+                  "title": "Domains",
+                  "type": "array"
+                },
+                "ipAddresses": {
+                  "description": "A list of ip addresses to check",
+                  "items": {
+                    "$ref": "#/definitions/ipAddress"
+                  },
+                  "order": 3,
+                  "title": "IpAddresses",
+                  "type": "array"
+                },
+                "processes": {
+                  "description": "A list of processes to check",
+                  "items": {
+                    "$ref": "#/definitions/process"
+                  },
+                  "order": 4,
+                  "title": "Processes",
+                  "type": "array"
+                },
+                "urls": {
+                  "description": "A list of URLs to check",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 1,
+                  "title": "Urls",
+                  "type": "array"
+                }
+              },
+              "title": "Content",
+              "type": "object"
+            },
+            "hash": {
+              "properties": {
+                "hash": {
+                  "description": "The actual hash",
+                  "order": 1,
+                  "title": "Hash",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The algorithm used to generate the hash",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "hash",
+                "type"
+              ],
+              "title": "Hash",
+              "type": "object"
+            },
+            "ipAddress": {
+              "properties": {
+                "ip": {
+                  "description": "The raw IP",
+                  "order": 1,
+                  "title": "Ip",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "Denotes if an IP is internal or external",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ip",
+                "type"
+              ],
+              "title": "IPAddress",
+              "type": "object"
+            },
+            "process": {
+              "properties": {
+                "assetId": {
+                  "description": "The asset id associated with the process",
+                  "order": 1,
+                  "title": "AssetId",
+                  "type": "string"
+                },
+                "cmdLine": {
+                  "description": "The raw value of the command line call used to invoke the process",
+                  "order": 5,
+                  "title": "CmdLine",
+                  "type": "string"
+                },
+                "hashes": {
+                  "description": "The list of hashes to check",
+                  "items": {
+                    "$ref": "#/definitions/hash"
+                  },
+                  "order": 3,
+                  "title": "Hashes",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "The name of the process",
+                  "order": 4,
+                  "title": "Name",
+                  "type": "string"
+                },
+                "processId": {
+                  "description": "The PID from the running process on the asset",
+                  "order": 2,
+                  "title": "ProcessId",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "assetId",
+                "processId"
+              ],
+              "title": "Process",
+              "type": "object"
+            },
+            "user": {
+              "properties": {
+                "distinguishedName": {
+                  "description": "The Active Directory distinguished name of the user",
+                  "order": 2,
+                  "title": "DistinguishedName",
+                  "type": "string"
+                },
+                "emails": {
+                  "description": "The email addresses associated with the user",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 3,
+                  "title": "Emails",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "The name of the user, as '<firstname> <lastname>' if available, or account name otherwise",
+                  "order": 1,
+                  "title": "Name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "emails"
+              ],
+              "title": "User",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "actors": {
+              "$ref": "#/definitions/actor",
+              "description": "The insightIDR actors that are part of the investigation",
+              "order": 7,
+              "title": "Actors"
+            },
+            "contents": {
+              "$ref": "#/definitions/content",
+              "description": "The contents to enrich",
+              "order": 8,
+              "title": "Contents"
+            },
+            "description": {
+              "description": "The description of the alert",
+              "order": 4,
+              "title": "Description",
+              "type": "string"
+            },
+            "investigationId": {
+              "description": "The investigation id",
+              "order": 6,
+              "title": "InvestigationId",
+              "type": "string"
+            },
+            "link": {
+              "description": "The deep link to the investigation in insightIDR",
+              "order": 5,
+              "title": "Link",
+              "type": "string"
+            },
+            "name": {
+              "description": "The human-readable name of the alert",
+              "order": 3,
+              "title": "Name",
+              "type": "string"
+            },
+            "timestamp": {
+              "description": "The time the alert was triggered in ISO 8601 extended timestamp format",
+              "order": 1,
+              "title": "Timestamp",
+              "type": "string"
+            },
+            "type": {
+              "description": "The type of alert",
+              "order": 2,
+              "title": "Type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "investigationId",
+            "actors",
+            "timestamp",
+            "type",
+            "name",
+            "description",
+            "link"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {
+            "actor": {
+              "properties": {
+                "assets": {
+                  "description": "The assets that are part of the investigation",
+                  "items": {
+                    "$ref": "#/definitions/asset"
+                  },
+                  "order": 2,
+                  "title": "Assets",
+                  "type": "array"
+                },
+                "users": {
+                  "description": "The users that are part of the investigation",
+                  "items": {
+                    "$ref": "#/definitions/user"
+                  },
+                  "order": 1,
+                  "title": "Users",
+                  "type": "array"
+                }
+              },
+              "title": "Actor",
+              "type": "object"
+            },
+            "asset": {
+              "properties": {
+                "assetId": {
+                  "description": "the ID of the asset",
+                  "order": 1,
+                  "title": "AssetId",
+                  "type": "string"
+                },
+                "fqdn": {
+                  "description": "The fully qualified domain name",
+                  "order": 3,
+                  "title": "Fqdn",
+                  "type": "string"
+                },
+                "shortname": {
+                  "description": "shortname of the asset",
+                  "order": 2,
+                  "title": "Shortname",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shortname",
+                "assetId"
+              ],
+              "title": "Asset",
+              "type": "object"
+            },
+            "content": {
+              "properties": {
+                "domains": {
+                  "description": "A list of domains to check",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 2,
+                  "title": "Domains",
+                  "type": "array"
+                },
+                "ipAddresses": {
+                  "description": "A list of ip addresses to check",
+                  "items": {
+                    "$ref": "#/definitions/ipAddress"
+                  },
+                  "order": 3,
+                  "title": "IpAddresses",
+                  "type": "array"
+                },
+                "processes": {
+                  "description": "A list of processes to check",
+                  "items": {
+                    "$ref": "#/definitions/process"
+                  },
+                  "order": 4,
+                  "title": "Processes",
+                  "type": "array"
+                },
+                "urls": {
+                  "description": "A list of URLs to check",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 1,
+                  "title": "Urls",
+                  "type": "array"
+                }
+              },
+              "title": "Content",
+              "type": "object"
+            },
+            "hash": {
+              "properties": {
+                "hash": {
+                  "description": "The actual hash",
+                  "order": 1,
+                  "title": "Hash",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The algorithm used to generate the hash",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "hash",
+                "type"
+              ],
+              "title": "Hash",
+              "type": "object"
+            },
+            "ipAddress": {
+              "properties": {
+                "ip": {
+                  "description": "The raw IP",
+                  "order": 1,
+                  "title": "Ip",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "Denotes if an IP is internal or external",
+                  "order": 2,
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ip",
+                "type"
+              ],
+              "title": "IPAddress",
+              "type": "object"
+            },
+            "process": {
+              "properties": {
+                "assetId": {
+                  "description": "The asset id associated with the process",
+                  "order": 1,
+                  "title": "AssetId",
+                  "type": "string"
+                },
+                "cmdLine": {
+                  "description": "The raw value of the command line call used to invoke the process",
+                  "order": 5,
+                  "title": "CmdLine",
+                  "type": "string"
+                },
+                "hashes": {
+                  "description": "The list of hashes to check",
+                  "items": {
+                    "$ref": "#/definitions/hash"
+                  },
+                  "order": 3,
+                  "title": "Hashes",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "The name of the process",
+                  "order": 4,
+                  "title": "Name",
+                  "type": "string"
+                },
+                "processId": {
+                  "description": "The PID from the running process on the asset",
+                  "order": 2,
+                  "title": "ProcessId",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "assetId",
+                "processId"
+              ],
+              "title": "Process",
+              "type": "object"
+            },
+            "user": {
+              "properties": {
+                "distinguishedName": {
+                  "description": "The Active Directory distinguished name of the user",
+                  "order": 2,
+                  "title": "DistinguishedName",
+                  "type": "string"
+                },
+                "emails": {
+                  "description": "The email addresses associated with the user",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 3,
+                  "title": "Emails",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "The name of the user, as '<firstname> <lastname>' if available, or account name otherwise",
+                  "order": 1,
+                  "title": "Name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "emails"
+              ],
+              "title": "User",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "actors": {
+              "$ref": "#/definitions/actor",
+              "description": "The insightIDR actors that are part of the investigation",
+              "order": 7,
+              "title": "Actors"
+            },
+            "contents": {
+              "$ref": "#/definitions/content",
+              "description": "The contents to enrich",
+              "order": 8,
+              "title": "Contents"
+            },
+            "description": {
+              "description": "The description of the alert",
+              "order": 4,
+              "title": "Description",
+              "type": "string"
+            },
+            "investigationId": {
+              "description": "The investigation id",
+              "order": 6,
+              "title": "InvestigationId",
+              "type": "string"
+            },
+            "link": {
+              "description": "The deep link to the investigation in insightIDR",
+              "order": 5,
+              "title": "Link",
+              "type": "string"
+            },
+            "name": {
+              "description": "The human-readable name of the alert",
+              "order": 3,
+              "title": "Name",
+              "type": "string"
+            },
+            "timestamp": {
+              "description": "The time the alert was triggered in ISO 8601 extended timestamp format",
+              "order": 1,
+              "title": "Timestamp",
+              "type": "string"
+            },
+            "type": {
+              "description": "The type of alert",
+              "order": 2,
+              "title": "Type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "investigationId",
+            "actors",
+            "timestamp",
+            "type",
+            "name",
+            "description",
+            "link"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api_idr"
+      }
+    ]
+  }
+}

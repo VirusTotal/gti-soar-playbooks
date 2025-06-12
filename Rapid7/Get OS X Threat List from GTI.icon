@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:39.658387078Z",
+    "workflowVersions": [
+      {
+        "name": "Get OS X Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "4d97dd7c-871b-4dd4-827f-4e33d491a461": {
+              "id": "4d97dd7c-871b-4dd4-827f-4e33d491a461",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "bc900d5a-5cc4-47e3-bbed-adfe37639233",
+              "toNodeId": "ce6950c3-ddfb-4e32-8e2d-8311a0e59b16"
+            },
+            "71444e1b-59d8-4007-a898-0c44251861a7": {
+              "id": "71444e1b-59d8-4007-a898-0c44251861a7",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "ce6950c3-ddfb-4e32-8e2d-8311a0e59b16",
+              "toNodeId": ""
+            },
+            "af0bcf63-315a-44ab-b9da-75bba104bed1": {
+              "id": "af0bcf63-315a-44ab-b9da-75bba104bed1",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "e35bceec-d0c7-4868-8357-dcaf15093233",
+              "toNodeId": ""
+            },
+            "e714d8fa-9091-44fc-a048-be9109a60cc2": {
+              "id": "e714d8fa-9091-44fc-a048-be9109a60cc2",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "ce6950c3-ddfb-4e32-8e2d-8311a0e59b16",
+              "toNodeId": "e35bceec-d0c7-4868-8357-dcaf15093233"
+            },
+            "e96ee83d-5b74-455a-8192-73245346c302": {
+              "id": "e96ee83d-5b74-455a-8192-73245346c302",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "fb7b30be-d5a9-4dd8-bc96-b47ec8d2b3cb",
+              "toNodeId": "bc900d5a-5cc4-47e3-bbed-adfe37639233"
+            }
+          },
+          "nodes": {
+            "bc900d5a-5cc4-47e3-bbed-adfe37639233": {
+              "id": "bc900d5a-5cc4-47e3-bbed-adfe37639233",
+              "parentNodeId": ""
+            },
+            "ce6950c3-ddfb-4e32-8e2d-8311a0e59b16": {
+              "id": "ce6950c3-ddfb-4e32-8e2d-8311a0e59b16",
+              "parentNodeId": ""
+            },
+            "e35bceec-d0c7-4868-8357-dcaf15093233": {
+              "id": "e35bceec-d0c7-4868-8357-dcaf15093233",
+              "parentNodeId": ""
+            },
+            "fb7b30be-d5a9-4dd8-bc96-b47ec8d2b3cb": {
+              "id": "fb7b30be-d5a9-4dd8-bc96-b47ec8d2b3cb",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "bc900d5a-5cc4-47e3-bbed-adfe37639233": {
+            "nodeId": "bc900d5a-5cc4-47e3-bbed-adfe37639233",
+            "name": "OS X Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "osx_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[fb7b30be-d5a9-4dd8-bc96-b47ec8d2b3cb].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "osx_threat_list_response": {
+                  "description": "OS X threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "OS X Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "osx_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/osx_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "osx_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "osx_threat_list_response": {
+                  "$ref": "#/definitions/osx_threat_list_response",
+                  "description": "OS X threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "OS X Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ce6950c3-ddfb-4e32-8e2d-8311a0e59b16": {
+            "nodeId": "ce6950c3-ddfb-4e32-8e2d-8311a0e59b16",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "71444e1b-59d8-4007-a898-0c44251861a7",
+              "stepControlParams": [
+                {
+                  "edgeId": "e714d8fa-9091-44fc-a048-be9109a60cc2",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "bc900d5a-5cc4-47e3-bbed-adfe37639233.osx_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[bc900d5a-5cc4-47e3-bbed-adfe37639233].[osx_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "71444e1b-59d8-4007-a898-0c44251861a7",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e35bceec-d0c7-4868-8357-dcaf15093233": {
+            "nodeId": "e35bceec-d0c7-4868-8357-dcaf15093233",
+            "name": "Send OS X Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[bc900d5a-5cc4-47e3-bbed-adfe37639233].[osx_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "fb7b30be-d5a9-4dd8-bc96-b47ec8d2b3cb": {
+            "nodeId": "fb7b30be-d5a9-4dd8-bc96-b47ec8d2b3cb",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "a446ab10-5554-47f5-92db-a28bc20b18c5",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "OS X",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves OS X files that have been identified as malware by Google Threat Intelligence security engine partners."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "a446ab10-5554-47f5-92db-a28bc20b18c5",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

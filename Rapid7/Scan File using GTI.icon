@@ -1,0 +1,449 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:54:18.654773081Z",
+    "workflowVersions": [
+      {
+        "name": "Scan File using GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "14e432f2-2ad3-415f-95c9-f4cfc9c54ef9": {
+              "id": "14e432f2-2ad3-415f-95c9-f4cfc9c54ef9",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "e5157302-807f-4176-a002-88f4a803a548",
+              "toNodeId": "96415d1c-810d-4691-b2c3-67851da35273"
+            },
+            "178ae2f7-1a30-4d90-a202-af4869adc1b9": {
+              "id": "178ae2f7-1a30-4d90-a202-af4869adc1b9",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "c51b12a8-a4cc-4ac3-88dd-ee6b53b7a4c1",
+              "toNodeId": "e5157302-807f-4176-a002-88f4a803a548"
+            },
+            "a3a4be3d-bc95-4e63-b979-d720f888fc23": {
+              "id": "a3a4be3d-bc95-4e63-b979-d720f888fc23",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "96415d1c-810d-4691-b2c3-67851da35273",
+              "toNodeId": ""
+            }
+          },
+          "nodes": {
+            "96415d1c-810d-4691-b2c3-67851da35273": {
+              "id": "96415d1c-810d-4691-b2c3-67851da35273",
+              "parentNodeId": ""
+            },
+            "c51b12a8-a4cc-4ac3-88dd-ee6b53b7a4c1": {
+              "id": "c51b12a8-a4cc-4ac3-88dd-ee6b53b7a4c1",
+              "parentNodeId": ""
+            },
+            "e5157302-807f-4176-a002-88f4a803a548": {
+              "id": "e5157302-807f-4176-a002-88f4a803a548",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "96415d1c-810d-4691-b2c3-67851da35273": {
+            "nodeId": "96415d1c-810d-4691-b2c3-67851da35273",
+            "name": "Send Scanned File Report  to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[e5157302-807f-4176-a002-88f4a803a548].[scanned_file_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c51b12a8-a4cc-4ac3-88dd-ee6b53b7a4c1": {
+            "nodeId": "c51b12a8-a4cc-4ac3-88dd-ee6b53b7a4c1",
+            "name": "API Trigger",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "fbd16093-8f51-4432-b2bf-e767dfd9e2c3",
+            "defaultInputJSONSchema": {
+              "definitions": {},
+              "properties": {},
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {},
+              "properties": {},
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e5157302-807f-4176-a002-88f4a803a548": {
+            "nodeId": "e5157302-807f-4176-a002-88f4a803a548",
+            "name": "Scan File ",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "scan_file",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "file": {
+                  "content": "JVBERi0xLjYKJb/3ov4KMSAwIG9iago8PCAvTGFuZyA8NTM5NTQ4YjQwM2VkNDQzNTU1ZjNlODcwYmU5MDFmNTgxMDRjYTgzMTVhYTAwN2ZhNjFiN2NmOTk3NjRhNTRmOD4gL0xhc3RNb2RpZmllZCA8Njk2YTg0MTk3MDM4ZmU4M2RlNWY0MmFhZDExNDI1MDBmNzAzZmI3ZDE3MDJjYjExMDg1ZWYxZDlmYjU2MjBlMTFjZmM5ZTMwODU1NmFjMDVlOTZjNWZiYzI4ZDY2NjE1PiAvTWFya0luZm8gPDwgL0xldHRlcnNwYWNlRmxhZ3MgMCAvTWFya2VkIHRydWUgPj4gL01ldGFkYXRhIDMgMCBSIC9QYWdlTGFiZWxzIDQgMCBSIC9QYWdlTGF5b3V0IC9PbmVDb2x1bW4gL1BhZ2VzIDUgMCBSIC9QaWVjZUluZm8gPDwgL01hcmtlZFBERiA8PCAvTGFzdE1vZGlmaWVkIDxkNDExZWEwZTgzMjMzMGJiZGM5OGVlNzZjOGY4MzkyNjc4MGRhZTEzYmRjZDk4MmQ4ZTE1MGQ2NzdmY2UxNjkxODg2YjA3ZmE3MDE3NDJjNjJkZDkxMGUxMmI3MWMyMDg+ID4+ID4+IC9TdHJ1Y3RUcmVlUm9vdCA3IDAgUiAvVHlwZSAvQ2F0YWxvZyA+PgplbmRvYmoKMiAwIG9iago8PCAvQXV0aG9yIDxjYzBmMDRmNTE0ZmM2YzhmOGIzNjc4YWQyZTYyZGVmYTZhOWI4MDUxMjhmNDUwNmY0YjE1MDRjNDM1MGJmODdlPiAvQ29tcGFueSA8N2VmN2QxZDQ5MjFkMWQ2ZWY5MjEzNTI3ZmQ1ZjE2MzRlNDg2NGEyZmU1YmVlMzhmMTIyMTcyNWZjYTM5ZTgwYjVmOTcxNTdlZWE5OGIyNWJhN2YyODk2ODQ5NzU3N2QyPiAvQ3JlYXRpb25EYXRlIDw1ZmExYTUwNzBhZTI4YTdiMDc1OWFlZjU1NDI0MzI2YjAxMTc3YWZmZmZjYWNjZmU4MjA0ZDYxNzQzNjdmZjQ1YzU3OGZlZWYyMGNkNzQyZGM0ZWMzM2EzODY4ZjFiNDA+IC9DcmVhdG9yIDxkMWZjNTBiOWE4MjkwYjg2NWQyOThmZmU0MWM3N2Y2NTAwOTg3NzZhYzk2MTBhMDE4NTQ5OTk2Mzk2OWIzNTRkZDYxMThmNzIzYWM5NzQ0N2QzMTEwYjYyZGExNjVhYmY+IC9Nb2REYXRlIDxmYzkzZDBhNjA2N2E1YjJiMTc5MWZiZWNhYTQ2NjBhODRhMjE5ZTI5YTRkOGU1M2ZmYzRkNGJhZTQ1ZTMwZjMwZTk3MDAxODkxOWIyN2M3NDFkODIzODdlOGZlOWQwYzA+IC9Qcm9kdWNlciA8NjYzYzZkNzdhNTZkNDE1MDBkMzg1MzE3OTM0ZDQ1NzY3MDMyYTY2YzAxZGQ2N2EyNjg4MWY0MjI4NWZlMjA5ZjYxZTNkNjIzNWY3N2NmNGY5ZjRkZDQxZWRiNGM1M2Q1OWI0MmVlYjdlZGY0ODgxMGNjODgxNTJhZDdmY2Y5NTk+IC9Tb3VyY2VNb2RpZmllZCA8YzhkMmE5MTRkNzU4Yjc5MWVlODdjZjU3MzY0OTJkN2UwNjljZGUzMTU5YjE4Y2RjODZlYWZmNGM0MTlhOGI5ZDg3MDAzNmVhYjgwOWU4NmFkOWM3NjdjNzMxNTU5M2E0PiAvVGl0bGUgPGY2MGU1MDUwM2JhODAwN2RjZjBmYjg3YWZlZjBhYTJlY2ZkZWIxODgxODNlNjVlNDIzOGU1MTI3ODVjMDQ5YjUxMDgzZmMxZjY0N2FlNDdlYTE4OTY1ZDAxYjA5ZTk3Mj4gPj4KZW5kb2JqCjMgMCBvYmoKPDwgL1N1YnR5cGUgL1hNTCAvVHlwZSAvTWV0YWRhdGEgL0xlbmd0aCA3ODQgL0ZpbHRlciAvRmxhdGVEZWNvZGUgPj4Kc3RyZWFtCvEqTFvDk2TqXXc9RidoMeruHrKT6aWViFuypxWRi3dKt7NengkPcKUUiYJUH/O/cD/dD14LHyLdWGpru9S3adnkvCaje2Em3EL1wNmzgLYG0yjCfPog3MhiAJeRUWVgDyLHgDMUbckVQFj69C5lKEaOTgbhNTSys3K3OdtzXtHOA1g89cot7SuRI3egERPuu9fPZHBF2FeJBBOou5SjDLUokCvU5eWbZuzFChTJ9KopmyL1eKTE3htJ5PlSxzSAMGBk7AalWCebRPptJYa5zkQY13YHpZg8YBTIgt5OtE0jv5cu59zs/7MBdKx6KqplJ/FusogS/Xoxjv+Bu7Swn3r8sjoTDa+5+tel6bHpVM4jc0+zfPmxFD1bf2fkbSPhMYOKdhzzK9vr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YXN0Q2hhciAxMjEgL1N1YnR5cGUgL1RydWVUeXBlIC9UeXBlIC9Gb250IC9XaWR0aHMgWyAyNTAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDcyMiAwIDU1NiAwIDAgMCAwIDAgMCAwIDAgMCA1NTYgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCA0NDQgMCAwIDUwMCAwIDAgMCAwIDAgMCAwIDI3OCA3NzggNTAwIDUwMCAwIDAgMCAwIDAgNTAwIDAgNzIyIDAgNTAwIF0gPj4KZW5kb2JqCjIwIDAgb2JqCjw8IC9Bc2NlbnQgODkxIC9DYXBIZWlnaHQgNjU2IC9EZXNjZW50IC0yMTYgL0ZsYWdzIDM0IC9Gb250QkJveCBbIC01NjggLTMwNyAyMDAwIDEwMDcgXSAvRm9udEZhbWlseSA8MDE0YjVmZmY0M2RiNjhiODY3NGE3MjUzNjkzOThkYTIyODJmYTRlYzRlNzc3YWFjYTE1MWExYjRkODRiNTgzNz4gL0ZvbnROYW1lIC9UaW1lc05ld1JvbWFuUFNNVCAvRm9udFN0cmV0Y2ggL05vcm1hbCAvRm9udFdlaWdodCA0MDAgL0l0YWxpY0FuZ2xlIDAgL1N0ZW1WIDgyIC9UeXBlIC9Gb250RGVzY3JpcHRvciAvWEhlaWdodCAtNTQ2ID4+CmVuZG9iagoyMSAwIG9iago8PCAvQ0YgPDwgL1N0ZENGIDw8IC9BdXRoRXZlbnQgL0RvY09wZW4gL0NGTSAvQUVTVjIgL0xlbmd0aCAxNiA+PiA+PiAvRmlsdGVyIC9TdGFuZGFyZCAvTGVuZ3RoIDEyOCAvTyA8MDliYjBiODhmNWVlYjE4Zjg3YjgyMjQ2YTQxNmM0ODFhMDg3NzQ2MmE0Y2I0MDE2NzZmNDk1Njk0MDRjN2EwYT4gL1AgLTQgL1IgNCAvU3RtRiAvU3RkQ0YgL1N0ckYgL1N0ZENGIC9VIDxjZDQ4ZGFhZWI4NGQ5YmZjMTczOGUzOGFkODhiNjY3NTAxMjI0NTZhOTFiYWU1MTM0MjczYTZkYjEzNGM4N2M0PiAvViA0ID4+CmVuZG9iagoyMiAwIG9iago8PCAvVHlwZSAvWFJlZiAvTGVuZ3RoIDcwIC9GaWx0ZXIgL0ZsYXRlRGVjb2RlIC9EZWNvZGVQYXJtcyA8PCAvQ29sdW1ucyA0IC9QcmVkaWN0b3IgMTIgPj4gL1cgWyAxIDIgMSBdIC9JbmZvIDIgMCBSIC9Sb290IDEgMCBSIC9TaXplIDIzIC9JRCBbPGY4OTlmYzkxMzZhZjM2ZmY0MTFiOGZhNDNmMGM3YzdkPjw2OTM5ZTdiZDVmZTYwNGQ3M2M3MjQ4MjUwYzBiMjU3MD5dIC9FbmNyeXB0IDIxIDAgUiA+PgpzdHJlYW0KeJxjYgACJkYGfgYmBqZ/QIK5HkiwlAIJBg0QYQOU/b4QxGJgJED8507+CWTJABUzfgYRN0DaQkEmV4G4liBChwEACkMJxQplbmRzdHJlYW0KZW5kb2JqCnN0YXJ0eHJlZgo0NDg0CiUlRU9GCg==",
+                  "filename": ""
+                }
+              }
+            },
+            "defaultInputJSONSchema": {
+              "definitions": {
+                "file": {
+                  "description": "File Object",
+                  "properties": {
+                    "content": {
+                      "description": "File contents",
+                      "format": "bytes",
+                      "title": "Content",
+                      "type": "string"
+                    },
+                    "filename": {
+                      "description": "Name of file",
+                      "title": "Filename",
+                      "type": "string"
+                    }
+                  },
+                  "title": "File",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "file": {
+                  "$ref": "#/definitions/file",
+                  "description": "Upload public file that needs to be analysed",
+                  "order": 1,
+                  "title": "Upload File"
+                }
+              },
+              "required": [
+                "file"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "file_report": {
+                  "properties": {
+                    "creation_date": {
+                      "description": "Extracted when possible from the file's metadata. Indicates when it was built or compiled. It can also be faked by malware creators. UTC timestamp",
+                      "order": 1,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "crowdsourced_ai_results": {
+                      "description": "A summary of all crowdsourced AI results",
+                      "order": 27,
+                      "title": "Crowdsourced AI Results",
+                      "type": "string"
+                    },
+                    "crowdsourced_yara_results": {
+                      "description": "YARA matches from crowdsourced rules.",
+                      "order": 2,
+                      "title": "CrowdSourced Yara Results Count",
+                      "type": "string"
+                    },
+                    "downloadable": {
+                      "description": "True if the file can be downloaded, false otherwise. Only available for Premium API users",
+                      "order": 3,
+                      "title": "Downloadable",
+                      "type": "boolean"
+                    },
+                    "first_submission_date": {
+                      "description": "Date when the file was first seen in Google TI. UTC timestamp",
+                      "order": 4,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 6,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 7,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when the object itself was last modified. UTC timestamp",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "Most recent date the file was posted to Google TI. UTC timestamp",
+                      "order": 9,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "main_icon": {
+                      "description": "Icon's relevant hashes",
+                      "order": 10,
+                      "title": "Main Icon",
+                      "type": "object"
+                    },
+                    "md5": {
+                      "description": "File's MD5 Hash",
+                      "order": 11,
+                      "title": "MD5 Hash",
+                      "type": "string"
+                    },
+                    "meaningful_name": {
+                      "description": "The most interesting name out of all file's names",
+                      "order": 12,
+                      "title": "MeaningFull Name",
+                      "type": "string"
+                    },
+                    "popular_threat_classification_label": {
+                      "description": "Extracts human readable names extracted from AV verdicts and clustering hashes",
+                      "order": 13,
+                      "title": "Popular Threat Classification Label",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "File's score calculated from all votes posted by the Google TI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "sha1": {
+                      "description": "File's SHA1 hash",
+                      "order": 15,
+                      "title": "SHA1 Hash",
+                      "type": "string"
+                    },
+                    "sha256": {
+                      "description": "File's SHA256 hash",
+                      "order": 16,
+                      "title": "SHA256 Hash",
+                      "type": "string"
+                    },
+                    "size": {
+                      "description": "File size in bytes",
+                      "order": 17,
+                      "title": "Size",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 18,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "threat_severity": {
+                      "description": "Threat severity classification",
+                      "order": 28,
+                      "title": "Threat Severity",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times the file has been posted to Google TI",
+                      "order": 19,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into \"harmless\" and \"malicious\"",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "type_description": {
+                      "description": "Describes the file type",
+                      "order": 21,
+                      "title": "Type Description",
+                      "type": "string"
+                    },
+                    "type_extension": {
+                      "description": "Specifies file extension",
+                      "order": 22,
+                      "title": "Type Extension",
+                      "type": "string"
+                    },
+                    "type_tag": {
+                      "description": "Tag representing the file type. Can be used to filter by file type in Google TI intelligence searches",
+                      "order": 23,
+                      "title": "Type Tag",
+                      "type": "string"
+                    },
+                    "type_tags": {
+                      "description": "Broader tags related to the specific file type, used to filter in Google TI intelligence searches",
+                      "order": 24,
+                      "title": "Type Tags",
+                      "type": "string"
+                    },
+                    "unique_sources": {
+                      "description": "Indicates how many different sources the file has been posted from",
+                      "order": 25,
+                      "title": "Unique Sources",
+                      "type": "string"
+                    },
+                    "vhash": {
+                      "description": "In-house similarity clustering algorithm value used to find similar files",
+                      "order": 26,
+                      "title": "Vhash",
+                      "type": "string"
+                    }
+                  },
+                  "title": "File Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "scanned_file_report": {
+                  "$ref": "#/definitions/file_report",
+                  "description": "Retrieves the scanned public file report",
+                  "order": 1,
+                  "title": "Scanned File Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Scan File"
+        ],
+        "humanCostSeconds": 900,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Retrieves the analysis report for a file submitted to Google Threat Intelligence for scanning."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "fbd16093-8f51-4432-b2bf-e767dfd9e2c3",
+        "name": "API Trigger",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {},
+          "properties": {},
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {},
+          "properties": {},
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api",
+        "options": {
+          "webhookEnabled": true
+        }
+      }
+    ]
+  }
+}

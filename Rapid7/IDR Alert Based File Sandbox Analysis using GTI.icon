@@ -1,0 +1,1772 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:13.246077689Z",
+    "workflowVersions": [
+      {
+        "name": "IDR Alert Based File Sandbox Analysis using GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "1228ea17-fced-4fd0-b2d0-ebbf90d40168": {
+              "id": "1228ea17-fced-4fd0-b2d0-ebbf90d40168",
+              "name": "",
+              "description": "",
+              "parentNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df",
+              "fromNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df",
+              "toNodeId": "492f2f5d-7175-40bc-8f90-3658c96efc3a"
+            },
+            "19144866-8fcc-49c8-8feb-a1bc47abbd09": {
+              "id": "19144866-8fcc-49c8-8feb-a1bc47abbd09",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "7c42fccd-e099-41b7-b3d8-a255ca376bdb",
+              "toNodeId": "d1738545-2607-4396-9ef9-c307fedb2fae"
+            },
+            "5bab54d4-d2fd-417e-b09c-457d045ef6fe": {
+              "id": "5bab54d4-d2fd-417e-b09c-457d045ef6fe",
+              "name": "",
+              "description": "",
+              "parentNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df",
+              "fromNodeId": "8333ae62-4300-48ca-9c78-cdbdfb082974",
+              "toNodeId": ""
+            },
+            "8eefd0f4-30be-42c4-8300-cc89afae9e76": {
+              "id": "8eefd0f4-30be-42c4-8300-cc89afae9e76",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "d1738545-2607-4396-9ef9-c307fedb2fae",
+              "toNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df"
+            },
+            "aa01dc58-b3b1-4352-8dbd-23c76eeb7bbd": {
+              "id": "aa01dc58-b3b1-4352-8dbd-23c76eeb7bbd",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df",
+              "toNodeId": ""
+            },
+            "b5f8dcc4-ea8e-407a-b643-4fefcae47ac9": {
+              "id": "b5f8dcc4-ea8e-407a-b643-4fefcae47ac9",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df",
+              "fromNodeId": "aa570517-4531-4db6-989a-1edee7410505",
+              "toNodeId": ""
+            },
+            "d2fd799f-cae1-4269-af10-b27351f8fc9e": {
+              "id": "d2fd799f-cae1-4269-af10-b27351f8fc9e",
+              "name": "",
+              "description": "",
+              "parentNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df",
+              "fromNodeId": "492f2f5d-7175-40bc-8f90-3658c96efc3a",
+              "toNodeId": "aa570517-4531-4db6-989a-1edee7410505"
+            },
+            "d85a8071-7df9-4228-b31a-15847384683f": {
+              "id": "d85a8071-7df9-4228-b31a-15847384683f",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df",
+              "fromNodeId": "aa570517-4531-4db6-989a-1edee7410505",
+              "toNodeId": "8333ae62-4300-48ca-9c78-cdbdfb082974"
+            }
+          },
+          "nodes": {
+            "492f2f5d-7175-40bc-8f90-3658c96efc3a": {
+              "id": "492f2f5d-7175-40bc-8f90-3658c96efc3a",
+              "parentNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df"
+            },
+            "7c42fccd-e099-41b7-b3d8-a255ca376bdb": {
+              "id": "7c42fccd-e099-41b7-b3d8-a255ca376bdb",
+              "parentNodeId": ""
+            },
+            "809912b5-65a9-43c5-a403-0fb6f39179df": {
+              "id": "809912b5-65a9-43c5-a403-0fb6f39179df",
+              "parentNodeId": ""
+            },
+            "8333ae62-4300-48ca-9c78-cdbdfb082974": {
+              "id": "8333ae62-4300-48ca-9c78-cdbdfb082974",
+              "parentNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df"
+            },
+            "aa570517-4531-4db6-989a-1edee7410505": {
+              "id": "aa570517-4531-4db6-989a-1edee7410505",
+              "parentNodeId": "809912b5-65a9-43c5-a403-0fb6f39179df"
+            },
+            "d1738545-2607-4396-9ef9-c307fedb2fae": {
+              "id": "d1738545-2607-4396-9ef9-c307fedb2fae",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "492f2f5d-7175-40bc-8f90-3658c96efc3a": {
+            "nodeId": "492f2f5d-7175-40bc-8f90-3658c96efc3a",
+            "name": "Get File Hash Sandbox Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_file_sandbox_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "file_hash": "{{[809912b5-65a9-43c5-a403-0fb6f39179df].[$item]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "file_hash": {
+                  "description": "The unique hash (SHA-256, or MD5) of the file for which you want to retrieve sandbox behavior details from Google Threat Intelligence",
+                  "order": 1,
+                  "title": "File Hash",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "file_hash"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "file_sandbox_report": {
+                  "properties": {
+                    "analysis_date": {
+                      "description": "Represents the date and time when the analysis was performed on the file",
+                      "order": 2,
+                      "title": "Analysis Date",
+                      "type": "string"
+                    },
+                    "behash": {
+                      "description": "Used to find similar behaviour analyses",
+                      "order": 4,
+                      "title": "BeHash",
+                      "type": "string"
+                    },
+                    "command_executions": {
+                      "description": "Shell command executions observed during the analysis of the given file",
+                      "order": 5,
+                      "title": "Command Executions",
+                      "type": "string"
+                    },
+                    "dns_lookups": {
+                      "description": "Attribute contains a list of domain name resolutions performed by a given file",
+                      "order": 12,
+                      "title": "DNS Lookups",
+                      "type": "string"
+                    },
+                    "has_memdump": {
+                      "description": "Whether there is a memdump file for this behaviour analysis",
+                      "order": 6,
+                      "title": "Has Memdump",
+                      "type": "boolean"
+                    },
+                    "has_pcap": {
+                      "description": "Whether there is a PCAP network capture for this behaviour analysis",
+                      "order": 7,
+                      "title": "Has PCAP",
+                      "type": "boolean"
+                    },
+                    "hosts_file": {
+                      "description": "The hosts file field stores the content of the local hostname-ip mapping hosts file IF AND ONLY IF the file was modified, else this field is not populated",
+                      "order": 8,
+                      "title": "Host File",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the file information was last updated. UTC timestamp",
+                      "order": 3,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "mitre_attack_techniques": {
+                      "description": "Aggregated list of mitre attack techniques",
+                      "order": 11,
+                      "title": "Mitre Attack Techniques",
+                      "type": "string"
+                    },
+                    "sandbox_name": {
+                      "description": "Name of the engine or sandbox provider that performed the dynamic analysis",
+                      "order": 1,
+                      "title": "Sandbox Name",
+                      "type": "string"
+                    },
+                    "sigma_analysis_results": {
+                      "description": "Aggregated sigma analyses results from all sandbox generated EVTX files",
+                      "order": 9,
+                      "title": "Sigma Analysis Results",
+                      "type": "string"
+                    },
+                    "signature_matches": {
+                      "description": "Aggregated list of matching signatures",
+                      "order": 10,
+                      "title": "Signature Matches",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 14,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "verdict_confidence": {
+                      "description": "It's a numerical score indicating how certain the system is about its verdict",
+                      "order": 15,
+                      "title": "Verdict Confidence",
+                      "type": "string"
+                    },
+                    "verdicts": {
+                      "description": "Contains a list of maliciousness classifications for the file under study based on its behaviour",
+                      "order": 13,
+                      "title": "Verdicts",
+                      "type": "string"
+                    }
+                  },
+                  "title": "File Sandbox Report",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "file_sandbox_report": {
+                  "description": "A collection of sandbox analysis results for the specified file, providing behavior insights like file operations, network activity, and any malicious behavior detected",
+                  "items": {
+                    "$ref": "#/definitions/file_sandbox_report"
+                  },
+                  "order": 1,
+                  "title": "File Sandbox Report",
+                  "type": "array"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "7c42fccd-e099-41b7-b3d8-a255ca376bdb": {
+            "nodeId": "7c42fccd-e099-41b7-b3d8-a255ca376bdb",
+            "name": "IDR Alert",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "6a1513f0-e619-43c5-b353-726ebad17d3c",
+            "defaultInputJSONSchema": {
+              "definitions": {
+                "alert": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the alert",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the alert",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "trigger": {
+                      "$ref": "#/definitions/trigger",
+                      "description": "Object containing details of the alert trigger",
+                      "order": 4,
+                      "title": "trigger"
+                    },
+                    "type": {
+                      "description": "Type of the alert",
+                      "order": 3,
+                      "title": "type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name",
+                    "trigger",
+                    "type"
+                  ],
+                  "title": "alert",
+                  "type": "object"
+                },
+                "comparison": {
+                  "properties": {
+                    "fromTimestamp": {
+                      "description": "Epoch time millis of the start of the comparison query",
+                      "order": 3,
+                      "title": "fromTimestamp",
+                      "type": "integer"
+                    },
+                    "query": {
+                      "description": "The query that was executed",
+                      "order": 1,
+                      "title": "query",
+                      "type": "string"
+                    },
+                    "toTimestamp": {
+                      "description": "Epoch time millis of the end of the comparison query",
+                      "order": 4,
+                      "title": "toTimestamp",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "description": "The result value of the comparison query",
+                      "order": 2,
+                      "title": "value",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "fromTimestamp",
+                    "query",
+                    "toTimestamp",
+                    "value"
+                  ],
+                  "title": "comparison",
+                  "type": "object"
+                },
+                "current": {
+                  "properties": {
+                    "fromTimestamp": {
+                      "description": "Epoch time millis of the start of the comparison query",
+                      "order": 3,
+                      "title": "fromTimestamp",
+                      "type": "integer"
+                    },
+                    "query": {
+                      "description": "The query that was executed",
+                      "order": 1,
+                      "title": "query",
+                      "type": "string"
+                    },
+                    "toTimestamp": {
+                      "description": "Epoch time millis of the end of the comparison query",
+                      "order": 4,
+                      "title": "toTimestamp",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "description": "The result value of the comparison query",
+                      "order": 2,
+                      "title": "value",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "fromTimestamp",
+                    "query",
+                    "toTimestamp",
+                    "value"
+                  ],
+                  "title": "current",
+                  "type": "object"
+                },
+                "event": {
+                  "properties": {
+                    "absoluteDiff": {
+                      "description": "Difference between the query values",
+                      "order": 4,
+                      "title": "absoluteDiff",
+                      "type": "number"
+                    },
+                    "entry": {
+                      "description": "The contents of the log entry that matched the pattern",
+                      "order": 5,
+                      "title": "entry",
+                      "type": "string"
+                    },
+                    "entryObject": {
+                      "description": "The contents of the log entry in Object format",
+                      "order": 6,
+                      "properties": {},
+                      "title": "entryObject",
+                      "type": "object"
+                    },
+                    "lastMatchTimestamp": {
+                      "description": "Epoch time millis of the last entry matching the pattern",
+                      "order": 2,
+                      "title": "lastMatchTimestamp",
+                      "type": "integer"
+                    },
+                    "queries": {
+                      "$ref": "#/definitions/queries",
+                      "description": "Object containing the results of the two queries",
+                      "order": 3,
+                      "title": "queries"
+                    },
+                    "sequenceId": {
+                      "description": "sequence id of the log entry the alert fired upon",
+                      "order": 7,
+                      "title": "sequenceId",
+                      "type": "integer"
+                    },
+                    "timestamp": {
+                      "description": "Epoch time millis of the alert firing",
+                      "order": 1,
+                      "title": "timestamp",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "timestamp"
+                  ],
+                  "title": "event",
+                  "type": "object"
+                },
+                "logSet": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the log set",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the log set",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "title": "logSet",
+                  "type": "object"
+                },
+                "logs": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the log",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "logSet": {
+                      "description": "Array of objects containing the details of the log set the log belongs to. Usually one element",
+                      "items": {
+                        "$ref": "#/definitions/logSet"
+                      },
+                      "order": 3,
+                      "title": "logSet",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the log the alert fired on",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "logSet",
+                    "name"
+                  ],
+                  "title": "logs",
+                  "type": "object"
+                },
+                "queries": {
+                  "properties": {
+                    "comparison": {
+                      "$ref": "#/definitions/comparison",
+                      "description": "Object containing the results of the comparison query",
+                      "order": 1,
+                      "title": "comparison"
+                    },
+                    "current": {
+                      "$ref": "#/definitions/current",
+                      "description": "Object containing the results of the current query",
+                      "order": 2,
+                      "title": "current"
+                    }
+                  },
+                  "required": [
+                    "comparison",
+                    "current"
+                  ],
+                  "title": "queries",
+                  "type": "object"
+                },
+                "trigger": {
+                  "properties": {
+                    "comparison": {
+                      "description": "The time frame for comparison against, in millis",
+                      "order": 6,
+                      "title": "comparison",
+                      "type": "integer"
+                    },
+                    "direction": {
+                      "description": "Direction of the anomaly - increase or decrease",
+                      "order": 3,
+                      "title": "direction",
+                      "type": "string"
+                    },
+                    "duration": {
+                      "description": "The duration of the alert's evaluation query, in millis",
+                      "order": 5,
+                      "title": "duration",
+                      "type": "integer"
+                    },
+                    "durationThreshold": {
+                      "description": "How long the pattern must not match any events for the inactivity alert to trigger",
+                      "order": 2,
+                      "title": "durationThreshold",
+                      "type": "string"
+                    },
+                    "pattern": {
+                      "description": "Query pattern of the alert",
+                      "order": 1,
+                      "title": "pattern",
+                      "type": "string"
+                    },
+                    "threshold": {
+                      "description": "The threshold percentage for the change",
+                      "order": 4,
+                      "title": "threshold",
+                      "type": "number"
+                    }
+                  },
+                  "title": "trigger",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "alert": {
+                  "$ref": "#/definitions/alert",
+                  "description": "Object containing details of the alert configuration that fired",
+                  "order": 2,
+                  "title": "alert"
+                },
+                "correlationId": {
+                  "description": "Unique ID of this alert firing, for correlation purposes between LE and Razor",
+                  "order": 1,
+                  "title": "correlationId",
+                  "type": "string"
+                },
+                "event": {
+                  "$ref": "#/definitions/event",
+                  "description": "Object containing details of the alert event",
+                  "order": 4,
+                  "title": "event"
+                },
+                "logs": {
+                  "description": "Object containing details of the log where the alert fired",
+                  "items": {
+                    "$ref": "#/definitions/logs"
+                  },
+                  "order": 3,
+                  "title": "logs",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "alert",
+                "correlationId",
+                "event",
+                "logs"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "alert": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the alert",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the alert",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "trigger": {
+                      "$ref": "#/definitions/trigger",
+                      "description": "Object containing details of the alert trigger",
+                      "order": 4,
+                      "title": "trigger"
+                    },
+                    "type": {
+                      "description": "Type of the alert",
+                      "order": 3,
+                      "title": "type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name",
+                    "trigger",
+                    "type"
+                  ],
+                  "title": "alert",
+                  "type": "object"
+                },
+                "comparison": {
+                  "properties": {
+                    "fromTimestamp": {
+                      "description": "Epoch time millis of the start of the comparison query",
+                      "order": 3,
+                      "title": "fromTimestamp",
+                      "type": "integer"
+                    },
+                    "query": {
+                      "description": "The query that was executed",
+                      "order": 1,
+                      "title": "query",
+                      "type": "string"
+                    },
+                    "toTimestamp": {
+                      "description": "Epoch time millis of the end of the comparison query",
+                      "order": 4,
+                      "title": "toTimestamp",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "description": "The result value of the comparison query",
+                      "order": 2,
+                      "title": "value",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "fromTimestamp",
+                    "query",
+                    "toTimestamp",
+                    "value"
+                  ],
+                  "title": "comparison",
+                  "type": "object"
+                },
+                "current": {
+                  "properties": {
+                    "fromTimestamp": {
+                      "description": "Epoch time millis of the start of the comparison query",
+                      "order": 3,
+                      "title": "fromTimestamp",
+                      "type": "integer"
+                    },
+                    "query": {
+                      "description": "The query that was executed",
+                      "order": 1,
+                      "title": "query",
+                      "type": "string"
+                    },
+                    "toTimestamp": {
+                      "description": "Epoch time millis of the end of the comparison query",
+                      "order": 4,
+                      "title": "toTimestamp",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "description": "The result value of the comparison query",
+                      "order": 2,
+                      "title": "value",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "fromTimestamp",
+                    "query",
+                    "toTimestamp",
+                    "value"
+                  ],
+                  "title": "current",
+                  "type": "object"
+                },
+                "event": {
+                  "properties": {
+                    "absoluteDiff": {
+                      "description": "Difference between the query values",
+                      "order": 4,
+                      "title": "absoluteDiff",
+                      "type": "number"
+                    },
+                    "entry": {
+                      "description": "The contents of the log entry that matched the pattern",
+                      "order": 5,
+                      "title": "entry",
+                      "type": "string"
+                    },
+                    "entryObject": {
+                      "description": "The contents of the log entry in Object format",
+                      "order": 6,
+                      "properties": {},
+                      "title": "entryObject",
+                      "type": "object"
+                    },
+                    "lastMatchTimestamp": {
+                      "description": "Epoch time millis of the last entry matching the pattern",
+                      "order": 2,
+                      "title": "lastMatchTimestamp",
+                      "type": "integer"
+                    },
+                    "queries": {
+                      "$ref": "#/definitions/queries",
+                      "description": "Object containing the results of the two queries",
+                      "order": 3,
+                      "title": "queries"
+                    },
+                    "sequenceId": {
+                      "description": "sequence id of the log entry the alert fired upon",
+                      "order": 7,
+                      "title": "sequenceId",
+                      "type": "integer"
+                    },
+                    "timestamp": {
+                      "description": "Epoch time millis of the alert firing",
+                      "order": 1,
+                      "title": "timestamp",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "timestamp"
+                  ],
+                  "title": "event",
+                  "type": "object"
+                },
+                "logSet": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the log set",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the log set",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "title": "logSet",
+                  "type": "object"
+                },
+                "logs": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the log",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "logSet": {
+                      "description": "Array of objects containing the details of the log set the log belongs to. Usually one element",
+                      "items": {
+                        "$ref": "#/definitions/logSet"
+                      },
+                      "order": 3,
+                      "title": "logSet",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the log the alert fired on",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "logSet",
+                    "name"
+                  ],
+                  "title": "logs",
+                  "type": "object"
+                },
+                "queries": {
+                  "properties": {
+                    "comparison": {
+                      "$ref": "#/definitions/comparison",
+                      "description": "Object containing the results of the comparison query",
+                      "order": 1,
+                      "title": "comparison"
+                    },
+                    "current": {
+                      "$ref": "#/definitions/current",
+                      "description": "Object containing the results of the current query",
+                      "order": 2,
+                      "title": "current"
+                    }
+                  },
+                  "required": [
+                    "comparison",
+                    "current"
+                  ],
+                  "title": "queries",
+                  "type": "object"
+                },
+                "trigger": {
+                  "properties": {
+                    "comparison": {
+                      "description": "The time frame for comparison against, in millis",
+                      "order": 6,
+                      "title": "comparison",
+                      "type": "integer"
+                    },
+                    "direction": {
+                      "description": "Direction of the anomaly - increase or decrease",
+                      "order": 3,
+                      "title": "direction",
+                      "type": "string"
+                    },
+                    "duration": {
+                      "description": "The duration of the alert's evaluation query, in millis",
+                      "order": 5,
+                      "title": "duration",
+                      "type": "integer"
+                    },
+                    "durationThreshold": {
+                      "description": "How long the pattern must not match any events for the inactivity alert to trigger",
+                      "order": 2,
+                      "title": "durationThreshold",
+                      "type": "string"
+                    },
+                    "pattern": {
+                      "description": "Query pattern of the alert",
+                      "order": 1,
+                      "title": "pattern",
+                      "type": "string"
+                    },
+                    "threshold": {
+                      "description": "The threshold percentage for the change",
+                      "order": 4,
+                      "title": "threshold",
+                      "type": "number"
+                    }
+                  },
+                  "title": "trigger",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "alert": {
+                  "$ref": "#/definitions/alert",
+                  "description": "Object containing details of the alert configuration that fired",
+                  "order": 2,
+                  "title": "alert"
+                },
+                "correlationId": {
+                  "description": "Unique ID of this alert firing, for correlation purposes between LE and Razor",
+                  "order": 1,
+                  "title": "correlationId",
+                  "type": "string"
+                },
+                "event": {
+                  "$ref": "#/definitions/event",
+                  "description": "Object containing details of the alert event",
+                  "order": 4,
+                  "title": "event"
+                },
+                "logs": {
+                  "description": "Object containing details of the log where the alert fired",
+                  "items": {
+                    "$ref": "#/definitions/logs"
+                  },
+                  "order": 3,
+                  "title": "logs",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "alert",
+                "correlationId",
+                "event",
+                "logs"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api-idr.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "809912b5-65a9-43c5-a403-0fb6f39179df": {
+            "nodeId": "809912b5-65a9-43c5-a403-0fb6f39179df",
+            "name": "File Hashes Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "1228ea17-fced-4fd0-b2d0-ebbf90d40168",
+              "nextEdgeId": "aa01dc58-b3b1-4352-8dbd-23c76eeb7bbd",
+              "repeatVariable": "{{[d1738545-2607-4396-9ef9-c307fedb2fae].[alert_event_indicators].[hashes]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "8333ae62-4300-48ca-9c78-cdbdfb082974": {
+            "nodeId": "8333ae62-4300-48ca-9c78-cdbdfb082974",
+            "name": "Send File Sandbox Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[492f2f5d-7175-40bc-8f90-3658c96efc3a].[file_sandbox_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "aa570517-4531-4db6-989a-1edee7410505": {
+            "nodeId": "aa570517-4531-4db6-989a-1edee7410505",
+            "name": "File Sandbox Report Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "b5f8dcc4-ea8e-407a-b643-4fefcae47ac9",
+              "stepControlParams": [
+                {
+                  "edgeId": "d85a8071-7df9-4228-b31a-15847384683f",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "492f2f5d-7175-40bc-8f90-3658c96efc3a.file_sandbox_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[492f2f5d-7175-40bc-8f90-3658c96efc3a].[file_sandbox_report]}}) > 0"
+                },
+                {
+                  "edgeId": "b5f8dcc4-ea8e-407a-b643-4fefcae47ac9",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "d1738545-2607-4396-9ef9-c307fedb2fae": {
+            "nodeId": "d1738545-2607-4396-9ef9-c307fedb2fae",
+            "name": "Extract Alert Information",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "extract_alert_event_information",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "alert_event": "{{[7c42fccd-e099-41b7-b3d8-a255ca376bdb].[event].[entryObject]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "alert_event": {
+                  "description": "Enter the generated event alert details in the form of object",
+                  "order": 1,
+                  "title": "Alert Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "alert_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "alert_event_indicators": {
+                  "description": "Object containing indicators like ip_address, url, domain, hash",
+                  "order": 1,
+                  "title": "Alert Event Indicators",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "alert_event_indicators"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "alert_event_indicators": {
+                  "properties": {
+                    "hashes": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "alert_event_indicators": {
+                  "$ref": "#/definitions/alert_event_indicators",
+                  "description": "Object containing indicators like ip_address, url, domain, hash",
+                  "order": 1,
+                  "title": "Alert Event Indicators"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "File Sandbox Report",
+          "IDR Alert"
+        ],
+        "humanCostSeconds": 1800,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Retrieves the sandbox analysis details for a specific file hash from Google Threat Intelligence."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "6a1513f0-e619-43c5-b353-726ebad17d3c",
+        "name": "IDR Alert",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {
+            "alert": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the alert",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Customer provided name of the alert",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                },
+                "trigger": {
+                  "$ref": "#/definitions/trigger",
+                  "description": "Object containing details of the alert trigger",
+                  "order": 4,
+                  "title": "trigger"
+                },
+                "type": {
+                  "description": "Type of the alert",
+                  "order": 3,
+                  "title": "type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "trigger",
+                "type"
+              ],
+              "title": "alert",
+              "type": "object"
+            },
+            "comparison": {
+              "properties": {
+                "fromTimestamp": {
+                  "description": "Epoch time millis of the start of the comparison query",
+                  "order": 3,
+                  "title": "fromTimestamp",
+                  "type": "integer"
+                },
+                "query": {
+                  "description": "The query that was executed",
+                  "order": 1,
+                  "title": "query",
+                  "type": "string"
+                },
+                "toTimestamp": {
+                  "description": "Epoch time millis of the end of the comparison query",
+                  "order": 4,
+                  "title": "toTimestamp",
+                  "type": "integer"
+                },
+                "value": {
+                  "description": "The result value of the comparison query",
+                  "order": 2,
+                  "title": "value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "fromTimestamp",
+                "query",
+                "toTimestamp",
+                "value"
+              ],
+              "title": "comparison",
+              "type": "object"
+            },
+            "current": {
+              "properties": {
+                "fromTimestamp": {
+                  "description": "Epoch time millis of the start of the comparison query",
+                  "order": 3,
+                  "title": "fromTimestamp",
+                  "type": "integer"
+                },
+                "query": {
+                  "description": "The query that was executed",
+                  "order": 1,
+                  "title": "query",
+                  "type": "string"
+                },
+                "toTimestamp": {
+                  "description": "Epoch time millis of the end of the comparison query",
+                  "order": 4,
+                  "title": "toTimestamp",
+                  "type": "integer"
+                },
+                "value": {
+                  "description": "The result value of the comparison query",
+                  "order": 2,
+                  "title": "value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "fromTimestamp",
+                "query",
+                "toTimestamp",
+                "value"
+              ],
+              "title": "current",
+              "type": "object"
+            },
+            "event": {
+              "properties": {
+                "absoluteDiff": {
+                  "description": "Difference between the query values",
+                  "order": 4,
+                  "title": "absoluteDiff",
+                  "type": "number"
+                },
+                "entry": {
+                  "description": "The contents of the log entry that matched the pattern",
+                  "order": 5,
+                  "title": "entry",
+                  "type": "string"
+                },
+                "entryObject": {
+                  "description": "The contents of the log entry in Object format",
+                  "order": 6,
+                  "properties": {},
+                  "title": "entryObject",
+                  "type": "object"
+                },
+                "lastMatchTimestamp": {
+                  "description": "Epoch time millis of the last entry matching the pattern",
+                  "order": 2,
+                  "title": "lastMatchTimestamp",
+                  "type": "integer"
+                },
+                "queries": {
+                  "$ref": "#/definitions/queries",
+                  "description": "Object containing the results of the two queries",
+                  "order": 3,
+                  "title": "queries"
+                },
+                "sequenceId": {
+                  "description": "sequence id of the log entry the alert fired upon",
+                  "order": 7,
+                  "title": "sequenceId",
+                  "type": "integer"
+                },
+                "timestamp": {
+                  "description": "Epoch time millis of the alert firing",
+                  "order": 1,
+                  "title": "timestamp",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "timestamp"
+              ],
+              "title": "event",
+              "type": "object"
+            },
+            "logSet": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the log set",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Customer provided name of the log set",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "title": "logSet",
+              "type": "object"
+            },
+            "logs": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the log",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "logSet": {
+                  "description": "Array of objects containing the details of the log set the log belongs to. Usually one element",
+                  "items": {
+                    "$ref": "#/definitions/logSet"
+                  },
+                  "order": 3,
+                  "title": "logSet",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "Customer provided name of the log the alert fired on",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "logSet",
+                "name"
+              ],
+              "title": "logs",
+              "type": "object"
+            },
+            "queries": {
+              "properties": {
+                "comparison": {
+                  "$ref": "#/definitions/comparison",
+                  "description": "Object containing the results of the comparison query",
+                  "order": 1,
+                  "title": "comparison"
+                },
+                "current": {
+                  "$ref": "#/definitions/current",
+                  "description": "Object containing the results of the current query",
+                  "order": 2,
+                  "title": "current"
+                }
+              },
+              "required": [
+                "comparison",
+                "current"
+              ],
+              "title": "queries",
+              "type": "object"
+            },
+            "trigger": {
+              "properties": {
+                "comparison": {
+                  "description": "The time frame for comparison against, in millis",
+                  "order": 6,
+                  "title": "comparison",
+                  "type": "integer"
+                },
+                "direction": {
+                  "description": "Direction of the anomaly - increase or decrease",
+                  "order": 3,
+                  "title": "direction",
+                  "type": "string"
+                },
+                "duration": {
+                  "description": "The duration of the alert's evaluation query, in millis",
+                  "order": 5,
+                  "title": "duration",
+                  "type": "integer"
+                },
+                "durationThreshold": {
+                  "description": "How long the pattern must not match any events for the inactivity alert to trigger",
+                  "order": 2,
+                  "title": "durationThreshold",
+                  "type": "string"
+                },
+                "pattern": {
+                  "description": "Query pattern of the alert",
+                  "order": 1,
+                  "title": "pattern",
+                  "type": "string"
+                },
+                "threshold": {
+                  "description": "The threshold percentage for the change",
+                  "order": 4,
+                  "title": "threshold",
+                  "type": "number"
+                }
+              },
+              "title": "trigger",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "alert": {
+              "$ref": "#/definitions/alert",
+              "description": "Object containing details of the alert configuration that fired",
+              "order": 2,
+              "title": "alert"
+            },
+            "correlationId": {
+              "description": "Unique ID of this alert firing, for correlation purposes between LE and Razor",
+              "order": 1,
+              "title": "correlationId",
+              "type": "string"
+            },
+            "event": {
+              "$ref": "#/definitions/event",
+              "description": "Object containing details of the alert event",
+              "order": 4,
+              "title": "event"
+            },
+            "logs": {
+              "description": "Object containing details of the log where the alert fired",
+              "items": {
+                "$ref": "#/definitions/logs"
+              },
+              "order": 3,
+              "title": "logs",
+              "type": "array"
+            }
+          },
+          "required": [
+            "alert",
+            "correlationId",
+            "event",
+            "logs"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {
+            "alert": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the alert",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Customer provided name of the alert",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                },
+                "trigger": {
+                  "$ref": "#/definitions/trigger",
+                  "description": "Object containing details of the alert trigger",
+                  "order": 4,
+                  "title": "trigger"
+                },
+                "type": {
+                  "description": "Type of the alert",
+                  "order": 3,
+                  "title": "type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "trigger",
+                "type"
+              ],
+              "title": "alert",
+              "type": "object"
+            },
+            "comparison": {
+              "properties": {
+                "fromTimestamp": {
+                  "description": "Epoch time millis of the start of the comparison query",
+                  "order": 3,
+                  "title": "fromTimestamp",
+                  "type": "integer"
+                },
+                "query": {
+                  "description": "The query that was executed",
+                  "order": 1,
+                  "title": "query",
+                  "type": "string"
+                },
+                "toTimestamp": {
+                  "description": "Epoch time millis of the end of the comparison query",
+                  "order": 4,
+                  "title": "toTimestamp",
+                  "type": "integer"
+                },
+                "value": {
+                  "description": "The result value of the comparison query",
+                  "order": 2,
+                  "title": "value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "fromTimestamp",
+                "query",
+                "toTimestamp",
+                "value"
+              ],
+              "title": "comparison",
+              "type": "object"
+            },
+            "current": {
+              "properties": {
+                "fromTimestamp": {
+                  "description": "Epoch time millis of the start of the comparison query",
+                  "order": 3,
+                  "title": "fromTimestamp",
+                  "type": "integer"
+                },
+                "query": {
+                  "description": "The query that was executed",
+                  "order": 1,
+                  "title": "query",
+                  "type": "string"
+                },
+                "toTimestamp": {
+                  "description": "Epoch time millis of the end of the comparison query",
+                  "order": 4,
+                  "title": "toTimestamp",
+                  "type": "integer"
+                },
+                "value": {
+                  "description": "The result value of the comparison query",
+                  "order": 2,
+                  "title": "value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "fromTimestamp",
+                "query",
+                "toTimestamp",
+                "value"
+              ],
+              "title": "current",
+              "type": "object"
+            },
+            "event": {
+              "properties": {
+                "absoluteDiff": {
+                  "description": "Difference between the query values",
+                  "order": 4,
+                  "title": "absoluteDiff",
+                  "type": "number"
+                },
+                "entry": {
+                  "description": "The contents of the log entry that matched the pattern",
+                  "order": 5,
+                  "title": "entry",
+                  "type": "string"
+                },
+                "entryObject": {
+                  "description": "The contents of the log entry in Object format",
+                  "order": 6,
+                  "properties": {},
+                  "title": "entryObject",
+                  "type": "object"
+                },
+                "lastMatchTimestamp": {
+                  "description": "Epoch time millis of the last entry matching the pattern",
+                  "order": 2,
+                  "title": "lastMatchTimestamp",
+                  "type": "integer"
+                },
+                "queries": {
+                  "$ref": "#/definitions/queries",
+                  "description": "Object containing the results of the two queries",
+                  "order": 3,
+                  "title": "queries"
+                },
+                "sequenceId": {
+                  "description": "sequence id of the log entry the alert fired upon",
+                  "order": 7,
+                  "title": "sequenceId",
+                  "type": "integer"
+                },
+                "timestamp": {
+                  "description": "Epoch time millis of the alert firing",
+                  "order": 1,
+                  "title": "timestamp",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "timestamp"
+              ],
+              "title": "event",
+              "type": "object"
+            },
+            "logSet": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the log set",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Customer provided name of the log set",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "title": "logSet",
+              "type": "object"
+            },
+            "logs": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the log",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "logSet": {
+                  "description": "Array of objects containing the details of the log set the log belongs to. Usually one element",
+                  "items": {
+                    "$ref": "#/definitions/logSet"
+                  },
+                  "order": 3,
+                  "title": "logSet",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "Customer provided name of the log the alert fired on",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "logSet",
+                "name"
+              ],
+              "title": "logs",
+              "type": "object"
+            },
+            "queries": {
+              "properties": {
+                "comparison": {
+                  "$ref": "#/definitions/comparison",
+                  "description": "Object containing the results of the comparison query",
+                  "order": 1,
+                  "title": "comparison"
+                },
+                "current": {
+                  "$ref": "#/definitions/current",
+                  "description": "Object containing the results of the current query",
+                  "order": 2,
+                  "title": "current"
+                }
+              },
+              "required": [
+                "comparison",
+                "current"
+              ],
+              "title": "queries",
+              "type": "object"
+            },
+            "trigger": {
+              "properties": {
+                "comparison": {
+                  "description": "The time frame for comparison against, in millis",
+                  "order": 6,
+                  "title": "comparison",
+                  "type": "integer"
+                },
+                "direction": {
+                  "description": "Direction of the anomaly - increase or decrease",
+                  "order": 3,
+                  "title": "direction",
+                  "type": "string"
+                },
+                "duration": {
+                  "description": "The duration of the alert's evaluation query, in millis",
+                  "order": 5,
+                  "title": "duration",
+                  "type": "integer"
+                },
+                "durationThreshold": {
+                  "description": "How long the pattern must not match any events for the inactivity alert to trigger",
+                  "order": 2,
+                  "title": "durationThreshold",
+                  "type": "string"
+                },
+                "pattern": {
+                  "description": "Query pattern of the alert",
+                  "order": 1,
+                  "title": "pattern",
+                  "type": "string"
+                },
+                "threshold": {
+                  "description": "The threshold percentage for the change",
+                  "order": 4,
+                  "title": "threshold",
+                  "type": "number"
+                }
+              },
+              "title": "trigger",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "alert": {
+              "$ref": "#/definitions/alert",
+              "description": "Object containing details of the alert configuration that fired",
+              "order": 2,
+              "title": "alert"
+            },
+            "correlationId": {
+              "description": "Unique ID of this alert firing, for correlation purposes between LE and Razor",
+              "order": 1,
+              "title": "correlationId",
+              "type": "string"
+            },
+            "event": {
+              "$ref": "#/definitions/event",
+              "description": "Object containing details of the alert event",
+              "order": 4,
+              "title": "event"
+            },
+            "logs": {
+              "description": "Object containing details of the log where the alert fired",
+              "items": {
+                "$ref": "#/definitions/logs"
+              },
+              "order": 3,
+              "title": "logs",
+              "type": "array"
+            }
+          },
+          "required": [
+            "alert",
+            "correlationId",
+            "event",
+            "logs"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api_log_alert"
+      }
+    ]
+  }
+}

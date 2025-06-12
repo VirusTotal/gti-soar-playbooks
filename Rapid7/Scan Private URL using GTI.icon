@@ -1,0 +1,400 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:54:10.49728213Z",
+    "workflowVersions": [
+      {
+        "name": "Scan Private URL using GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "30aea653-2023-4c96-963a-144b227a8e8a": {
+              "id": "30aea653-2023-4c96-963a-144b227a8e8a",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "a4a955c5-3bbb-4f49-b711-c8eb601f5f56",
+              "toNodeId": "cade4e74-0898-4a45-b7f2-dab58103c85a"
+            },
+            "aaa6827a-c2f8-4bd1-ae4a-23624ef10b29": {
+              "id": "aaa6827a-c2f8-4bd1-ae4a-23624ef10b29",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "cade4e74-0898-4a45-b7f2-dab58103c85a",
+              "toNodeId": ""
+            },
+            "cc31afa4-4bfc-4da4-b70b-5486c2665d29": {
+              "id": "cc31afa4-4bfc-4da4-b70b-5486c2665d29",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "770206a4-f266-4b67-90b5-1e4aeae6a6ed",
+              "toNodeId": "a4a955c5-3bbb-4f49-b711-c8eb601f5f56"
+            }
+          },
+          "nodes": {
+            "770206a4-f266-4b67-90b5-1e4aeae6a6ed": {
+              "id": "770206a4-f266-4b67-90b5-1e4aeae6a6ed",
+              "parentNodeId": ""
+            },
+            "a4a955c5-3bbb-4f49-b711-c8eb601f5f56": {
+              "id": "a4a955c5-3bbb-4f49-b711-c8eb601f5f56",
+              "parentNodeId": ""
+            },
+            "cade4e74-0898-4a45-b7f2-dab58103c85a": {
+              "id": "cade4e74-0898-4a45-b7f2-dab58103c85a",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "770206a4-f266-4b67-90b5-1e4aeae6a6ed": {
+            "nodeId": "770206a4-f266-4b67-90b5-1e4aeae6a6ed",
+            "name": "API Trigger",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "430640ca-999b-4724-af45-d810f1b089d7",
+            "defaultInputJSONSchema": {
+              "definitions": {},
+              "properties": {
+                "private_url": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {},
+              "properties": {
+                "private_url": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "a4a955c5-3bbb-4f49-b711-c8eb601f5f56": {
+            "nodeId": "a4a955c5-3bbb-4f49-b711-c8eb601f5f56",
+            "name": "Scan Private URL",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "scan_private_url",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "private_url": "{{[770206a4-f266-4b67-90b5-1e4aeae6a6ed].[private_url]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "private_url": {
+                  "description": "Provide the URL that need to be analysed",
+                  "order": 1,
+                  "title": "Private URL",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "private_url"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "url_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "String, with the key as the partner who categorized the URL and the value as the URL's category according to that partner",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the URL's favicon. Only returned in premium API",
+                      "order": 2,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "first_submission_date": {
+                      "description": "UTC timestamp of the date when the URL was first submitted to GTI",
+                      "order": 3,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "UTC timestamp representing last time the URL was scanned",
+                      "order": 5,
+                      "title": "Last Analysis Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scans",
+                      "order": 6,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_final_url": {
+                      "description": "Final URL in URL redirections",
+                      "order": 7,
+                      "title": "Last Final URL",
+                      "type": "string"
+                    },
+                    "last_http_response_code": {
+                      "description": "HTTP response code of the last response",
+                      "order": 8,
+                      "title": "Last HTTP Response Code",
+                      "type": "string"
+                    },
+                    "last_http_response_content_length": {
+                      "description": "Length in bytes of the content received",
+                      "order": 9,
+                      "title": "Last HTTP Response Content Length",
+                      "type": "string"
+                    },
+                    "last_http_response_content_sha256": {
+                      "description": "URL response body's SHA256 hash",
+                      "order": 10,
+                      "title": "Last HTTP Response Content SHA256",
+                      "type": "string"
+                    },
+                    "last_http_response_cookies": {
+                      "description": "Dictionary containing the website's cookies",
+                      "order": 11,
+                      "title": "Last HTTP Response Cookies",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "UTC timestamp representing last modification date",
+                      "order": 12,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "UTC timestamp representing last time it was sent to be analyzed",
+                      "order": 13,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Value of votes from GTI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 15,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "targeted_brand": {
+                      "description": "Targeted brand info extracted from phishing engines",
+                      "order": 16,
+                      "title": "Targeted Brand",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times that URL has been checked",
+                      "order": 17,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 18,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Containing the number of positive (harmless) and negative (malicious) votes received from VirusTotal community",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "url": {
+                      "description": "Original URL to be scanned",
+                      "order": 21,
+                      "title": "URL",
+                      "type": "string"
+                    },
+                    "webpage_title": {
+                      "description": "Webpage title",
+                      "order": 19,
+                      "title": "Webpage Title",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Url Report",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "scanned_private_url_report": {
+                  "$ref": "#/definitions/url_report",
+                  "description": "Retrieves the scanned private URL report",
+                  "order": 1,
+                  "title": "Scanned Private URL Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "cade4e74-0898-4a45-b7f2-dab58103c85a": {
+            "nodeId": "cade4e74-0898-4a45-b7f2-dab58103c85a",
+            "name": "Send Scanned Private URL Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[a4a955c5-3bbb-4f49-b711-c8eb601f5f56].[scanned_private_url_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Scan Private URL"
+        ],
+        "humanCostSeconds": 900,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Retrieves the analysis report for a URL privately submitted to Google Threat Intelligence for scanning."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "430640ca-999b-4724-af45-d810f1b089d7",
+        "name": "API Trigger",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {},
+          "properties": {
+            "private_url": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {},
+          "properties": {
+            "private_url": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api",
+        "options": {
+          "webhookEnabled": true
+        }
+      }
+    ]
+  }
+}

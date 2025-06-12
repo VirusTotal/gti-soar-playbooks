@@ -1,0 +1,4531 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:04.097648276Z",
+    "workflowVersions": [
+      {
+        "name": "IDR Alert Based IOC Enrichment and Threat Contextualization using GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "050fc743-57cc-4f6f-b41b-33abfc3ca234": {
+              "id": "050fc743-57cc-4f6f-b41b-33abfc3ca234",
+              "name": "",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "3b2561b9-1645-4425-b9cb-ff0cf680e33c",
+              "toNodeId": "baef93e8-3cc7-4c2e-8286-47dd5889e3f3"
+            },
+            "1f6aa9a4-ce7c-4f98-a56f-c9e9fa6d1121": {
+              "id": "1f6aa9a4-ce7c-4f98-a56f-c9e9fa6d1121",
+              "name": "",
+              "description": "",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "fromNodeId": "d686a8bd-20db-40db-9d53-071029348af7",
+              "toNodeId": ""
+            },
+            "239b4804-51ed-4c03-9d08-a9688b861966": {
+              "id": "239b4804-51ed-4c03-9d08-a9688b861966",
+              "name": "",
+              "description": "",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "fromNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "toNodeId": "64fb74ab-c1bb-4807-8c51-df4c351e1e7d"
+            },
+            "2b01d947-7d24-4496-9d7f-ebfaebc5c219": {
+              "id": "2b01d947-7d24-4496-9d7f-ebfaebc5c219",
+              "name": "",
+              "description": "",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "fromNodeId": "e9648954-39d7-49a3-9ffd-da0dfdbdab40",
+              "toNodeId": ""
+            },
+            "2c4960d1-5f09-4c29-bcbc-f35a90946556": {
+              "id": "2c4960d1-5f09-4c29-bcbc-f35a90946556",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "da6ff41b-3c8d-44dd-8338-2aaac107bf6b",
+              "toNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1"
+            },
+            "308ab72d-1b12-4ade-bf51-90f94edf186c": {
+              "id": "308ab72d-1b12-4ade-bf51-90f94edf186c",
+              "name": "",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "fbd6985e-660d-4ec8-8f3d-7c3bf3e34130",
+              "toNodeId": ""
+            },
+            "3d3bd6db-798d-45b9-b188-3e4330efd7df": {
+              "id": "3d3bd6db-798d-45b9-b188-3e4330efd7df",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "fromNodeId": "6fb78644-4934-4bfb-8b57-9d44c47da74f",
+              "toNodeId": ""
+            },
+            "3e6d80b0-d27e-4587-996f-9827c687f107": {
+              "id": "3e6d80b0-d27e-4587-996f-9827c687f107",
+              "name": "",
+              "description": "",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "fromNodeId": "ac607bc5-fa4b-41e3-b6e0-e26f5f82877c",
+              "toNodeId": "752c8ef3-bc24-4ba5-a4b3-747d693fcaa5"
+            },
+            "40416bb0-ca23-4e1f-a8a1-bd30f50f1713": {
+              "id": "40416bb0-ca23-4e1f-a8a1-bd30f50f1713",
+              "name": "",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "bd0a6a76-a7bd-4c9b-ba9e-26c61a713509",
+              "toNodeId": ""
+            },
+            "474ad519-8714-49ab-9355-5313982275de": {
+              "id": "474ad519-8714-49ab-9355-5313982275de",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "50ab45e6-ecb7-4b35-8918-fd18a7ef27f5",
+              "toNodeId": ""
+            },
+            "56c2af65-5618-44ef-8ff6-fda12090faa6": {
+              "id": "56c2af65-5618-44ef-8ff6-fda12090faa6",
+              "name": "",
+              "description": "",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "fromNodeId": "c75839f0-8c87-4e63-9809-a1ebc69d41ce",
+              "toNodeId": "f65cd78c-03ea-4029-ad1d-0da26fcf3622"
+            },
+            "5ea610a7-47a9-4db7-925f-34392b4794f3": {
+              "id": "5ea610a7-47a9-4db7-925f-34392b4794f3",
+              "name": "",
+              "description": "",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "fromNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "toNodeId": "c75839f0-8c87-4e63-9809-a1ebc69d41ce"
+            },
+            "5ffc2ad5-3097-45f4-9bf2-d777bf5dcbf6": {
+              "id": "5ffc2ad5-3097-45f4-9bf2-d777bf5dcbf6",
+              "name": "",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "toNodeId": "164200ce-e2a9-4b6c-a08d-f1ab839bce10"
+            },
+            "6ad81657-4142-4f67-962d-e136d7d0b92b": {
+              "id": "6ad81657-4142-4f67-962d-e136d7d0b92b",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "4f110c6f-0393-4178-acfb-7373e9f02669",
+              "toNodeId": "50ab45e6-ecb7-4b35-8918-fd18a7ef27f5"
+            },
+            "79f72f69-9e1e-4491-b4f6-d03fe7e8dcd7": {
+              "id": "79f72f69-9e1e-4491-b4f6-d03fe7e8dcd7",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "baef93e8-3cc7-4c2e-8286-47dd5889e3f3",
+              "toNodeId": ""
+            },
+            "7d3cc2ab-fe42-4b78-be80-c7e29a7f0f95": {
+              "id": "7d3cc2ab-fe42-4b78-be80-c7e29a7f0f95",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "fromNodeId": "ab9fc5e5-0772-4426-9a85-34df8f61cd03",
+              "toNodeId": "e0e42381-15fa-4b41-b431-ae0cebf3c3b1"
+            },
+            "83155095-6746-454c-b17e-d21ff48af25a": {
+              "id": "83155095-6746-454c-b17e-d21ff48af25a",
+              "name": "",
+              "description": "",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "fromNodeId": "e0e42381-15fa-4b41-b431-ae0cebf3c3b1",
+              "toNodeId": ""
+            },
+            "85a57ace-ef58-450c-8c4a-6a6826724427": {
+              "id": "85a57ace-ef58-450c-8c4a-6a6826724427",
+              "name": "",
+              "description": "",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "fromNodeId": "64fb74ab-c1bb-4807-8c51-df4c351e1e7d",
+              "toNodeId": "3dd6154d-8617-45b0-809e-08b66f798d87"
+            },
+            "8b412ff9-003b-4691-bad7-bf8991d9e514": {
+              "id": "8b412ff9-003b-4691-bad7-bf8991d9e514",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "fromNodeId": "467e03cc-a5e7-4249-9c94-c9a555ab0626",
+              "toNodeId": "e9648954-39d7-49a3-9ffd-da0dfdbdab40"
+            },
+            "8fe01ef6-a4ba-4d28-91dd-f58835cb3ed7": {
+              "id": "8fe01ef6-a4ba-4d28-91dd-f58835cb3ed7",
+              "name": "",
+              "description": "",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "fromNodeId": "752c8ef3-bc24-4ba5-a4b3-747d693fcaa5",
+              "toNodeId": "ab9fc5e5-0772-4426-9a85-34df8f61cd03"
+            },
+            "906a7ba8-184b-4f95-a560-19e6a04a4914": {
+              "id": "906a7ba8-184b-4f95-a560-19e6a04a4914",
+              "name": "",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "164200ce-e2a9-4b6c-a08d-f1ab839bce10",
+              "toNodeId": "0a2d9d5e-6c36-41ad-b727-a5439786320b"
+            },
+            "9112347f-d9a3-4f0f-aeb3-04a1af6323fe": {
+              "id": "9112347f-d9a3-4f0f-aeb3-04a1af6323fe",
+              "name": "",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "0a2d9d5e-6c36-41ad-b727-a5439786320b",
+              "toNodeId": "4f110c6f-0393-4178-acfb-7373e9f02669"
+            },
+            "9c5bcf52-dca7-4bbf-a3a4-a353999d358c": {
+              "id": "9c5bcf52-dca7-4bbf-a3a4-a353999d358c",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "fromNodeId": "467e03cc-a5e7-4249-9c94-c9a555ab0626",
+              "toNodeId": ""
+            },
+            "a396536a-5f20-4290-9d3d-4e7ae304c6e0": {
+              "id": "a396536a-5f20-4290-9d3d-4e7ae304c6e0",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "4f110c6f-0393-4178-acfb-7373e9f02669",
+              "toNodeId": "3b2561b9-1645-4425-b9cb-ff0cf680e33c"
+            },
+            "a9b8e64b-4ed8-4b07-b147-969803345ece": {
+              "id": "a9b8e64b-4ed8-4b07-b147-969803345ece",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "toNodeId": ""
+            },
+            "ac219df0-cca5-4dcb-8acd-24ec9b7c2349": {
+              "id": "ac219df0-cca5-4dcb-8acd-24ec9b7c2349",
+              "name": "",
+              "description": "",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "fromNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "toNodeId": "ac607bc5-fa4b-41e3-b6e0-e26f5f82877c"
+            },
+            "b507c5e5-773f-4e26-aa3f-b67e6dae32b0": {
+              "id": "b507c5e5-773f-4e26-aa3f-b67e6dae32b0",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "fromNodeId": "6fb78644-4934-4bfb-8b57-9d44c47da74f",
+              "toNodeId": "d686a8bd-20db-40db-9d53-071029348af7"
+            },
+            "d6bfb158-2db8-4124-84ff-34d786aa6421": {
+              "id": "d6bfb158-2db8-4124-84ff-34d786aa6421",
+              "name": "",
+              "description": "",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "fromNodeId": "f65cd78c-03ea-4029-ad1d-0da26fcf3622",
+              "toNodeId": "6fb78644-4934-4bfb-8b57-9d44c47da74f"
+            },
+            "d7dd5b10-77fe-41ed-9834-72d7069e11bb": {
+              "id": "d7dd5b10-77fe-41ed-9834-72d7069e11bb",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "4ea501a0-229b-45e3-8e66-57f8a12eb8e3",
+              "toNodeId": "da6ff41b-3c8d-44dd-8338-2aaac107bf6b"
+            },
+            "dd675843-09cd-4485-9ed2-e6dc4bfdbdb9": {
+              "id": "dd675843-09cd-4485-9ed2-e6dc4bfdbdb9",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "toNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6"
+            },
+            "e34cfbb7-7d33-422e-9f2d-742e78561e1e": {
+              "id": "e34cfbb7-7d33-422e-9f2d-742e78561e1e",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "50ab45e6-ecb7-4b35-8918-fd18a7ef27f5",
+              "toNodeId": "bd0a6a76-a7bd-4c9b-ba9e-26c61a713509"
+            },
+            "e736726e-f29c-4ed7-a603-c89a3c0a8a9d": {
+              "id": "e736726e-f29c-4ed7-a603-c89a3c0a8a9d",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "fromNodeId": "ab9fc5e5-0772-4426-9a85-34df8f61cd03",
+              "toNodeId": ""
+            },
+            "e8177dd6-ef97-4e65-8c5a-f816e13a8927": {
+              "id": "e8177dd6-ef97-4e65-8c5a-f816e13a8927",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "toNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            },
+            "f2575a60-06b1-472a-8e7e-e066855f1401": {
+              "id": "f2575a60-06b1-472a-8e7e-e066855f1401",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "toNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11"
+            },
+            "f2c52389-888e-42f8-9f8d-7d5503271ec9": {
+              "id": "f2c52389-888e-42f8-9f8d-7d5503271ec9",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "fromNodeId": "baef93e8-3cc7-4c2e-8286-47dd5889e3f3",
+              "toNodeId": "fbd6985e-660d-4ec8-8f3d-7c3bf3e34130"
+            },
+            "f2f1f0c3-1189-4617-bc7b-21c06ef19b93": {
+              "id": "f2f1f0c3-1189-4617-bc7b-21c06ef19b93",
+              "name": "",
+              "description": "",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "fromNodeId": "3dd6154d-8617-45b0-809e-08b66f798d87",
+              "toNodeId": "467e03cc-a5e7-4249-9c94-c9a555ab0626"
+            }
+          },
+          "nodes": {
+            "0a2d9d5e-6c36-41ad-b727-a5439786320b": {
+              "id": "0a2d9d5e-6c36-41ad-b727-a5439786320b",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            },
+            "149f86ba-017a-4c8d-b35e-45b2aaceeab1": {
+              "id": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+              "parentNodeId": ""
+            },
+            "164200ce-e2a9-4b6c-a08d-f1ab839bce10": {
+              "id": "164200ce-e2a9-4b6c-a08d-f1ab839bce10",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            },
+            "1f69af9a-1b46-4915-a597-6087c2011d11": {
+              "id": "1f69af9a-1b46-4915-a597-6087c2011d11",
+              "parentNodeId": ""
+            },
+            "3b2561b9-1645-4425-b9cb-ff0cf680e33c": {
+              "id": "3b2561b9-1645-4425-b9cb-ff0cf680e33c",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            },
+            "3dd6154d-8617-45b0-809e-08b66f798d87": {
+              "id": "3dd6154d-8617-45b0-809e-08b66f798d87",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6"
+            },
+            "467e03cc-a5e7-4249-9c94-c9a555ab0626": {
+              "id": "467e03cc-a5e7-4249-9c94-c9a555ab0626",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6"
+            },
+            "4ea501a0-229b-45e3-8e66-57f8a12eb8e3": {
+              "id": "4ea501a0-229b-45e3-8e66-57f8a12eb8e3",
+              "parentNodeId": ""
+            },
+            "4f110c6f-0393-4178-acfb-7373e9f02669": {
+              "id": "4f110c6f-0393-4178-acfb-7373e9f02669",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            },
+            "50ab45e6-ecb7-4b35-8918-fd18a7ef27f5": {
+              "id": "50ab45e6-ecb7-4b35-8918-fd18a7ef27f5",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            },
+            "60ab34d4-d769-4a65-ae33-8b20bcc589e2": {
+              "id": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+              "parentNodeId": ""
+            },
+            "64fb74ab-c1bb-4807-8c51-df4c351e1e7d": {
+              "id": "64fb74ab-c1bb-4807-8c51-df4c351e1e7d",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6"
+            },
+            "6fb78644-4934-4bfb-8b57-9d44c47da74f": {
+              "id": "6fb78644-4934-4bfb-8b57-9d44c47da74f",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1"
+            },
+            "752c8ef3-bc24-4ba5-a4b3-747d693fcaa5": {
+              "id": "752c8ef3-bc24-4ba5-a4b3-747d693fcaa5",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11"
+            },
+            "ab9fc5e5-0772-4426-9a85-34df8f61cd03": {
+              "id": "ab9fc5e5-0772-4426-9a85-34df8f61cd03",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11"
+            },
+            "ac607bc5-fa4b-41e3-b6e0-e26f5f82877c": {
+              "id": "ac607bc5-fa4b-41e3-b6e0-e26f5f82877c",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11"
+            },
+            "baef93e8-3cc7-4c2e-8286-47dd5889e3f3": {
+              "id": "baef93e8-3cc7-4c2e-8286-47dd5889e3f3",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            },
+            "bcd40d02-ace5-49ee-af0f-4bff37fee3a6": {
+              "id": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+              "parentNodeId": ""
+            },
+            "bd0a6a76-a7bd-4c9b-ba9e-26c61a713509": {
+              "id": "bd0a6a76-a7bd-4c9b-ba9e-26c61a713509",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            },
+            "c75839f0-8c87-4e63-9809-a1ebc69d41ce": {
+              "id": "c75839f0-8c87-4e63-9809-a1ebc69d41ce",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1"
+            },
+            "d686a8bd-20db-40db-9d53-071029348af7": {
+              "id": "d686a8bd-20db-40db-9d53-071029348af7",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1"
+            },
+            "da6ff41b-3c8d-44dd-8338-2aaac107bf6b": {
+              "id": "da6ff41b-3c8d-44dd-8338-2aaac107bf6b",
+              "parentNodeId": ""
+            },
+            "e0e42381-15fa-4b41-b431-ae0cebf3c3b1": {
+              "id": "e0e42381-15fa-4b41-b431-ae0cebf3c3b1",
+              "parentNodeId": "1f69af9a-1b46-4915-a597-6087c2011d11"
+            },
+            "e9648954-39d7-49a3-9ffd-da0dfdbdab40": {
+              "id": "e9648954-39d7-49a3-9ffd-da0dfdbdab40",
+              "parentNodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6"
+            },
+            "f65cd78c-03ea-4029-ad1d-0da26fcf3622": {
+              "id": "f65cd78c-03ea-4029-ad1d-0da26fcf3622",
+              "parentNodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1"
+            },
+            "fbd6985e-660d-4ec8-8f3d-7c3bf3e34130": {
+              "id": "fbd6985e-660d-4ec8-8f3d-7c3bf3e34130",
+              "parentNodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2"
+            }
+          }
+        },
+        "steps": {
+          "0a2d9d5e-6c36-41ad-b727-a5439786320b": {
+            "nodeId": "0a2d9d5e-6c36-41ad-b727-a5439786320b",
+            "name": "Send File Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[164200ce-e2a9-4b6c-a08d-f1ab839bce10].[file_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "149f86ba-017a-4c8d-b35e-45b2aaceeab1": {
+            "nodeId": "149f86ba-017a-4c8d-b35e-45b2aaceeab1",
+            "name": "IP Addresses Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "5ea610a7-47a9-4db7-925f-34392b4794f3",
+              "nextEdgeId": "f2575a60-06b1-472a-8e7e-e066855f1401",
+              "repeatVariable": "{{[da6ff41b-3c8d-44dd-8338-2aaac107bf6b].[alert_event_indicators].[ip_addresses]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "164200ce-e2a9-4b6c-a08d-f1ab839bce10": {
+            "nodeId": "164200ce-e2a9-4b6c-a08d-f1ab839bce10",
+            "name": "Get File Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_file_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "file_hash": "{{[60ab34d4-d769-4a65-ae33-8b20bcc589e2].[$item]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "file_hash": {
+                  "description": "MD5/SHA1/SHA256 hash to be analysed",
+                  "order": 1,
+                  "title": "File Hash",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "file_hash"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "file_report": {
+                  "properties": {
+                    "creation_date": {
+                      "description": "Extracted when possible from the file's metadata. Indicates when it was built or compiled. It can also be faked by malware creators. UTC timestamp",
+                      "order": 1,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "crowdsourced_ai_results": {
+                      "description": "A summary of all crowdsourced AI results",
+                      "order": 27,
+                      "title": "Crowdsourced AI Results",
+                      "type": "string"
+                    },
+                    "crowdsourced_yara_results": {
+                      "description": "YARA matches from crowdsourced rules.",
+                      "order": 2,
+                      "title": "CrowdSourced Yara Results Count",
+                      "type": "string"
+                    },
+                    "downloadable": {
+                      "description": "True if the file can be downloaded, false otherwise. Only available for Premium API users",
+                      "order": 3,
+                      "title": "Downloadable",
+                      "type": "boolean"
+                    },
+                    "first_submission_date": {
+                      "description": "Date when the file was first seen in Google TI. UTC timestamp",
+                      "order": 4,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 6,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 7,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when the object itself was last modified. UTC timestamp",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "Most recent date the file was posted to Google TI. UTC timestamp",
+                      "order": 9,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "main_icon": {
+                      "description": "Icon's relevant hashes",
+                      "order": 10,
+                      "title": "Main Icon",
+                      "type": "object"
+                    },
+                    "md5": {
+                      "description": "File's MD5 Hash",
+                      "order": 11,
+                      "title": "MD5 Hash",
+                      "type": "string"
+                    },
+                    "meaningful_name": {
+                      "description": "The most interesting name out of all file's names",
+                      "order": 12,
+                      "title": "MeaningFull Name",
+                      "type": "string"
+                    },
+                    "popular_threat_classification_label": {
+                      "description": "Extracts human readable names extracted from AV verdicts and clustering hashes",
+                      "order": 13,
+                      "title": "Popular Threat Classification Label",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "File's score calculated from all votes posted by the Google TI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "sha1": {
+                      "description": "File's SHA1 hash",
+                      "order": 15,
+                      "title": "SHA1 Hash",
+                      "type": "string"
+                    },
+                    "sha256": {
+                      "description": "File's SHA256 hash",
+                      "order": 16,
+                      "title": "SHA256 Hash",
+                      "type": "string"
+                    },
+                    "size": {
+                      "description": "File size in bytes",
+                      "order": 17,
+                      "title": "Size",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 18,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "threat_severity": {
+                      "description": "Threat severity classification",
+                      "order": 28,
+                      "title": "Threat Severity",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times the file has been posted to Google TI",
+                      "order": 19,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into \"harmless\" and \"malicious\"",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "type_description": {
+                      "description": "Describes the file type",
+                      "order": 21,
+                      "title": "Type Description",
+                      "type": "string"
+                    },
+                    "type_extension": {
+                      "description": "Specifies file extension",
+                      "order": 22,
+                      "title": "Type Extension",
+                      "type": "string"
+                    },
+                    "type_tag": {
+                      "description": "Tag representing the file type. Can be used to filter by file type in Google TI intelligence searches",
+                      "order": 23,
+                      "title": "Type Tag",
+                      "type": "string"
+                    },
+                    "type_tags": {
+                      "description": "Broader tags related to the specific file type, used to filter in Google TI intelligence searches",
+                      "order": 24,
+                      "title": "Type Tags",
+                      "type": "string"
+                    },
+                    "unique_sources": {
+                      "description": "Indicates how many different sources the file has been posted from",
+                      "order": 25,
+                      "title": "Unique Sources",
+                      "type": "string"
+                    },
+                    "vhash": {
+                      "description": "In-house similarity clustering algorithm value used to find similar files",
+                      "order": 26,
+                      "title": "Vhash",
+                      "type": "string"
+                    }
+                  },
+                  "title": "File Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "file_report": {
+                  "$ref": "#/definitions/file_report",
+                  "description": "File Enrichment Report",
+                  "order": 1,
+                  "title": "File Report"
+                },
+                "mitre_attack_report": {
+                  "description": "Provides summary of MITRE ATT&CK tactics and techniques observed in each of the sandbox reports of a file",
+                  "order": 3,
+                  "title": "Mitre Attack Report",
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to hashes",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "file_report": {
+                  "properties": {
+                    "creation_date": {
+                      "description": "Extracted when possible from the file's metadata. Indicates when it was built or compiled. It can also be faked by malware creators. UTC timestamp",
+                      "order": 1,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "crowdsourced_ai_results": {
+                      "description": "A summary of all crowdsourced AI results",
+                      "order": 27,
+                      "title": "Crowdsourced AI Results",
+                      "type": "string"
+                    },
+                    "crowdsourced_yara_results": {
+                      "description": "YARA matches from crowdsourced rules.",
+                      "order": 2,
+                      "title": "CrowdSourced Yara Results Count",
+                      "type": "string"
+                    },
+                    "downloadable": {
+                      "description": "True if the file can be downloaded, false otherwise. Only available for Premium API users",
+                      "order": 3,
+                      "title": "Downloadable",
+                      "type": "boolean"
+                    },
+                    "first_submission_date": {
+                      "description": "Date when the file was first seen in Google TI. UTC timestamp",
+                      "order": 4,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 6,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Most recent scan date. UTC timestamp",
+                      "order": 7,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when the object itself was last modified. UTC timestamp",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "Most recent date the file was posted to Google TI. UTC timestamp",
+                      "order": 9,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "main_icon": {
+                      "description": "Icon's relevant hashes",
+                      "order": 10,
+                      "title": "Main Icon",
+                      "type": "object"
+                    },
+                    "md5": {
+                      "description": "File's MD5 Hash",
+                      "order": 11,
+                      "title": "MD5 Hash",
+                      "type": "string"
+                    },
+                    "meaningful_name": {
+                      "description": "The most interesting name out of all file's names",
+                      "order": 12,
+                      "title": "MeaningFull Name",
+                      "type": "string"
+                    },
+                    "popular_threat_classification_label": {
+                      "description": "Extracts human readable names extracted from AV verdicts and clustering hashes",
+                      "order": 13,
+                      "title": "Popular Threat Classification Label",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "File's score calculated from all votes posted by the Google TI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "sha1": {
+                      "description": "File's SHA1 hash",
+                      "order": 15,
+                      "title": "SHA1 Hash",
+                      "type": "string"
+                    },
+                    "sha256": {
+                      "description": "File's SHA256 hash",
+                      "order": 16,
+                      "title": "SHA256 Hash",
+                      "type": "string"
+                    },
+                    "size": {
+                      "description": "File size in bytes",
+                      "order": 17,
+                      "title": "Size",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 18,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "threat_severity": {
+                      "description": "Threat severity classification",
+                      "order": 28,
+                      "title": "Threat Severity",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times the file has been posted to Google TI",
+                      "order": 19,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into \"harmless\" and \"malicious\"",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "type_description": {
+                      "description": "Describes the file type",
+                      "order": 21,
+                      "title": "Type Description",
+                      "type": "string"
+                    },
+                    "type_extension": {
+                      "description": "Specifies file extension",
+                      "order": 22,
+                      "title": "Type Extension",
+                      "type": "string"
+                    },
+                    "type_tag": {
+                      "description": "Tag representing the file type. Can be used to filter by file type in Google TI intelligence searches",
+                      "order": 23,
+                      "title": "Type Tag",
+                      "type": "string"
+                    },
+                    "type_tags": {
+                      "description": "Broader tags related to the specific file type, used to filter in Google TI intelligence searches",
+                      "order": 24,
+                      "title": "Type Tags",
+                      "type": "string"
+                    },
+                    "unique_sources": {
+                      "description": "Indicates how many different sources the file has been posted from",
+                      "order": 25,
+                      "title": "Unique Sources",
+                      "type": "string"
+                    },
+                    "vhash": {
+                      "description": "In-house similarity clustering algorithm value used to find similar files",
+                      "order": 26,
+                      "title": "Vhash",
+                      "type": "string"
+                    }
+                  },
+                  "title": "File Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "mitre_attack_report": {
+                  "properties": {
+                    "mitre_attack_data": {
+                      "items": {
+                        "$ref": "#/definitions/mitre_attack_report_mitre_attack_data"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "mitre_attack_report_mitre_attack_data": {
+                  "properties": {},
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "properties": {
+                    "threat_contextualization_report": {
+                      "items": {
+                        "$ref": "#/definitions/threat_contextualization_report_threat_contextualization_report"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                },
+                "threat_contextualization_report_threat_contextualization_report": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "file_report": {
+                  "$ref": "#/definitions/file_report",
+                  "description": "File Enrichment Report",
+                  "order": 1,
+                  "title": "File Report"
+                },
+                "mitre_attack_report": {
+                  "$ref": "#/definitions/mitre_attack_report",
+                  "description": "Provides summary of MITRE ATT&CK tactics and techniques observed in each of the sandbox reports of a file",
+                  "order": 3,
+                  "title": "Mitre Attack Report"
+                },
+                "threat_contextualization_report": {
+                  "$ref": "#/definitions/threat_contextualization_report",
+                  "description": "Provides information on adversaries related to hashes",
+                  "order": 2,
+                  "title": "Threat Contextualization Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "1f69af9a-1b46-4915-a597-6087c2011d11": {
+            "nodeId": "1f69af9a-1b46-4915-a597-6087c2011d11",
+            "name": "Domains Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "ac219df0-cca5-4dcb-8acd-24ec9b7c2349",
+              "nextEdgeId": "dd675843-09cd-4485-9ed2-e6dc4bfdbdb9",
+              "repeatVariable": "{{[da6ff41b-3c8d-44dd-8338-2aaac107bf6b].[alert_event_indicators].[domains]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "3b2561b9-1645-4425-b9cb-ff0cf680e33c": {
+            "nodeId": "3b2561b9-1645-4425-b9cb-ff0cf680e33c",
+            "name": "Send File Threat Contextualization Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[164200ce-e2a9-4b6c-a08d-f1ab839bce10].[threat_contextualization_report].[threat_contextualization_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "3dd6154d-8617-45b0-809e-08b66f798d87": {
+            "nodeId": "3dd6154d-8617-45b0-809e-08b66f798d87",
+            "name": "Send URL Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[64fb74ab-c1bb-4807-8c51-df4c351e1e7d].[url_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "467e03cc-a5e7-4249-9c94-c9a555ab0626": {
+            "nodeId": "467e03cc-a5e7-4249-9c94-c9a555ab0626",
+            "name": "URL Threat Contextualization Report Found ? ",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "9c5bcf52-dca7-4bbf-a3a4-a353999d358c",
+              "stepControlParams": [
+                {
+                  "edgeId": "8b412ff9-003b-4691-bad7-bf8991d9e514",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "64fb74ab-c1bb-4807-8c51-df4c351e1e7d.threat_contextualization_report.threat_contextualization_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[64fb74ab-c1bb-4807-8c51-df4c351e1e7d].[threat_contextualization_report].[threat_contextualization_report]}}) > 0"
+                },
+                {
+                  "edgeId": "9c5bcf52-dca7-4bbf-a3a4-a353999d358c",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "4ea501a0-229b-45e3-8e66-57f8a12eb8e3": {
+            "nodeId": "4ea501a0-229b-45e3-8e66-57f8a12eb8e3",
+            "name": "IDR Alert",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "672ad767-fc90-4ea9-90ef-e33bbef52c29",
+            "defaultInputJSONSchema": {
+              "definitions": {
+                "alert": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the alert",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the alert",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "trigger": {
+                      "$ref": "#/definitions/trigger",
+                      "description": "Object containing details of the alert trigger",
+                      "order": 4,
+                      "title": "trigger"
+                    },
+                    "type": {
+                      "description": "Type of the alert",
+                      "order": 3,
+                      "title": "type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name",
+                    "trigger",
+                    "type"
+                  ],
+                  "title": "alert",
+                  "type": "object"
+                },
+                "comparison": {
+                  "properties": {
+                    "fromTimestamp": {
+                      "description": "Epoch time millis of the start of the comparison query",
+                      "order": 3,
+                      "title": "fromTimestamp",
+                      "type": "integer"
+                    },
+                    "query": {
+                      "description": "The query that was executed",
+                      "order": 1,
+                      "title": "query",
+                      "type": "string"
+                    },
+                    "toTimestamp": {
+                      "description": "Epoch time millis of the end of the comparison query",
+                      "order": 4,
+                      "title": "toTimestamp",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "description": "The result value of the comparison query",
+                      "order": 2,
+                      "title": "value",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "fromTimestamp",
+                    "query",
+                    "toTimestamp",
+                    "value"
+                  ],
+                  "title": "comparison",
+                  "type": "object"
+                },
+                "current": {
+                  "properties": {
+                    "fromTimestamp": {
+                      "description": "Epoch time millis of the start of the comparison query",
+                      "order": 3,
+                      "title": "fromTimestamp",
+                      "type": "integer"
+                    },
+                    "query": {
+                      "description": "The query that was executed",
+                      "order": 1,
+                      "title": "query",
+                      "type": "string"
+                    },
+                    "toTimestamp": {
+                      "description": "Epoch time millis of the end of the comparison query",
+                      "order": 4,
+                      "title": "toTimestamp",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "description": "The result value of the comparison query",
+                      "order": 2,
+                      "title": "value",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "fromTimestamp",
+                    "query",
+                    "toTimestamp",
+                    "value"
+                  ],
+                  "title": "current",
+                  "type": "object"
+                },
+                "event": {
+                  "properties": {
+                    "absoluteDiff": {
+                      "description": "Difference between the query values",
+                      "order": 4,
+                      "title": "absoluteDiff",
+                      "type": "number"
+                    },
+                    "entry": {
+                      "description": "The contents of the log entry that matched the pattern",
+                      "order": 5,
+                      "title": "entry",
+                      "type": "string"
+                    },
+                    "entryObject": {
+                      "description": "The contents of the log entry in Object format",
+                      "order": 6,
+                      "properties": {},
+                      "title": "entryObject",
+                      "type": "object"
+                    },
+                    "lastMatchTimestamp": {
+                      "description": "Epoch time millis of the last entry matching the pattern",
+                      "order": 2,
+                      "title": "lastMatchTimestamp",
+                      "type": "integer"
+                    },
+                    "queries": {
+                      "$ref": "#/definitions/queries",
+                      "description": "Object containing the results of the two queries",
+                      "order": 3,
+                      "title": "queries"
+                    },
+                    "sequenceId": {
+                      "description": "sequence id of the log entry the alert fired upon",
+                      "order": 7,
+                      "title": "sequenceId",
+                      "type": "integer"
+                    },
+                    "timestamp": {
+                      "description": "Epoch time millis of the alert firing",
+                      "order": 1,
+                      "title": "timestamp",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "timestamp"
+                  ],
+                  "title": "event",
+                  "type": "object"
+                },
+                "logSet": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the log set",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the log set",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "title": "logSet",
+                  "type": "object"
+                },
+                "logs": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the log",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "logSet": {
+                      "description": "Array of objects containing the details of the log set the log belongs to. Usually one element",
+                      "items": {
+                        "$ref": "#/definitions/logSet"
+                      },
+                      "order": 3,
+                      "title": "logSet",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the log the alert fired on",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "logSet",
+                    "name"
+                  ],
+                  "title": "logs",
+                  "type": "object"
+                },
+                "queries": {
+                  "properties": {
+                    "comparison": {
+                      "$ref": "#/definitions/comparison",
+                      "description": "Object containing the results of the comparison query",
+                      "order": 1,
+                      "title": "comparison"
+                    },
+                    "current": {
+                      "$ref": "#/definitions/current",
+                      "description": "Object containing the results of the current query",
+                      "order": 2,
+                      "title": "current"
+                    }
+                  },
+                  "required": [
+                    "comparison",
+                    "current"
+                  ],
+                  "title": "queries",
+                  "type": "object"
+                },
+                "trigger": {
+                  "properties": {
+                    "comparison": {
+                      "description": "The time frame for comparison against, in millis",
+                      "order": 6,
+                      "title": "comparison",
+                      "type": "integer"
+                    },
+                    "direction": {
+                      "description": "Direction of the anomaly - increase or decrease",
+                      "order": 3,
+                      "title": "direction",
+                      "type": "string"
+                    },
+                    "duration": {
+                      "description": "The duration of the alert's evaluation query, in millis",
+                      "order": 5,
+                      "title": "duration",
+                      "type": "integer"
+                    },
+                    "durationThreshold": {
+                      "description": "How long the pattern must not match any events for the inactivity alert to trigger",
+                      "order": 2,
+                      "title": "durationThreshold",
+                      "type": "string"
+                    },
+                    "pattern": {
+                      "description": "Query pattern of the alert",
+                      "order": 1,
+                      "title": "pattern",
+                      "type": "string"
+                    },
+                    "threshold": {
+                      "description": "The threshold percentage for the change",
+                      "order": 4,
+                      "title": "threshold",
+                      "type": "number"
+                    }
+                  },
+                  "title": "trigger",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "alert": {
+                  "$ref": "#/definitions/alert",
+                  "description": "Object containing details of the alert configuration that fired",
+                  "order": 2,
+                  "title": "alert"
+                },
+                "correlationId": {
+                  "description": "Unique ID of this alert firing, for correlation purposes between LE and Razor",
+                  "order": 1,
+                  "title": "correlationId",
+                  "type": "string"
+                },
+                "event": {
+                  "$ref": "#/definitions/event",
+                  "description": "Object containing details of the alert event",
+                  "order": 4,
+                  "title": "event"
+                },
+                "logs": {
+                  "description": "Object containing details of the log where the alert fired",
+                  "items": {
+                    "$ref": "#/definitions/logs"
+                  },
+                  "order": 3,
+                  "title": "logs",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "alert",
+                "correlationId",
+                "event",
+                "logs"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "alert": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the alert",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the alert",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    },
+                    "trigger": {
+                      "$ref": "#/definitions/trigger",
+                      "description": "Object containing details of the alert trigger",
+                      "order": 4,
+                      "title": "trigger"
+                    },
+                    "type": {
+                      "description": "Type of the alert",
+                      "order": 3,
+                      "title": "type",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name",
+                    "trigger",
+                    "type"
+                  ],
+                  "title": "alert",
+                  "type": "object"
+                },
+                "comparison": {
+                  "properties": {
+                    "fromTimestamp": {
+                      "description": "Epoch time millis of the start of the comparison query",
+                      "order": 3,
+                      "title": "fromTimestamp",
+                      "type": "integer"
+                    },
+                    "query": {
+                      "description": "The query that was executed",
+                      "order": 1,
+                      "title": "query",
+                      "type": "string"
+                    },
+                    "toTimestamp": {
+                      "description": "Epoch time millis of the end of the comparison query",
+                      "order": 4,
+                      "title": "toTimestamp",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "description": "The result value of the comparison query",
+                      "order": 2,
+                      "title": "value",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "fromTimestamp",
+                    "query",
+                    "toTimestamp",
+                    "value"
+                  ],
+                  "title": "comparison",
+                  "type": "object"
+                },
+                "current": {
+                  "properties": {
+                    "fromTimestamp": {
+                      "description": "Epoch time millis of the start of the comparison query",
+                      "order": 3,
+                      "title": "fromTimestamp",
+                      "type": "integer"
+                    },
+                    "query": {
+                      "description": "The query that was executed",
+                      "order": 1,
+                      "title": "query",
+                      "type": "string"
+                    },
+                    "toTimestamp": {
+                      "description": "Epoch time millis of the end of the comparison query",
+                      "order": 4,
+                      "title": "toTimestamp",
+                      "type": "integer"
+                    },
+                    "value": {
+                      "description": "The result value of the comparison query",
+                      "order": 2,
+                      "title": "value",
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "fromTimestamp",
+                    "query",
+                    "toTimestamp",
+                    "value"
+                  ],
+                  "title": "current",
+                  "type": "object"
+                },
+                "event": {
+                  "properties": {
+                    "absoluteDiff": {
+                      "description": "Difference between the query values",
+                      "order": 4,
+                      "title": "absoluteDiff",
+                      "type": "number"
+                    },
+                    "entry": {
+                      "description": "The contents of the log entry that matched the pattern",
+                      "order": 5,
+                      "title": "entry",
+                      "type": "string"
+                    },
+                    "entryObject": {
+                      "description": "The contents of the log entry in Object format",
+                      "order": 6,
+                      "properties": {},
+                      "title": "entryObject",
+                      "type": "object"
+                    },
+                    "lastMatchTimestamp": {
+                      "description": "Epoch time millis of the last entry matching the pattern",
+                      "order": 2,
+                      "title": "lastMatchTimestamp",
+                      "type": "integer"
+                    },
+                    "queries": {
+                      "$ref": "#/definitions/queries",
+                      "description": "Object containing the results of the two queries",
+                      "order": 3,
+                      "title": "queries"
+                    },
+                    "sequenceId": {
+                      "description": "sequence id of the log entry the alert fired upon",
+                      "order": 7,
+                      "title": "sequenceId",
+                      "type": "integer"
+                    },
+                    "timestamp": {
+                      "description": "Epoch time millis of the alert firing",
+                      "order": 1,
+                      "title": "timestamp",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "timestamp"
+                  ],
+                  "title": "event",
+                  "type": "object"
+                },
+                "logSet": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the log set",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the log set",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "title": "logSet",
+                  "type": "object"
+                },
+                "logs": {
+                  "properties": {
+                    "id": {
+                      "description": "Identifier for the log",
+                      "order": 2,
+                      "title": "id",
+                      "type": "string"
+                    },
+                    "logSet": {
+                      "description": "Array of objects containing the details of the log set the log belongs to. Usually one element",
+                      "items": {
+                        "$ref": "#/definitions/logSet"
+                      },
+                      "order": 3,
+                      "title": "logSet",
+                      "type": "array"
+                    },
+                    "name": {
+                      "description": "Customer provided name of the log the alert fired on",
+                      "order": 1,
+                      "title": "name",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "logSet",
+                    "name"
+                  ],
+                  "title": "logs",
+                  "type": "object"
+                },
+                "queries": {
+                  "properties": {
+                    "comparison": {
+                      "$ref": "#/definitions/comparison",
+                      "description": "Object containing the results of the comparison query",
+                      "order": 1,
+                      "title": "comparison"
+                    },
+                    "current": {
+                      "$ref": "#/definitions/current",
+                      "description": "Object containing the results of the current query",
+                      "order": 2,
+                      "title": "current"
+                    }
+                  },
+                  "required": [
+                    "comparison",
+                    "current"
+                  ],
+                  "title": "queries",
+                  "type": "object"
+                },
+                "trigger": {
+                  "properties": {
+                    "comparison": {
+                      "description": "The time frame for comparison against, in millis",
+                      "order": 6,
+                      "title": "comparison",
+                      "type": "integer"
+                    },
+                    "direction": {
+                      "description": "Direction of the anomaly - increase or decrease",
+                      "order": 3,
+                      "title": "direction",
+                      "type": "string"
+                    },
+                    "duration": {
+                      "description": "The duration of the alert's evaluation query, in millis",
+                      "order": 5,
+                      "title": "duration",
+                      "type": "integer"
+                    },
+                    "durationThreshold": {
+                      "description": "How long the pattern must not match any events for the inactivity alert to trigger",
+                      "order": 2,
+                      "title": "durationThreshold",
+                      "type": "string"
+                    },
+                    "pattern": {
+                      "description": "Query pattern of the alert",
+                      "order": 1,
+                      "title": "pattern",
+                      "type": "string"
+                    },
+                    "threshold": {
+                      "description": "The threshold percentage for the change",
+                      "order": 4,
+                      "title": "threshold",
+                      "type": "number"
+                    }
+                  },
+                  "title": "trigger",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "alert": {
+                  "$ref": "#/definitions/alert",
+                  "description": "Object containing details of the alert configuration that fired",
+                  "order": 2,
+                  "title": "alert"
+                },
+                "correlationId": {
+                  "description": "Unique ID of this alert firing, for correlation purposes between LE and Razor",
+                  "order": 1,
+                  "title": "correlationId",
+                  "type": "string"
+                },
+                "event": {
+                  "$ref": "#/definitions/event",
+                  "description": "Object containing details of the alert event",
+                  "order": 4,
+                  "title": "event"
+                },
+                "logs": {
+                  "description": "Object containing details of the log where the alert fired",
+                  "items": {
+                    "$ref": "#/definitions/logs"
+                  },
+                  "order": 3,
+                  "title": "logs",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "alert",
+                "correlationId",
+                "event",
+                "logs"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api-idr.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "4f110c6f-0393-4178-acfb-7373e9f02669": {
+            "nodeId": "4f110c6f-0393-4178-acfb-7373e9f02669",
+            "name": "File Threat Contextualization Report Found ? ",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "6ad81657-4142-4f67-962d-e136d7d0b92b",
+              "stepControlParams": [
+                {
+                  "edgeId": "a396536a-5f20-4290-9d3d-4e7ae304c6e0",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "164200ce-e2a9-4b6c-a08d-f1ab839bce10.threat_contextualization_report.threat_contextualization_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[164200ce-e2a9-4b6c-a08d-f1ab839bce10].[threat_contextualization_report].[threat_contextualization_report]}}) > 0"
+                },
+                {
+                  "edgeId": "6ad81657-4142-4f67-962d-e136d7d0b92b",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "50ab45e6-ecb7-4b35-8918-fd18a7ef27f5": {
+            "nodeId": "50ab45e6-ecb7-4b35-8918-fd18a7ef27f5",
+            "name": "File Mitre Attack Data Found ? ",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "474ad519-8714-49ab-9355-5313982275de",
+              "stepControlParams": [
+                {
+                  "edgeId": "e34cfbb7-7d33-422e-9f2d-742e78561e1e",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "164200ce-e2a9-4b6c-a08d-f1ab839bce10.mitre_attack_report.mitre_attack_data",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[164200ce-e2a9-4b6c-a08d-f1ab839bce10].[mitre_attack_report].[mitre_attack_data]}}) > 0"
+                },
+                {
+                  "edgeId": "474ad519-8714-49ab-9355-5313982275de",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "60ab34d4-d769-4a65-ae33-8b20bcc589e2": {
+            "nodeId": "60ab34d4-d769-4a65-ae33-8b20bcc589e2",
+            "name": "File Hashes Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "5ffc2ad5-3097-45f4-9bf2-d777bf5dcbf6",
+              "nextEdgeId": "a9b8e64b-4ed8-4b07-b147-969803345ece",
+              "repeatVariable": "{{[da6ff41b-3c8d-44dd-8338-2aaac107bf6b].[alert_event_indicators].[hashes]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "64fb74ab-c1bb-4807-8c51-df4c351e1e7d": {
+            "nodeId": "64fb74ab-c1bb-4807-8c51-df4c351e1e7d",
+            "name": "Get URL Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_url_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "url": "{{[bcd40d02-ace5-49ee-af0f-4bff37fee3a6].[$item]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "url": {
+                  "description": "URL that need to be analysed",
+                  "order": 1,
+                  "title": "URL",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "url"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "url_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "String, with the key as the partner who categorized the URL and the value as the URL's category according to that partner",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the URL's favicon. Only returned in premium API",
+                      "order": 2,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "first_submission_date": {
+                      "description": "UTC timestamp of the date when the URL was first submitted to GTI",
+                      "order": 3,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "UTC timestamp representing last time the URL was scanned",
+                      "order": 5,
+                      "title": "Last Analysis Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scans",
+                      "order": 6,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_final_url": {
+                      "description": "Final URL in URL redirections",
+                      "order": 7,
+                      "title": "Last Final URL",
+                      "type": "string"
+                    },
+                    "last_http_response_code": {
+                      "description": "HTTP response code of the last response",
+                      "order": 8,
+                      "title": "Last HTTP Response Code",
+                      "type": "string"
+                    },
+                    "last_http_response_content_length": {
+                      "description": "Length in bytes of the content received",
+                      "order": 9,
+                      "title": "Last HTTP Response Content Length",
+                      "type": "string"
+                    },
+                    "last_http_response_content_sha256": {
+                      "description": "URL response body's SHA256 hash",
+                      "order": 10,
+                      "title": "Last HTTP Response Content SHA256",
+                      "type": "string"
+                    },
+                    "last_http_response_cookies": {
+                      "description": "Dictionary containing the website's cookies",
+                      "order": 11,
+                      "title": "Last HTTP Response Cookies",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "UTC timestamp representing last modification date",
+                      "order": 12,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "UTC timestamp representing last time it was sent to be analyzed",
+                      "order": 13,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Value of votes from GTI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 15,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "targeted_brand": {
+                      "description": "Targeted brand info extracted from phishing engines",
+                      "order": 16,
+                      "title": "Targeted Brand",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times that URL has been checked",
+                      "order": 17,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 18,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Containing the number of positive (harmless) and negative (malicious) votes received from VirusTotal community",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "url": {
+                      "description": "Original URL to be scanned",
+                      "order": 21,
+                      "title": "URL",
+                      "type": "string"
+                    },
+                    "webpage_title": {
+                      "description": "Webpage title",
+                      "order": 19,
+                      "title": "Webpage Title",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Url Report",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to urls",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                },
+                "url_report": {
+                  "$ref": "#/definitions/url_report",
+                  "description": "URL Enrichment Report",
+                  "order": 1,
+                  "title": "URL Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "properties": {
+                    "threat_contextualization_report": {
+                      "items": {
+                        "$ref": "#/definitions/threat_contextualization_report_threat_contextualization_report"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "threat_contextualization_report_threat_contextualization_report": {
+                  "properties": {},
+                  "type": "object"
+                },
+                "url_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "String, with the key as the partner who categorized the URL and the value as the URL's category according to that partner",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the URL's favicon. Only returned in premium API",
+                      "order": 2,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "first_submission_date": {
+                      "description": "UTC timestamp of the date when the URL was first submitted to GTI",
+                      "order": 3,
+                      "title": "First Submission Date",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_date": {
+                      "description": "UTC timestamp representing last time the URL was scanned",
+                      "order": 5,
+                      "title": "Last Analysis Date",
+                      "type": "string"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scans",
+                      "order": 6,
+                      "title": "Last Analysis Stats",
+                      "type": "object"
+                    },
+                    "last_final_url": {
+                      "description": "Final URL in URL redirections",
+                      "order": 7,
+                      "title": "Last Final URL",
+                      "type": "string"
+                    },
+                    "last_http_response_code": {
+                      "description": "HTTP response code of the last response",
+                      "order": 8,
+                      "title": "Last HTTP Response Code",
+                      "type": "string"
+                    },
+                    "last_http_response_content_length": {
+                      "description": "Length in bytes of the content received",
+                      "order": 9,
+                      "title": "Last HTTP Response Content Length",
+                      "type": "string"
+                    },
+                    "last_http_response_content_sha256": {
+                      "description": "URL response body's SHA256 hash",
+                      "order": 10,
+                      "title": "Last HTTP Response Content SHA256",
+                      "type": "string"
+                    },
+                    "last_http_response_cookies": {
+                      "description": "Dictionary containing the website's cookies",
+                      "order": 11,
+                      "title": "Last HTTP Response Cookies",
+                      "type": "object"
+                    },
+                    "last_modification_date": {
+                      "description": "UTC timestamp representing last modification date",
+                      "order": 12,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_submission_date": {
+                      "description": "UTC timestamp representing last time it was sent to be analyzed",
+                      "order": 13,
+                      "title": "Last Submission Date",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Value of votes from GTI community",
+                      "order": 14,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 15,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "targeted_brand": {
+                      "description": "Targeted brand info extracted from phishing engines",
+                      "order": 16,
+                      "title": "Targeted Brand",
+                      "type": "object"
+                    },
+                    "times_submitted": {
+                      "description": "Number of times that URL has been checked",
+                      "order": 17,
+                      "title": "Times Submitted",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 18,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Containing the number of positive (harmless) and negative (malicious) votes received from VirusTotal community",
+                      "order": 20,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "url": {
+                      "description": "Original URL to be scanned",
+                      "order": 21,
+                      "title": "URL",
+                      "type": "string"
+                    },
+                    "webpage_title": {
+                      "description": "Webpage title",
+                      "order": 19,
+                      "title": "Webpage Title",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Url Report",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "threat_contextualization_report": {
+                  "$ref": "#/definitions/threat_contextualization_report",
+                  "description": "Provides information on adversaries related to urls",
+                  "order": 2,
+                  "title": "Threat Contextualization Report"
+                },
+                "url_report": {
+                  "$ref": "#/definitions/url_report",
+                  "description": "URL Enrichment Report",
+                  "order": 1,
+                  "title": "URL Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "6fb78644-4934-4bfb-8b57-9d44c47da74f": {
+            "nodeId": "6fb78644-4934-4bfb-8b57-9d44c47da74f",
+            "name": "IP Address Threat Contextualization Report Found ? ",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "3d3bd6db-798d-45b9-b188-3e4330efd7df",
+              "stepControlParams": [
+                {
+                  "edgeId": "b507c5e5-773f-4e26-aa3f-b67e6dae32b0",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "c75839f0-8c87-4e63-9809-a1ebc69d41ce.threat_contextualization_report.threat_contextualization_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[c75839f0-8c87-4e63-9809-a1ebc69d41ce].[threat_contextualization_report].[threat_contextualization_report]}}) > 0"
+                },
+                {
+                  "edgeId": "3d3bd6db-798d-45b9-b188-3e4330efd7df",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "752c8ef3-bc24-4ba5-a4b3-747d693fcaa5": {
+            "nodeId": "752c8ef3-bc24-4ba5-a4b3-747d693fcaa5",
+            "name": "Send Domain Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[ac607bc5-fa4b-41e3-b6e0-e26f5f82877c].[domain_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ab9fc5e5-0772-4426-9a85-34df8f61cd03": {
+            "nodeId": "ab9fc5e5-0772-4426-9a85-34df8f61cd03",
+            "name": "Domain Threat Contextualization Report Found ? ",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "e736726e-f29c-4ed7-a603-c89a3c0a8a9d",
+              "stepControlParams": [
+                {
+                  "edgeId": "7d3cc2ab-fe42-4b78-be80-c7e29a7f0f95",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "ac607bc5-fa4b-41e3-b6e0-e26f5f82877c.threat_contextualization_report.threat_contextualization_report",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[ac607bc5-fa4b-41e3-b6e0-e26f5f82877c].[threat_contextualization_report].[threat_contextualization_report]}}) > 0"
+                },
+                {
+                  "edgeId": "e736726e-f29c-4ed7-a603-c89a3c0a8a9d",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ac607bc5-fa4b-41e3-b6e0-e26f5f82877c": {
+            "nodeId": "ac607bc5-fa4b-41e3-b6e0-e26f5f82877c",
+            "name": "Get Domain Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_domain_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "domain": "{{[1f69af9a-1b46-4915-a597-6087c2011d11].[$item]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "domain": {
+                  "description": "Domain that need to be analysed",
+                  "order": 1,
+                  "title": "Domain",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "domain"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "cert_signature": {
+                  "properties": {
+                    "issuer": {
+                      "description": "Certificate's issuer data",
+                      "order": 3,
+                      "title": "Issuer",
+                      "type": "object"
+                    },
+                    "signature": {
+                      "description": "Signature hexdump",
+                      "order": 1,
+                      "title": "Signature",
+                      "type": "string"
+                    },
+                    "signature_algorithm": {
+                      "description": "Used algorithm",
+                      "order": 2,
+                      "title": "Signature Algorithm",
+                      "type": "string"
+                    },
+                    "validity": {
+                      "description": "Certificate's validity period",
+                      "order": 5,
+                      "title": "Validity",
+                      "type": "object"
+                    },
+                    "version": {
+                      "description": "Certificate's version",
+                      "order": 4,
+                      "title": "Version",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cert Signature",
+                  "type": "object"
+                },
+                "domain_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "Mapping that relates categorisation services with the category it assigns the domain to. These services are, among others like Alexa, BitDefender, TrendMicro, Websense ThreatSeeker, etc",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "creation_date": {
+                      "description": "Creation date extracted from the Domain's whois (UTC timestamp)",
+                      "order": 2,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the domain's favicon. Only available for premium users",
+                      "order": 3,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scan",
+                      "order": 5,
+                      "title": "Last Analysis Statistics",
+                      "type": "object"
+                    },
+                    "last_https_certificate": {
+                      "$ref": "#/definitions/ssl_certificate",
+                      "description": "SSL certificate object retrieved last time the domain was analyzed",
+                      "order": 6,
+                      "title": "Last HTTPS Certificate"
+                    },
+                    "last_https_certificate_date": {
+                      "description": "Date when the certificate was retrieved by GTI (UTC timestamp)",
+                      "order": 7,
+                      "title": "Last HTTPS Certificate Date",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the domain's information was last updated",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_update_date": {
+                      "description": "Updated date extracted from WHOIS (UTC timestamp)",
+                      "order": 9,
+                      "title": "Last Update Date",
+                      "type": "string"
+                    },
+                    "registrar": {
+                      "description": "Company that registered the domain",
+                      "order": 10,
+                      "title": "Registrar",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Domain's score calculated from the votes of the GTI's community",
+                      "order": 11,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 12,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 13,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided in harmless and malicious",
+                      "order": 14,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "whois_date": {
+                      "description": "Date of the last update of the WHOIS record in VirusTotal",
+                      "order": 15,
+                      "title": "WHOIS Date",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Domain Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "ssl_certificate": {
+                  "properties": {
+                    "cert_signature": {
+                      "$ref": "#/definitions/cert_signature",
+                      "description": "Dictionary containing certificate's signature and algorithm",
+                      "order": 1,
+                      "title": "Certificate Signature"
+                    }
+                  },
+                  "title": "Ssl Certificate",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "domain_report": {
+                  "$ref": "#/definitions/domain_report",
+                  "description": "Domain Enrichment Report",
+                  "order": 1,
+                  "title": "Domain Report"
+                },
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to domains",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "cert_signature": {
+                  "properties": {
+                    "issuer": {
+                      "description": "Certificate's issuer data",
+                      "order": 3,
+                      "title": "Issuer",
+                      "type": "object"
+                    },
+                    "signature": {
+                      "description": "Signature hexdump",
+                      "order": 1,
+                      "title": "Signature",
+                      "type": "string"
+                    },
+                    "signature_algorithm": {
+                      "description": "Used algorithm",
+                      "order": 2,
+                      "title": "Signature Algorithm",
+                      "type": "string"
+                    },
+                    "validity": {
+                      "description": "Certificate's validity period",
+                      "order": 5,
+                      "title": "Validity",
+                      "type": "object"
+                    },
+                    "version": {
+                      "description": "Certificate's version",
+                      "order": 4,
+                      "title": "Version",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cert Signature",
+                  "type": "object"
+                },
+                "domain_report": {
+                  "properties": {
+                    "categories": {
+                      "description": "Mapping that relates categorisation services with the category it assigns the domain to. These services are, among others like Alexa, BitDefender, TrendMicro, Websense ThreatSeeker, etc",
+                      "order": 1,
+                      "title": "Categories",
+                      "type": "string"
+                    },
+                    "creation_date": {
+                      "description": "Creation date extracted from the Domain's whois (UTC timestamp)",
+                      "order": 2,
+                      "title": "Creation Date",
+                      "type": "string"
+                    },
+                    "favicon": {
+                      "description": "Dictionary including difference hash and MD5 hash of the domain's favicon. Only available for premium users",
+                      "order": 3,
+                      "title": "Favicon",
+                      "type": "object"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 4,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from this scan",
+                      "order": 5,
+                      "title": "Last Analysis Statistics",
+                      "type": "object"
+                    },
+                    "last_https_certificate": {
+                      "$ref": "#/definitions/ssl_certificate",
+                      "description": "SSL certificate object retrieved last time the domain was analyzed",
+                      "order": 6,
+                      "title": "Last HTTPS Certificate"
+                    },
+                    "last_https_certificate_date": {
+                      "description": "Date when the certificate was retrieved by GTI (UTC timestamp)",
+                      "order": 7,
+                      "title": "Last HTTPS Certificate Date",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the domain's information was last updated",
+                      "order": 8,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "last_update_date": {
+                      "description": "Updated date extracted from WHOIS (UTC timestamp)",
+                      "order": 9,
+                      "title": "Last Update Date",
+                      "type": "string"
+                    },
+                    "registrar": {
+                      "description": "Company that registered the domain",
+                      "order": 10,
+                      "title": "Registrar",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "Domain's score calculated from the votes of the GTI's community",
+                      "order": 11,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "List of representative attributes",
+                      "order": 12,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "tld": {
+                      "description": "Top Level Domain",
+                      "order": 13,
+                      "title": "Top Level Domain",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided in harmless and malicious",
+                      "order": 14,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "whois_date": {
+                      "description": "Date of the last update of the WHOIS record in VirusTotal",
+                      "order": 15,
+                      "title": "WHOIS Date",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Domain Report",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "ssl_certificate": {
+                  "properties": {
+                    "cert_signature": {
+                      "$ref": "#/definitions/cert_signature",
+                      "description": "Dictionary containing certificate's signature and algorithm",
+                      "order": 1,
+                      "title": "Certificate Signature"
+                    }
+                  },
+                  "title": "Ssl Certificate",
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "properties": {
+                    "threat_contextualization_report": {
+                      "items": {
+                        "$ref": "#/definitions/threat_contextualization_report_threat_contextualization_report"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "threat_contextualization_report_threat_contextualization_report": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "domain_report": {
+                  "$ref": "#/definitions/domain_report",
+                  "description": "Domain Enrichment Report",
+                  "order": 1,
+                  "title": "Domain Report"
+                },
+                "threat_contextualization_report": {
+                  "$ref": "#/definitions/threat_contextualization_report",
+                  "description": "Provides information on adversaries related to domains",
+                  "order": 2,
+                  "title": "Threat Contextualization Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "baef93e8-3cc7-4c2e-8286-47dd5889e3f3": {
+            "nodeId": "baef93e8-3cc7-4c2e-8286-47dd5889e3f3",
+            "name": "File Mitre Attack Data Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "79f72f69-9e1e-4491-b4f6-d03fe7e8dcd7",
+              "stepControlParams": [
+                {
+                  "edgeId": "f2c52389-888e-42f8-9f8d-7d5503271ec9",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "164200ce-e2a9-4b6c-a08d-f1ab839bce10.mitre_attack_report.mitre_attack_data",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[164200ce-e2a9-4b6c-a08d-f1ab839bce10].[mitre_attack_report].[mitre_attack_data]}}) > 0"
+                },
+                {
+                  "edgeId": "79f72f69-9e1e-4491-b4f6-d03fe7e8dcd7",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "bcd40d02-ace5-49ee-af0f-4bff37fee3a6": {
+            "nodeId": "bcd40d02-ace5-49ee-af0f-4bff37fee3a6",
+            "name": "URLs Loop",
+            "type": "loop",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "customOutput": [],
+              "innerEdgeId": "239b4804-51ed-4c03-9d08-a9688b861966",
+              "nextEdgeId": "e8177dd6-ef97-4e65-8c5a-f816e13a8927",
+              "repeatVariable": "{{[da6ff41b-3c8d-44dd-8338-2aaac107bf6b].[alert_event_indicators].[urls]}}"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": {
+              "properties": {},
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "bd0a6a76-a7bd-4c9b-ba9e-26c61a713509": {
+            "nodeId": "bd0a6a76-a7bd-4c9b-ba9e-26c61a713509",
+            "name": "Send File Mitre Attack Data to IDR ",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[164200ce-e2a9-4b6c-a08d-f1ab839bce10].[mitre_attack_report].[mitre_attack_data]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c75839f0-8c87-4e63-9809-a1ebc69d41ce": {
+            "nodeId": "c75839f0-8c87-4e63-9809-a1ebc69d41ce",
+            "name": "Get IP Address Report",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_ip_address_report",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "ip_address": "{{[149f86ba-017a-4c8d-b35e-45b2aaceeab1].[$item]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "ip_address": {
+                  "description": "IP address that need to be analysed",
+                  "order": 1,
+                  "title": "IP Address",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ip_address"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "cert_signature": {
+                  "properties": {
+                    "issuer": {
+                      "description": "Certificate's issuer data",
+                      "order": 3,
+                      "title": "Issuer",
+                      "type": "object"
+                    },
+                    "signature": {
+                      "description": "Signature hexdump",
+                      "order": 1,
+                      "title": "Signature",
+                      "type": "string"
+                    },
+                    "signature_algorithm": {
+                      "description": "Used algorithm",
+                      "order": 2,
+                      "title": "Signature Algorithm",
+                      "type": "string"
+                    },
+                    "validity": {
+                      "description": "Certificate's validity period",
+                      "order": 5,
+                      "title": "Validity",
+                      "type": "object"
+                    },
+                    "version": {
+                      "description": "Certificate's version",
+                      "order": 4,
+                      "title": "Version",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cert Signature",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "ip_address_report": {
+                  "properties": {
+                    "as_owner": {
+                      "description": "Owner of the Autonomous System to which the IP belongs",
+                      "order": 1,
+                      "title": "As Owner",
+                      "type": "string"
+                    },
+                    "asn": {
+                      "description": "Autonomous System Number to which the IP belongs",
+                      "order": 2,
+                      "title": "ASN",
+                      "type": "string"
+                    },
+                    "continent": {
+                      "description": "Continent where the IP is placed (ISO-3166 continent code)",
+                      "order": 3,
+                      "title": "Continent",
+                      "type": "string"
+                    },
+                    "country": {
+                      "description": "Country where the IP is placed (ISO-3166 country code)",
+                      "order": 4,
+                      "title": "Country",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from these scans",
+                      "order": 6,
+                      "title": "Last Analysis Statistics",
+                      "type": "object"
+                    },
+                    "last_https_certificate": {
+                      "$ref": "#/definitions/ssl_certificate",
+                      "description": "SSL Certificate object retrieved the last time the IP was analyzed",
+                      "order": 7,
+                      "title": "Last HTTPS Certificate"
+                    },
+                    "last_https_certificate_date": {
+                      "description": "Date when the certificate was retrieved by GTI (UTC timestamp)",
+                      "order": 8,
+                      "title": "Last HTTPS Certificate Date",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the IP's information was last updated (UTC timestamp)",
+                      "order": 9,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "network": {
+                      "description": "IPv4 network range to which the IP belongs",
+                      "order": 10,
+                      "title": "Network",
+                      "type": "string"
+                    },
+                    "regional_internet_registry": {
+                      "description": "RIR (one of the current RIRs are AFRINIC, ARIN, APNIC, LACNIC or RIPE NCC)",
+                      "order": 11,
+                      "title": "Regional Internet Registry",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "IP's score calculated from the votes of the GTI's community",
+                      "order": 12,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 13,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into harmless and malicious",
+                      "order": 14,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "whois_date": {
+                      "description": "Date when the WHOIS information was last retrieved (UTC timestamp)",
+                      "order": 15,
+                      "title": "WHOIS Date",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Ip Address Report",
+                  "type": "object"
+                },
+                "ssl_certificate": {
+                  "properties": {
+                    "cert_signature": {
+                      "$ref": "#/definitions/cert_signature",
+                      "description": "Dictionary containing certificate's signature and algorithm",
+                      "order": 1,
+                      "title": "Certificate Signature"
+                    }
+                  },
+                  "title": "Ssl Certificate",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "ip_address_report": {
+                  "$ref": "#/definitions/ip_address_report",
+                  "description": "IP address Enrichment Report",
+                  "order": 1,
+                  "title": "IP Address Report"
+                },
+                "threat_contextualization_report": {
+                  "description": "Provides information on adversaries related to ip addresses",
+                  "order": 2,
+                  "title": "Threat Contextualization Report",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "cert_signature": {
+                  "properties": {
+                    "issuer": {
+                      "description": "Certificate's issuer data",
+                      "order": 3,
+                      "title": "Issuer",
+                      "type": "object"
+                    },
+                    "signature": {
+                      "description": "Signature hexdump",
+                      "order": 1,
+                      "title": "Signature",
+                      "type": "string"
+                    },
+                    "signature_algorithm": {
+                      "description": "Used algorithm",
+                      "order": 2,
+                      "title": "Signature Algorithm",
+                      "type": "string"
+                    },
+                    "validity": {
+                      "description": "Certificate's validity period",
+                      "order": 5,
+                      "title": "Validity",
+                      "type": "object"
+                    },
+                    "version": {
+                      "description": "Certificate's version",
+                      "order": 4,
+                      "title": "Version",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Cert Signature",
+                  "type": "object"
+                },
+                "gti_assessment": {
+                  "properties": {
+                    "gti_assessment_description": {
+                      "description": "A human readable description of the factors contributing to the verdict and severity classification",
+                      "order": 1,
+                      "title": "GTI Assessment Description",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "Severity of the threat detected",
+                      "order": 3,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "threat_score": {
+                      "description": "GTI score is a function of the Verdict and Severity, and leverages additional internal factors to generate the score. Valid values go from 0 to 100",
+                      "order": 4,
+                      "title": "Threat Score",
+                      "type": "string"
+                    },
+                    "verdict": {
+                      "description": "Verdict of the threat detected",
+                      "order": 2,
+                      "title": "Verdict",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Gti Assessment",
+                  "type": "object"
+                },
+                "ip_address_report": {
+                  "properties": {
+                    "as_owner": {
+                      "description": "Owner of the Autonomous System to which the IP belongs",
+                      "order": 1,
+                      "title": "As Owner",
+                      "type": "string"
+                    },
+                    "asn": {
+                      "description": "Autonomous System Number to which the IP belongs",
+                      "order": 2,
+                      "title": "ASN",
+                      "type": "string"
+                    },
+                    "continent": {
+                      "description": "Continent where the IP is placed (ISO-3166 continent code)",
+                      "order": 3,
+                      "title": "Continent",
+                      "type": "string"
+                    },
+                    "country": {
+                      "description": "Country where the IP is placed (ISO-3166 country code)",
+                      "order": 4,
+                      "title": "Country",
+                      "type": "string"
+                    },
+                    "gti_assessment": {
+                      "$ref": "#/definitions/gti_assessment",
+                      "description": "Evaluation of the threat based on the Global Threat Intelligence (GTI) criteria",
+                      "order": 5,
+                      "title": "GTI Assessment"
+                    },
+                    "last_analysis_stats": {
+                      "description": "Number of different results from these scans",
+                      "order": 6,
+                      "title": "Last Analysis Statistics",
+                      "type": "object"
+                    },
+                    "last_https_certificate": {
+                      "$ref": "#/definitions/ssl_certificate",
+                      "description": "SSL Certificate object retrieved the last time the IP was analyzed",
+                      "order": 7,
+                      "title": "Last HTTPS Certificate"
+                    },
+                    "last_https_certificate_date": {
+                      "description": "Date when the certificate was retrieved by GTI (UTC timestamp)",
+                      "order": 8,
+                      "title": "Last HTTPS Certificate Date",
+                      "type": "string"
+                    },
+                    "last_modification_date": {
+                      "description": "Date when any of the IP's information was last updated (UTC timestamp)",
+                      "order": 9,
+                      "title": "Last Modification Date",
+                      "type": "string"
+                    },
+                    "network": {
+                      "description": "IPv4 network range to which the IP belongs",
+                      "order": 10,
+                      "title": "Network",
+                      "type": "string"
+                    },
+                    "regional_internet_registry": {
+                      "description": "RIR (one of the current RIRs are AFRINIC, ARIN, APNIC, LACNIC or RIPE NCC)",
+                      "order": 11,
+                      "title": "Regional Internet Registry",
+                      "type": "string"
+                    },
+                    "reputation": {
+                      "description": "IP's score calculated from the votes of the GTI's community",
+                      "order": 12,
+                      "title": "Reputation",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 13,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "total_votes": {
+                      "description": "Unweighted number of total votes from the community, divided into harmless and malicious",
+                      "order": 14,
+                      "title": "Total Votes",
+                      "type": "object"
+                    },
+                    "whois_date": {
+                      "description": "Date when the WHOIS information was last retrieved (UTC timestamp)",
+                      "order": 15,
+                      "title": "WHOIS Date",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Ip Address Report",
+                  "type": "object"
+                },
+                "ssl_certificate": {
+                  "properties": {
+                    "cert_signature": {
+                      "$ref": "#/definitions/cert_signature",
+                      "description": "Dictionary containing certificate's signature and algorithm",
+                      "order": 1,
+                      "title": "Certificate Signature"
+                    }
+                  },
+                  "title": "Ssl Certificate",
+                  "type": "object"
+                },
+                "threat_contextualization_report": {
+                  "properties": {
+                    "threat_contextualization_report": {
+                      "items": {
+                        "$ref": "#/definitions/threat_contextualization_report_threat_contextualization_report"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "threat_contextualization_report_threat_contextualization_report": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "ip_address_report": {
+                  "$ref": "#/definitions/ip_address_report",
+                  "description": "IP address Enrichment Report",
+                  "order": 1,
+                  "title": "IP Address Report"
+                },
+                "threat_contextualization_report": {
+                  "$ref": "#/definitions/threat_contextualization_report",
+                  "description": "Provides information on adversaries related to ip addresses",
+                  "order": 2,
+                  "title": "Threat Contextualization Report"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "d686a8bd-20db-40db-9d53-071029348af7": {
+            "nodeId": "d686a8bd-20db-40db-9d53-071029348af7",
+            "name": "Send IP Address Threat Contextualization Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[c75839f0-8c87-4e63-9809-a1ebc69d41ce].[threat_contextualization_report].[threat_contextualization_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "da6ff41b-3c8d-44dd-8338-2aaac107bf6b": {
+            "nodeId": "da6ff41b-3c8d-44dd-8338-2aaac107bf6b",
+            "name": "Extract Alert Information",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "extract_alert_event_information",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "alert_event": "{{[4ea501a0-229b-45e3-8e66-57f8a12eb8e3].[event].[entryObject]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "alert_event": {
+                  "description": "Enter the generated event alert details in the form of object",
+                  "order": 1,
+                  "title": "Alert Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "alert_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "alert_event_indicators": {
+                  "description": "Object containing indicators like ip_address, url, domain, hash",
+                  "order": 1,
+                  "title": "Alert Event Indicators",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "alert_event_indicators"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "alert_event_indicators": {
+                  "properties": {
+                    "domains": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "hashes": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "ip_addresses": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "urls": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "alert_event_indicators": {
+                  "$ref": "#/definitions/alert_event_indicators",
+                  "description": "Object containing indicators like ip_address, url, domain, hash",
+                  "order": 1,
+                  "title": "Alert Event Indicators"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e0e42381-15fa-4b41-b431-ae0cebf3c3b1": {
+            "nodeId": "e0e42381-15fa-4b41-b431-ae0cebf3c3b1",
+            "name": "Send Domain Threat Contextualization Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[ac607bc5-fa4b-41e3-b6e0-e26f5f82877c].[threat_contextualization_report].[threat_contextualization_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e9648954-39d7-49a3-9ffd-da0dfdbdab40": {
+            "nodeId": "e9648954-39d7-49a3-9ffd-da0dfdbdab40",
+            "name": "Send URL Threat Contextualization Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[64fb74ab-c1bb-4807-8c51-df4c351e1e7d].[threat_contextualization_report].[threat_contextualization_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "f65cd78c-03ea-4029-ad1d-0da26fcf3622": {
+            "nodeId": "f65cd78c-03ea-4029-ad1d-0da26fcf3622",
+            "name": "Send IP Address Report to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_event_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_event": "{{[c75839f0-8c87-4e63-9809-a1ebc69d41ce].[ip_address_report]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_event": {
+                  "description": "Provide the event in the form of object",
+                  "order": 1,
+                  "title": "Send Event",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "send_event"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Describes whether the event has been sent or not",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "fbd6985e-660d-4ec8-8f3d-7c3bf3e34130": {
+            "nodeId": "fbd6985e-660d-4ec8-8f3d-7c3bf3e34130",
+            "name": "Send File Mitre Attack Data to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[164200ce-e2a9-4b6c-a08d-f1ab839bce10].[mitre_attack_report].[mitre_attack_data]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "IDR Alert",
+          "IOC Enrichment",
+          "Threat Contextualization"
+        ],
+        "humanCostSeconds": 7800,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Retrieves detailed information on a given IOC from Google Threat Intelligence platform."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "672ad767-fc90-4ea9-90ef-e33bbef52c29",
+        "name": "IDR Alert",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {
+            "alert": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the alert",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Customer provided name of the alert",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                },
+                "trigger": {
+                  "$ref": "#/definitions/trigger",
+                  "description": "Object containing details of the alert trigger",
+                  "order": 4,
+                  "title": "trigger"
+                },
+                "type": {
+                  "description": "Type of the alert",
+                  "order": 3,
+                  "title": "type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "trigger",
+                "type"
+              ],
+              "title": "alert",
+              "type": "object"
+            },
+            "comparison": {
+              "properties": {
+                "fromTimestamp": {
+                  "description": "Epoch time millis of the start of the comparison query",
+                  "order": 3,
+                  "title": "fromTimestamp",
+                  "type": "integer"
+                },
+                "query": {
+                  "description": "The query that was executed",
+                  "order": 1,
+                  "title": "query",
+                  "type": "string"
+                },
+                "toTimestamp": {
+                  "description": "Epoch time millis of the end of the comparison query",
+                  "order": 4,
+                  "title": "toTimestamp",
+                  "type": "integer"
+                },
+                "value": {
+                  "description": "The result value of the comparison query",
+                  "order": 2,
+                  "title": "value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "fromTimestamp",
+                "query",
+                "toTimestamp",
+                "value"
+              ],
+              "title": "comparison",
+              "type": "object"
+            },
+            "current": {
+              "properties": {
+                "fromTimestamp": {
+                  "description": "Epoch time millis of the start of the comparison query",
+                  "order": 3,
+                  "title": "fromTimestamp",
+                  "type": "integer"
+                },
+                "query": {
+                  "description": "The query that was executed",
+                  "order": 1,
+                  "title": "query",
+                  "type": "string"
+                },
+                "toTimestamp": {
+                  "description": "Epoch time millis of the end of the comparison query",
+                  "order": 4,
+                  "title": "toTimestamp",
+                  "type": "integer"
+                },
+                "value": {
+                  "description": "The result value of the comparison query",
+                  "order": 2,
+                  "title": "value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "fromTimestamp",
+                "query",
+                "toTimestamp",
+                "value"
+              ],
+              "title": "current",
+              "type": "object"
+            },
+            "event": {
+              "properties": {
+                "absoluteDiff": {
+                  "description": "Difference between the query values",
+                  "order": 4,
+                  "title": "absoluteDiff",
+                  "type": "number"
+                },
+                "entry": {
+                  "description": "The contents of the log entry that matched the pattern",
+                  "order": 5,
+                  "title": "entry",
+                  "type": "string"
+                },
+                "entryObject": {
+                  "description": "The contents of the log entry in Object format",
+                  "order": 6,
+                  "properties": {},
+                  "title": "entryObject",
+                  "type": "object"
+                },
+                "lastMatchTimestamp": {
+                  "description": "Epoch time millis of the last entry matching the pattern",
+                  "order": 2,
+                  "title": "lastMatchTimestamp",
+                  "type": "integer"
+                },
+                "queries": {
+                  "$ref": "#/definitions/queries",
+                  "description": "Object containing the results of the two queries",
+                  "order": 3,
+                  "title": "queries"
+                },
+                "sequenceId": {
+                  "description": "sequence id of the log entry the alert fired upon",
+                  "order": 7,
+                  "title": "sequenceId",
+                  "type": "integer"
+                },
+                "timestamp": {
+                  "description": "Epoch time millis of the alert firing",
+                  "order": 1,
+                  "title": "timestamp",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "timestamp"
+              ],
+              "title": "event",
+              "type": "object"
+            },
+            "logSet": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the log set",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Customer provided name of the log set",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "title": "logSet",
+              "type": "object"
+            },
+            "logs": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the log",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "logSet": {
+                  "description": "Array of objects containing the details of the log set the log belongs to. Usually one element",
+                  "items": {
+                    "$ref": "#/definitions/logSet"
+                  },
+                  "order": 3,
+                  "title": "logSet",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "Customer provided name of the log the alert fired on",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "logSet",
+                "name"
+              ],
+              "title": "logs",
+              "type": "object"
+            },
+            "queries": {
+              "properties": {
+                "comparison": {
+                  "$ref": "#/definitions/comparison",
+                  "description": "Object containing the results of the comparison query",
+                  "order": 1,
+                  "title": "comparison"
+                },
+                "current": {
+                  "$ref": "#/definitions/current",
+                  "description": "Object containing the results of the current query",
+                  "order": 2,
+                  "title": "current"
+                }
+              },
+              "required": [
+                "comparison",
+                "current"
+              ],
+              "title": "queries",
+              "type": "object"
+            },
+            "trigger": {
+              "properties": {
+                "comparison": {
+                  "description": "The time frame for comparison against, in millis",
+                  "order": 6,
+                  "title": "comparison",
+                  "type": "integer"
+                },
+                "direction": {
+                  "description": "Direction of the anomaly - increase or decrease",
+                  "order": 3,
+                  "title": "direction",
+                  "type": "string"
+                },
+                "duration": {
+                  "description": "The duration of the alert's evaluation query, in millis",
+                  "order": 5,
+                  "title": "duration",
+                  "type": "integer"
+                },
+                "durationThreshold": {
+                  "description": "How long the pattern must not match any events for the inactivity alert to trigger",
+                  "order": 2,
+                  "title": "durationThreshold",
+                  "type": "string"
+                },
+                "pattern": {
+                  "description": "Query pattern of the alert",
+                  "order": 1,
+                  "title": "pattern",
+                  "type": "string"
+                },
+                "threshold": {
+                  "description": "The threshold percentage for the change",
+                  "order": 4,
+                  "title": "threshold",
+                  "type": "number"
+                }
+              },
+              "title": "trigger",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "alert": {
+              "$ref": "#/definitions/alert",
+              "description": "Object containing details of the alert configuration that fired",
+              "order": 2,
+              "title": "alert"
+            },
+            "correlationId": {
+              "description": "Unique ID of this alert firing, for correlation purposes between LE and Razor",
+              "order": 1,
+              "title": "correlationId",
+              "type": "string"
+            },
+            "event": {
+              "$ref": "#/definitions/event",
+              "description": "Object containing details of the alert event",
+              "order": 4,
+              "title": "event"
+            },
+            "logs": {
+              "description": "Object containing details of the log where the alert fired",
+              "items": {
+                "$ref": "#/definitions/logs"
+              },
+              "order": 3,
+              "title": "logs",
+              "type": "array"
+            }
+          },
+          "required": [
+            "alert",
+            "correlationId",
+            "event",
+            "logs"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {
+            "alert": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the alert",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Customer provided name of the alert",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                },
+                "trigger": {
+                  "$ref": "#/definitions/trigger",
+                  "description": "Object containing details of the alert trigger",
+                  "order": 4,
+                  "title": "trigger"
+                },
+                "type": {
+                  "description": "Type of the alert",
+                  "order": 3,
+                  "title": "type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "trigger",
+                "type"
+              ],
+              "title": "alert",
+              "type": "object"
+            },
+            "comparison": {
+              "properties": {
+                "fromTimestamp": {
+                  "description": "Epoch time millis of the start of the comparison query",
+                  "order": 3,
+                  "title": "fromTimestamp",
+                  "type": "integer"
+                },
+                "query": {
+                  "description": "The query that was executed",
+                  "order": 1,
+                  "title": "query",
+                  "type": "string"
+                },
+                "toTimestamp": {
+                  "description": "Epoch time millis of the end of the comparison query",
+                  "order": 4,
+                  "title": "toTimestamp",
+                  "type": "integer"
+                },
+                "value": {
+                  "description": "The result value of the comparison query",
+                  "order": 2,
+                  "title": "value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "fromTimestamp",
+                "query",
+                "toTimestamp",
+                "value"
+              ],
+              "title": "comparison",
+              "type": "object"
+            },
+            "current": {
+              "properties": {
+                "fromTimestamp": {
+                  "description": "Epoch time millis of the start of the comparison query",
+                  "order": 3,
+                  "title": "fromTimestamp",
+                  "type": "integer"
+                },
+                "query": {
+                  "description": "The query that was executed",
+                  "order": 1,
+                  "title": "query",
+                  "type": "string"
+                },
+                "toTimestamp": {
+                  "description": "Epoch time millis of the end of the comparison query",
+                  "order": 4,
+                  "title": "toTimestamp",
+                  "type": "integer"
+                },
+                "value": {
+                  "description": "The result value of the comparison query",
+                  "order": 2,
+                  "title": "value",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "fromTimestamp",
+                "query",
+                "toTimestamp",
+                "value"
+              ],
+              "title": "current",
+              "type": "object"
+            },
+            "event": {
+              "properties": {
+                "absoluteDiff": {
+                  "description": "Difference between the query values",
+                  "order": 4,
+                  "title": "absoluteDiff",
+                  "type": "number"
+                },
+                "entry": {
+                  "description": "The contents of the log entry that matched the pattern",
+                  "order": 5,
+                  "title": "entry",
+                  "type": "string"
+                },
+                "entryObject": {
+                  "description": "The contents of the log entry in Object format",
+                  "order": 6,
+                  "properties": {},
+                  "title": "entryObject",
+                  "type": "object"
+                },
+                "lastMatchTimestamp": {
+                  "description": "Epoch time millis of the last entry matching the pattern",
+                  "order": 2,
+                  "title": "lastMatchTimestamp",
+                  "type": "integer"
+                },
+                "queries": {
+                  "$ref": "#/definitions/queries",
+                  "description": "Object containing the results of the two queries",
+                  "order": 3,
+                  "title": "queries"
+                },
+                "sequenceId": {
+                  "description": "sequence id of the log entry the alert fired upon",
+                  "order": 7,
+                  "title": "sequenceId",
+                  "type": "integer"
+                },
+                "timestamp": {
+                  "description": "Epoch time millis of the alert firing",
+                  "order": 1,
+                  "title": "timestamp",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "timestamp"
+              ],
+              "title": "event",
+              "type": "object"
+            },
+            "logSet": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the log set",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "name": {
+                  "description": "Customer provided name of the log set",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ],
+              "title": "logSet",
+              "type": "object"
+            },
+            "logs": {
+              "properties": {
+                "id": {
+                  "description": "Identifier for the log",
+                  "order": 2,
+                  "title": "id",
+                  "type": "string"
+                },
+                "logSet": {
+                  "description": "Array of objects containing the details of the log set the log belongs to. Usually one element",
+                  "items": {
+                    "$ref": "#/definitions/logSet"
+                  },
+                  "order": 3,
+                  "title": "logSet",
+                  "type": "array"
+                },
+                "name": {
+                  "description": "Customer provided name of the log the alert fired on",
+                  "order": 1,
+                  "title": "name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "logSet",
+                "name"
+              ],
+              "title": "logs",
+              "type": "object"
+            },
+            "queries": {
+              "properties": {
+                "comparison": {
+                  "$ref": "#/definitions/comparison",
+                  "description": "Object containing the results of the comparison query",
+                  "order": 1,
+                  "title": "comparison"
+                },
+                "current": {
+                  "$ref": "#/definitions/current",
+                  "description": "Object containing the results of the current query",
+                  "order": 2,
+                  "title": "current"
+                }
+              },
+              "required": [
+                "comparison",
+                "current"
+              ],
+              "title": "queries",
+              "type": "object"
+            },
+            "trigger": {
+              "properties": {
+                "comparison": {
+                  "description": "The time frame for comparison against, in millis",
+                  "order": 6,
+                  "title": "comparison",
+                  "type": "integer"
+                },
+                "direction": {
+                  "description": "Direction of the anomaly - increase or decrease",
+                  "order": 3,
+                  "title": "direction",
+                  "type": "string"
+                },
+                "duration": {
+                  "description": "The duration of the alert's evaluation query, in millis",
+                  "order": 5,
+                  "title": "duration",
+                  "type": "integer"
+                },
+                "durationThreshold": {
+                  "description": "How long the pattern must not match any events for the inactivity alert to trigger",
+                  "order": 2,
+                  "title": "durationThreshold",
+                  "type": "string"
+                },
+                "pattern": {
+                  "description": "Query pattern of the alert",
+                  "order": 1,
+                  "title": "pattern",
+                  "type": "string"
+                },
+                "threshold": {
+                  "description": "The threshold percentage for the change",
+                  "order": 4,
+                  "title": "threshold",
+                  "type": "number"
+                }
+              },
+              "title": "trigger",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "alert": {
+              "$ref": "#/definitions/alert",
+              "description": "Object containing details of the alert configuration that fired",
+              "order": 2,
+              "title": "alert"
+            },
+            "correlationId": {
+              "description": "Unique ID of this alert firing, for correlation purposes between LE and Razor",
+              "order": 1,
+              "title": "correlationId",
+              "type": "string"
+            },
+            "event": {
+              "$ref": "#/definitions/event",
+              "description": "Object containing details of the alert event",
+              "order": 4,
+              "title": "event"
+            },
+            "logs": {
+              "description": "Object containing details of the log where the alert fired",
+              "items": {
+                "$ref": "#/definitions/logs"
+              },
+              "order": 3,
+              "title": "logs",
+              "type": "array"
+            }
+          },
+          "required": [
+            "alert",
+            "correlationId",
+            "event",
+            "logs"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api_log_alert"
+      }
+    ]
+  }
+}
