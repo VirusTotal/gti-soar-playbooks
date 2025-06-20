@@ -1,0 +1,155 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:54:24.891393501Z",
+    "workflowVersions": [
+      {
+        "name": "Delete IOC Comment on GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "4315a4af-9281-41c3-be5c-b23056f34671": {
+              "id": "4315a4af-9281-41c3-be5c-b23056f34671",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "a220b802-1fac-4a23-9d8b-aba36e6229e6",
+              "toNodeId": ""
+            },
+            "c7d9863f-e65a-45f4-9696-0d63bc234d5c": {
+              "id": "c7d9863f-e65a-45f4-9696-0d63bc234d5c",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "349d0a16-db02-4d5a-bec2-39b1f895aa72",
+              "toNodeId": "a220b802-1fac-4a23-9d8b-aba36e6229e6"
+            }
+          },
+          "nodes": {
+            "349d0a16-db02-4d5a-bec2-39b1f895aa72": {
+              "id": "349d0a16-db02-4d5a-bec2-39b1f895aa72",
+              "parentNodeId": ""
+            },
+            "a220b802-1fac-4a23-9d8b-aba36e6229e6": {
+              "id": "a220b802-1fac-4a23-9d8b-aba36e6229e6",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "349d0a16-db02-4d5a-bec2-39b1f895aa72": {
+            "nodeId": "349d0a16-db02-4d5a-bec2-39b1f895aa72",
+            "name": "API Trigger",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "d5d8b6c1-230c-4e05-874d-c0f4b90fe8c9",
+            "defaultInputJSONSchema": {
+              "definitions": {},
+              "properties": {},
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {},
+              "properties": {},
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "a220b802-1fac-4a23-9d8b-aba36e6229e6": {
+            "nodeId": "a220b802-1fac-4a23-9d8b-aba36e6229e6",
+            "name": "Delete Comment",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "delete_comment",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "comment_id": "i-1.1.1.1-2232ed31"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "comment_id": {
+                  "description": "The unique identifier for the comment you want to delete from Google Threat Intelligence platform",
+                  "order": 1,
+                  "title": "Comment ID",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "comment_id"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "response_message": {
+                  "description": "Indicates whether the comment was successfully deleted from Google Threat Intelligence from the IOC (IP address / URL / Domain / File Hash)",
+                  "order": 1,
+                  "title": "Response Message",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Delete Comment"
+        ],
+        "humanCostSeconds": 600,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Deletes a previously submitted comment provided for the IOC (IP address / URL / Domain / File Hash) on Google Threat Intelligence platform."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "d5d8b6c1-230c-4e05-874d-c0f4b90fe8c9",
+        "name": "API Trigger",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {},
+          "properties": {},
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {},
+          "properties": {},
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api",
+        "options": {
+          "webhookEnabled": true
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:54:32.782239168Z",
+    "workflowVersions": [
+      {
+        "name": "Get IOC Comments from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "1ac9d365-3ce8-4b48-9ebb-d1da26275ac6": {
+              "id": "1ac9d365-3ce8-4b48-9ebb-d1da26275ac6",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "6b91d611-3faa-4f97-9ce1-25ed5c8318a6",
+              "toNodeId": "34f74747-5d51-47ad-9c73-a34e9858db7d"
+            },
+            "3893e692-4bed-43bf-a63b-c246740a4194": {
+              "id": "3893e692-4bed-43bf-a63b-c246740a4194",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "4774a265-3eb3-44cc-8ee1-31dcaaff5049",
+              "toNodeId": ""
+            },
+            "b8870120-9359-4ae3-85b9-4cd3eb6236f0": {
+              "id": "b8870120-9359-4ae3-85b9-4cd3eb6236f0",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "34f74747-5d51-47ad-9c73-a34e9858db7d",
+              "toNodeId": "4774a265-3eb3-44cc-8ee1-31dcaaff5049"
+            },
+            "cfbc3c65-ee65-4651-a83d-5f86236ad335": {
+              "id": "cfbc3c65-ee65-4651-a83d-5f86236ad335",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "c334627e-b342-49cf-802d-1902b000b165",
+              "toNodeId": ""
+            },
+            "d127a2a7-c52b-41b6-aa40-ab54b86cd241": {
+              "id": "d127a2a7-c52b-41b6-aa40-ab54b86cd241",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "4774a265-3eb3-44cc-8ee1-31dcaaff5049",
+              "toNodeId": "c334627e-b342-49cf-802d-1902b000b165"
+            }
+          },
+          "nodes": {
+            "34f74747-5d51-47ad-9c73-a34e9858db7d": {
+              "id": "34f74747-5d51-47ad-9c73-a34e9858db7d",
+              "parentNodeId": ""
+            },
+            "4774a265-3eb3-44cc-8ee1-31dcaaff5049": {
+              "id": "4774a265-3eb3-44cc-8ee1-31dcaaff5049",
+              "parentNodeId": ""
+            },
+            "6b91d611-3faa-4f97-9ce1-25ed5c8318a6": {
+              "id": "6b91d611-3faa-4f97-9ce1-25ed5c8318a6",
+              "parentNodeId": ""
+            },
+            "c334627e-b342-49cf-802d-1902b000b165": {
+              "id": "c334627e-b342-49cf-802d-1902b000b165",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "34f74747-5d51-47ad-9c73-a34e9858db7d": {
+            "nodeId": "34f74747-5d51-47ad-9c73-a34e9858db7d",
+            "name": "Get Comments",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_comments",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "ioc_type": "IP Address",
+                "ioc_value": "1.1.1.1"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "ioc_type": {
+                  "description": "Select the type of the IOC (IP address, Domain, URL, File Hash)",
+                  "enum": [
+                    "IP Address",
+                    "Domain",
+                    "Url",
+                    "File Hash"
+                  ],
+                  "order": 1,
+                  "title": "IOC Type",
+                  "type": "string"
+                },
+                "ioc_value": {
+                  "description": "Provide the (IP address / Domain / URL / File Hash) for which you want to retrieve comments from Google Threat Intelligence",
+                  "order": 2,
+                  "title": "IOC Value",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ioc_type",
+                "ioc_value"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "get_comment": {
+                  "properties": {
+                    "date": {
+                      "description": "Date when the comment was done",
+                      "order": 3,
+                      "title": "Date",
+                      "type": "string"
+                    },
+                    "id": {
+                      "description": "Resource identifier of the comment",
+                      "order": 1,
+                      "title": "Comment Id",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 2,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "text": {
+                      "description": "Comment in text",
+                      "order": 4,
+                      "title": "Text",
+                      "type": "string"
+                    },
+                    "votes": {
+                      "description": "Unweighted number of total votes from the community, divided in \"harmless\" and \"malicious\"",
+                      "order": 5,
+                      "title": "Votes",
+                      "type": "object"
+                    }
+                  },
+                  "title": "Get Comment",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "comments_response": {
+                  "description": "A collection of comments linked to the specified IP address, domain, URL, or File Hash, offering contextual details or threat intelligence insights from Google Threat Intelligence",
+                  "items": {
+                    "$ref": "#/definitions/get_comment"
+                  },
+                  "order": 1,
+                  "title": "Get Comments Response",
+                  "type": "array"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "4774a265-3eb3-44cc-8ee1-31dcaaff5049": {
+            "nodeId": "4774a265-3eb3-44cc-8ee1-31dcaaff5049",
+            "name": "Comments Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "3893e692-4bed-43bf-a63b-c246740a4194",
+              "stepControlParams": [
+                {
+                  "edgeId": "d127a2a7-c52b-41b6-aa40-ab54b86cd241",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "34f74747-5d51-47ad-9c73-a34e9858db7d.comments_response",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[34f74747-5d51-47ad-9c73-a34e9858db7d].[comments_response]}}) > 0"
+                },
+                {
+                  "edgeId": "3893e692-4bed-43bf-a63b-c246740a4194",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "6b91d611-3faa-4f97-9ce1-25ed5c8318a6": {
+            "nodeId": "6b91d611-3faa-4f97-9ce1-25ed5c8318a6",
+            "name": "API Trigger",
+            "type": "trigger",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "triggerId": "0c78d0eb-10e1-442c-8412-e7325eefc0d7",
+            "defaultInputJSONSchema": {
+              "definitions": {},
+              "properties": {},
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {},
+              "properties": {},
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/trigger-api.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c334627e-b342-49cf-802d-1902b000b165": {
+            "nodeId": "c334627e-b342-49cf-802d-1902b000b165",
+            "name": "Comments Fetched",
+            "type": "artifact",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "content": "{{[34f74747-5d51-47ad-9c73-a34e9858db7d].[comments_response]}}"
+              },
+              "type": "markdown"
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/artifact.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Get Comments"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Retrieves comments associated with a specific IP address, Domain, URL, or File Hash from Google Threat Intelligence."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "0c78d0eb-10e1-442c-8412-e7325eefc0d7",
+        "name": "API Trigger",
+        "description": "",
+        "input": null,
+        "inputJsonSchema": {
+          "definitions": {},
+          "properties": {},
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "definitions": {},
+          "properties": {},
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_api",
+        "options": {
+          "webhookEnabled": true
+        }
+      }
+    ]
+  }
+}

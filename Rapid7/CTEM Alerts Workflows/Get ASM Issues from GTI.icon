@@ -1,0 +1,535 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:54:49.429187676Z",
+    "workflowVersions": [
+      {
+        "name": "Get ASM Issues from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "1bdd10b4-47aa-4926-88e1-bc58501c5874": {
+              "id": "1bdd10b4-47aa-4926-88e1-bc58501c5874",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "03ed04d1-0562-4689-91da-a4a361607bbe",
+              "toNodeId": ""
+            },
+            "64309d76-3c5b-476b-82b1-67c3f9b61943": {
+              "id": "64309d76-3c5b-476b-82b1-67c3f9b61943",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "d8275ef4-6af2-4dd7-8616-043f16d66d23",
+              "toNodeId": ""
+            },
+            "7a498064-7fa6-4a95-9b78-422ce48ed3b5": {
+              "id": "7a498064-7fa6-4a95-9b78-422ce48ed3b5",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "490a72e1-b0b0-43b8-a49c-c7d9c3b1215c",
+              "toNodeId": "04ce0591-39cb-48d5-9792-110e912a346b"
+            },
+            "836ee8c6-8b82-4535-8798-aea0eb8dfa43": {
+              "id": "836ee8c6-8b82-4535-8798-aea0eb8dfa43",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "03ed04d1-0562-4689-91da-a4a361607bbe",
+              "toNodeId": "d8275ef4-6af2-4dd7-8616-043f16d66d23"
+            },
+            "95cc9266-251c-4b80-b38a-f40de2b489f5": {
+              "id": "95cc9266-251c-4b80-b38a-f40de2b489f5",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "04ce0591-39cb-48d5-9792-110e912a346b",
+              "toNodeId": "03ed04d1-0562-4689-91da-a4a361607bbe"
+            }
+          },
+          "nodes": {
+            "03ed04d1-0562-4689-91da-a4a361607bbe": {
+              "id": "03ed04d1-0562-4689-91da-a4a361607bbe",
+              "parentNodeId": ""
+            },
+            "04ce0591-39cb-48d5-9792-110e912a346b": {
+              "id": "04ce0591-39cb-48d5-9792-110e912a346b",
+              "parentNodeId": ""
+            },
+            "490a72e1-b0b0-43b8-a49c-c7d9c3b1215c": {
+              "id": "490a72e1-b0b0-43b8-a49c-c7d9c3b1215c",
+              "parentNodeId": ""
+            },
+            "d8275ef4-6af2-4dd7-8616-043f16d66d23": {
+              "id": "d8275ef4-6af2-4dd7-8616-043f16d66d23",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "03ed04d1-0562-4689-91da-a4a361607bbe": {
+            "nodeId": "03ed04d1-0562-4689-91da-a4a361607bbe",
+            "name": "ASM Issues Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "1bdd10b4-47aa-4926-88e1-bc58501c5874",
+              "stepControlParams": [
+                {
+                  "edgeId": "836ee8c6-8b82-4535-8798-aea0eb8dfa43",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "04ce0591-39cb-48d5-9792-110e912a346b.asm_issues",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[04ce0591-39cb-48d5-9792-110e912a346b].[asm_issues]}}) > 0"
+                },
+                {
+                  "edgeId": "1bdd10b4-47aa-4926-88e1-bc58501c5874",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "04ce0591-39cb-48d5-9792-110e912a346b": {
+            "nodeId": "04ce0591-39cb-48d5-9792-110e912a346b",
+            "name": "Get ASM Issues",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_asm_issues",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "historical_time": "{{[490a72e1-b0b0-43b8-a49c-c7d9c3b1215c].[time]}}",
+                "limit": 1000,
+                "search_string": "severity:5"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "historical_time": {
+                  "description": "Time from when issue should be retrieved (must be within the last 5 days)",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Historical Time",
+                  "type": "string"
+                },
+                "limit": {
+                  "default": 1000,
+                  "description": "Number of issues to retrieve (must be between 1 and 1000)",
+                  "order": 1,
+                  "title": "Limit",
+                  "type": "integer"
+                },
+                "search_string": {
+                  "description": "Provide the search string for which issue should be retrieved",
+                  "order": 3,
+                  "title": "Search String",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "historical_time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "asm_issue": {
+                  "properties": {
+                    "asm_description": {
+                      "description": "Description of the issue",
+                      "order": 4,
+                      "title": "Description",
+                      "type": "string"
+                    },
+                    "category": {
+                      "description": "Category of the issue",
+                      "order": 17,
+                      "title": "Category",
+                      "type": "string"
+                    },
+                    "collection": {
+                      "description": "Name of the Collection to which this issue belongs to",
+                      "order": 12,
+                      "title": "Collection",
+                      "type": "string"
+                    },
+                    "collection_type": {
+                      "description": "Type of the Collection to which this issue belongs to",
+                      "order": 13,
+                      "title": "Collection Type",
+                      "type": "string"
+                    },
+                    "confidence": {
+                      "description": "Confidence of the issue",
+                      "order": 16,
+                      "title": "Confidence",
+                      "type": "string"
+                    },
+                    "entity_name": {
+                      "description": "Entity Name under which this issue falls",
+                      "order": 11,
+                      "title": "Entity Name",
+                      "type": "string"
+                    },
+                    "entity_type": {
+                      "description": "Entity Type under which this issue falls",
+                      "order": 9,
+                      "title": "Entity Type",
+                      "type": "string"
+                    },
+                    "entity_uid": {
+                      "description": "Entity UID under which this issue falls",
+                      "order": 10,
+                      "title": "Entity UID",
+                      "type": "string"
+                    },
+                    "first_seen": {
+                      "description": "When the first time issue was detected",
+                      "order": 8,
+                      "title": "First Seen",
+                      "type": "string"
+                    },
+                    "id": {
+                      "description": "ID of the issue",
+                      "order": 1,
+                      "title": "ID",
+                      "type": "string"
+                    },
+                    "last_seen": {
+                      "description": "When the last time issue was detected",
+                      "order": 7,
+                      "title": "Last Seen",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Name of the issue",
+                      "order": 5,
+                      "title": "Name",
+                      "type": "string"
+                    },
+                    "organization_uuid": {
+                      "description": "Organization UUID of issue",
+                      "order": 22,
+                      "title": "Organization UUID",
+                      "type": "string"
+                    },
+                    "pretty_name": {
+                      "description": "Detailed Name of the issue",
+                      "order": 6,
+                      "title": "Detailed Name",
+                      "type": "string"
+                    },
+                    "scoped": {
+                      "description": "Boolean indicating whether the issue is within the defined scope (true or false)",
+                      "order": 18,
+                      "title": "Scoped",
+                      "type": "boolean"
+                    },
+                    "severity": {
+                      "description": "Severity of the issue",
+                      "order": 14,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "status": {
+                      "description": "Status of the issue",
+                      "order": 15,
+                      "title": "Status",
+                      "type": "string"
+                    },
+                    "status_new": {
+                      "description": "Represents the current state of the issue in a simplified way",
+                      "order": 19,
+                      "title": "Status New",
+                      "type": "string"
+                    },
+                    "status_new_detailed": {
+                      "description": "More specific status value (e.g., new, open_in_progress, closed_mitigated, etc.)",
+                      "order": 21,
+                      "title": "Status New Detailed",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "Identificative attributes",
+                      "order": 20,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "uid": {
+                      "description": "UID of the issue",
+                      "order": 2,
+                      "title": "UID",
+                      "type": "string"
+                    },
+                    "uuid": {
+                      "description": "UUID of the issue",
+                      "order": 3,
+                      "title": "UUID",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Asm Issue",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "asm_issues": {
+                  "description": "List of ASM Issues generated on the Google Threat Intelligence platform, including details  such as vulnerabilities and misconfigurations",
+                  "items": {
+                    "$ref": "#/definitions/asm_issue"
+                  },
+                  "order": 1,
+                  "title": "ASM Issues",
+                  "type": "array"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "490a72e1-b0b0-43b8-a49c-c7d9c3b1215c": {
+            "nodeId": "490a72e1-b0b0-43b8-a49c-c7d9c3b1215c",
+            "name": "ASM Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "64f21e37-b087-40db-b4ad-2d5e8d80077c",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "d8275ef4-6af2-4dd7-8616-043f16d66d23": {
+            "nodeId": "d8275ef4-6af2-4dd7-8616-043f16d66d23",
+            "name": "Send ASM Issues to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[04ce0591-39cb-48d5-9792-110e912a346b].[asm_issues]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "ASM Issues"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "By simulating an attacker's viewpoint, ASM enables you to identify vulnerabilities, misconfigurations, and their potential impact on your organization."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "64f21e37-b087-40db-b4ad-2d5e8d80077c",
+        "identifier": "periodic",
+        "name": "ASM Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:16.164971225Z",
+    "workflowVersions": [
+      {
+        "name": "Get Infostealers Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "4368da27-a7bc-401a-8328-d20c5ab7391f": {
+              "id": "4368da27-a7bc-401a-8328-d20c5ab7391f",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "52c2627e-419d-45a1-b650-d73bb055cf61",
+              "toNodeId": "ce09d611-f3a5-4a1c-9fbb-9e3d95f87065"
+            },
+            "5571f4a5-ee47-4407-bffe-81d11f17eee3": {
+              "id": "5571f4a5-ee47-4407-bffe-81d11f17eee3",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "ce09d611-f3a5-4a1c-9fbb-9e3d95f87065",
+              "toNodeId": "4a5523b4-9d97-4767-8bc2-0c9fece42544"
+            },
+            "91cce684-bfc6-4914-9959-bff8a8b628c6": {
+              "id": "91cce684-bfc6-4914-9959-bff8a8b628c6",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "ce09d611-f3a5-4a1c-9fbb-9e3d95f87065",
+              "toNodeId": ""
+            },
+            "c18b9b23-02c2-4067-b04a-f99741ffd4f6": {
+              "id": "c18b9b23-02c2-4067-b04a-f99741ffd4f6",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "a2030324-958c-4a23-ad0a-c2d6122b4d15",
+              "toNodeId": "52c2627e-419d-45a1-b650-d73bb055cf61"
+            },
+            "f5d02028-72c2-4cbc-8619-f060446a1ce4": {
+              "id": "f5d02028-72c2-4cbc-8619-f060446a1ce4",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "4a5523b4-9d97-4767-8bc2-0c9fece42544",
+              "toNodeId": ""
+            }
+          },
+          "nodes": {
+            "4a5523b4-9d97-4767-8bc2-0c9fece42544": {
+              "id": "4a5523b4-9d97-4767-8bc2-0c9fece42544",
+              "parentNodeId": ""
+            },
+            "52c2627e-419d-45a1-b650-d73bb055cf61": {
+              "id": "52c2627e-419d-45a1-b650-d73bb055cf61",
+              "parentNodeId": ""
+            },
+            "a2030324-958c-4a23-ad0a-c2d6122b4d15": {
+              "id": "a2030324-958c-4a23-ad0a-c2d6122b4d15",
+              "parentNodeId": ""
+            },
+            "ce09d611-f3a5-4a1c-9fbb-9e3d95f87065": {
+              "id": "ce09d611-f3a5-4a1c-9fbb-9e3d95f87065",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "4a5523b4-9d97-4767-8bc2-0c9fece42544": {
+            "nodeId": "4a5523b4-9d97-4767-8bc2-0c9fece42544",
+            "name": "Send Infostealers Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[52c2627e-419d-45a1-b650-d73bb055cf61].[infostealers_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "52c2627e-419d-45a1-b650-d73bb055cf61": {
+            "nodeId": "52c2627e-419d-45a1-b650-d73bb055cf61",
+            "name": "Infostealers Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "infostealers_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[a2030324-958c-4a23-ad0a-c2d6122b4d15].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "infostealers_threat_list_response": {
+                  "description": "Infostealers threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Infostealers Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "infostealers_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/infostealers_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "infostealers_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "infostealers_threat_list_response": {
+                  "$ref": "#/definitions/infostealers_threat_list_response",
+                  "description": "Infostealers threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Infostealers Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "a2030324-958c-4a23-ad0a-c2d6122b4d15": {
+            "nodeId": "a2030324-958c-4a23-ad0a-c2d6122b4d15",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "ff26ee55-0ca7-462b-afea-9163ba05e035",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ce09d611-f3a5-4a1c-9fbb-9e3d95f87065": {
+            "nodeId": "ce09d611-f3a5-4a1c-9fbb-9e3d95f87065",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "91cce684-bfc6-4914-9959-bff8a8b628c6",
+              "stepControlParams": [
+                {
+                  "edgeId": "5571f4a5-ee47-4407-bffe-81d11f17eee3",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "52c2627e-419d-45a1-b650-d73bb055cf61.infostealers_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[52c2627e-419d-45a1-b650-d73bb055cf61].[infostealers_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "91cce684-bfc6-4914-9959-bff8a8b628c6",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Infostealers",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves files that have been categorized as Infostealers by Google Threat Intelligence security engine partners or Google TI experts."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "ff26ee55-0ca7-462b-afea-9163ba05e035",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

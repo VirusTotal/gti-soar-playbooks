@@ -1,0 +1,400 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:54:02.107990734Z",
+    "workflowVersions": [
+      {
+        "name": "Get IOC Stream Notifications from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "225c5011-3e36-4f36-bdfd-f2dc833775e8": {
+              "id": "225c5011-3e36-4f36-bdfd-f2dc833775e8",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "503d78d5-ab7b-4363-870b-3a926e88db02",
+              "toNodeId": "d17768b0-39b3-4e29-b2bd-b5eafe848a08"
+            },
+            "31a63093-6e13-4f10-87b9-62bee4548d01": {
+              "id": "31a63093-6e13-4f10-87b9-62bee4548d01",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "d17768b0-39b3-4e29-b2bd-b5eafe848a08",
+              "toNodeId": "fc842ac9-10c5-41d8-9ebe-159533e059d5"
+            },
+            "44441cd5-c29d-4d6f-b44e-87dcafbc8790": {
+              "id": "44441cd5-c29d-4d6f-b44e-87dcafbc8790",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "fc842ac9-10c5-41d8-9ebe-159533e059d5",
+              "toNodeId": ""
+            },
+            "7352b58b-c1c0-4c61-9bb6-934ef94c310a": {
+              "id": "7352b58b-c1c0-4c61-9bb6-934ef94c310a",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "40fbc86d-dc22-4957-ac90-3357fecc77c7",
+              "toNodeId": "503d78d5-ab7b-4363-870b-3a926e88db02"
+            },
+            "7f26d4b1-a0c7-45e0-a5e3-ff4ef44cea41": {
+              "id": "7f26d4b1-a0c7-45e0-a5e3-ff4ef44cea41",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "d17768b0-39b3-4e29-b2bd-b5eafe848a08",
+              "toNodeId": ""
+            }
+          },
+          "nodes": {
+            "40fbc86d-dc22-4957-ac90-3357fecc77c7": {
+              "id": "40fbc86d-dc22-4957-ac90-3357fecc77c7",
+              "parentNodeId": ""
+            },
+            "503d78d5-ab7b-4363-870b-3a926e88db02": {
+              "id": "503d78d5-ab7b-4363-870b-3a926e88db02",
+              "parentNodeId": ""
+            },
+            "d17768b0-39b3-4e29-b2bd-b5eafe848a08": {
+              "id": "d17768b0-39b3-4e29-b2bd-b5eafe848a08",
+              "parentNodeId": ""
+            },
+            "fc842ac9-10c5-41d8-9ebe-159533e059d5": {
+              "id": "fc842ac9-10c5-41d8-9ebe-159533e059d5",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "40fbc86d-dc22-4957-ac90-3357fecc77c7": {
+            "nodeId": "40fbc86d-dc22-4957-ac90-3357fecc77c7",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "80124940-e2d1-4c7f-a48d-85f8a3c0d741",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "503d78d5-ab7b-4363-870b-3a926e88db02": {
+            "nodeId": "503d78d5-ab7b-4363-870b-3a926e88db02",
+            "name": "IOC Stream Notifications",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "ioc_stream_notifications",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "filter": ""
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "filter": {
+                  "description": "Provide the filter parameter to filter the curated notifications data using specific criteria. It supports a combination of modifiers to refine search results based on threat attributes",
+                  "order": 1,
+                  "title": "Filter",
+                  "type": "string"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "ioc_stream_notifications_response": {
+                  "description": "Provides IOC stream notifications data",
+                  "order": 1,
+                  "title": "IOC Stream Notifications Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "ioc_stream_notifications_response": {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "$ref": "#/definitions/ioc_stream_notifications_response_data"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "ioc_stream_notifications_response_data": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "ioc_stream_notifications_response": {
+                  "$ref": "#/definitions/ioc_stream_notifications_response",
+                  "description": "Provides IOC stream notifications data",
+                  "order": 1,
+                  "title": "IOC Stream Notifications Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "d17768b0-39b3-4e29-b2bd-b5eafe848a08": {
+            "nodeId": "d17768b0-39b3-4e29-b2bd-b5eafe848a08",
+            "name": "Notifications Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "7f26d4b1-a0c7-45e0-a5e3-ff4ef44cea41",
+              "stepControlParams": [
+                {
+                  "edgeId": "31a63093-6e13-4f10-87b9-62bee4548d01",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "503d78d5-ab7b-4363-870b-3a926e88db02.ioc_stream_notifications_response.data",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[503d78d5-ab7b-4363-870b-3a926e88db02].[ioc_stream_notifications_response].[data]}}) > 0"
+                },
+                {
+                  "edgeId": "7f26d4b1-a0c7-45e0-a5e3-ff4ef44cea41",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "fc842ac9-10c5-41d8-9ebe-159533e059d5": {
+            "nodeId": "fc842ac9-10c5-41d8-9ebe-159533e059d5",
+            "name": "Send IOC Stream Notifications",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[503d78d5-ab7b-4363-870b-3a926e88db02].[ioc_stream_notifications_response].[data]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "IOC Stream Notifications"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves IOC Stream Notifications from the curated custom feeds on Google Threat Intelligence."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "80124940-e2d1-4c7f-a48d-85f8a3c0d741",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

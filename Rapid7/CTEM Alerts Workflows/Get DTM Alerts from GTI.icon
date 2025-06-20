@@ -1,0 +1,578 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:57.156714811Z",
+    "workflowVersions": [
+      {
+        "name": "Get DTM Alerts from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "10330091-d5a1-4bab-8c1b-03c84535670a": {
+              "id": "10330091-d5a1-4bab-8c1b-03c84535670a",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "1f4d20aa-1639-4e3d-96d6-75b2fbedee24",
+              "toNodeId": "76ff924b-bdf1-46f7-b903-add285faba40"
+            },
+            "2bdcdb32-3e72-471b-88f4-44341528d1c0": {
+              "id": "2bdcdb32-3e72-471b-88f4-44341528d1c0",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "76ff924b-bdf1-46f7-b903-add285faba40",
+              "toNodeId": ""
+            },
+            "37de4b73-ed2b-4610-b46d-7adfee3a7e59": {
+              "id": "37de4b73-ed2b-4610-b46d-7adfee3a7e59",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "1648e22b-ebfb-4e80-83d1-7259599d5788",
+              "toNodeId": ""
+            },
+            "517d5b2d-318d-4df3-9b82-a4367f08c531": {
+              "id": "517d5b2d-318d-4df3-9b82-a4367f08c531",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "76ff924b-bdf1-46f7-b903-add285faba40",
+              "toNodeId": "1648e22b-ebfb-4e80-83d1-7259599d5788"
+            },
+            "914e1f50-7085-4c84-b2ef-f8c75a4b9c1f": {
+              "id": "914e1f50-7085-4c84-b2ef-f8c75a4b9c1f",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "670e6fad-077e-48ec-8e88-7dad5076db6f",
+              "toNodeId": "1f4d20aa-1639-4e3d-96d6-75b2fbedee24"
+            }
+          },
+          "nodes": {
+            "1648e22b-ebfb-4e80-83d1-7259599d5788": {
+              "id": "1648e22b-ebfb-4e80-83d1-7259599d5788",
+              "parentNodeId": ""
+            },
+            "1f4d20aa-1639-4e3d-96d6-75b2fbedee24": {
+              "id": "1f4d20aa-1639-4e3d-96d6-75b2fbedee24",
+              "parentNodeId": ""
+            },
+            "670e6fad-077e-48ec-8e88-7dad5076db6f": {
+              "id": "670e6fad-077e-48ec-8e88-7dad5076db6f",
+              "parentNodeId": ""
+            },
+            "76ff924b-bdf1-46f7-b903-add285faba40": {
+              "id": "76ff924b-bdf1-46f7-b903-add285faba40",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "1648e22b-ebfb-4e80-83d1-7259599d5788": {
+            "nodeId": "1648e22b-ebfb-4e80-83d1-7259599d5788",
+            "name": "Send DTM Alerts to IDR",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[1f4d20aa-1639-4e3d-96d6-75b2fbedee24].[dtm_alerts]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "1f4d20aa-1639-4e3d-96d6-75b2fbedee24": {
+            "nodeId": "1f4d20aa-1639-4e3d-96d6-75b2fbedee24",
+            "name": "Get DTM Alerts",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "get_dtm_alerts",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "alert_type": [],
+                "limit": 1000,
+                "match_value": [],
+                "monitor_id": [],
+                "mscore_gte": 0,
+                "search": "",
+                "severity": [],
+                "since": "{{[670e6fad-077e-48ec-8e88-7dad5076db6f].[time]}}",
+                "status": [],
+                "tags": []
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "alert_type": {
+                  "description": "Filter alerts by alert type. This parameter can be specified multiple times. Possible values are Compromised Credentials, Domain Discovery, Forum Post, Message, Paste, Shop Listing, Tweet, and Web Content",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 5,
+                  "title": "Alert Type",
+                  "type": "array"
+                },
+                "limit": {
+                  "default": 1000,
+                  "description": "Number of alerts to retrieve (must be between 1 and 1000)",
+                  "order": 1,
+                  "title": "Limit",
+                  "type": "integer"
+                },
+                "match_value": {
+                  "description": "If specified, then only alerts that have the given match value are returned. This parameter can be repeated multiple times",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 7,
+                  "title": "Match Value",
+                  "type": "array"
+                },
+                "monitor_id": {
+                  "description": "Only return alerts for the given monitor IDs",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 2,
+                  "title": "Monitor ID",
+                  "type": "array"
+                },
+                "mscore_gte": {
+                  "description": "Filter alerts with mscores greater than or equal to the given value",
+                  "order": 9,
+                  "title": "MScore GTE",
+                  "type": "integer"
+                },
+                "search": {
+                  "description": "Search alert and triggering doc contents based on a simple Lucene query string including 1 or more text values separated by AND or OR",
+                  "order": 10,
+                  "title": "Search",
+                  "type": "string"
+                },
+                "severity": {
+                  "description": "Return alerts that have the given severity. This parameter can be repeated multiple times. Possible values are high, medium and low",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 8,
+                  "title": "Severity",
+                  "type": "array"
+                },
+                "since": {
+                  "description": "Time from when alerts should be retrieved (must be within the last 5 days)",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 3,
+                  "title": "Since",
+                  "type": "string"
+                },
+                "status": {
+                  "description": "Filter alerts by their status. This parameter can be specified multiple times. Possible values are new, read, escalated, in_progress, closed, no_action_required, duplicate, not_relevant, and tracked_external",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 4,
+                  "title": "Status",
+                  "type": "array"
+                },
+                "tags": {
+                  "description": "Filter alerts by tag(s). This parameter can be used more than once to filter on multiple tags",
+                  "items": {
+                    "type": "string"
+                  },
+                  "order": 6,
+                  "title": "Tags",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "since"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "definitions": {
+                "dtm_alert": {
+                  "properties": {
+                    "ai_doc_summary": {
+                      "description": "AI Document Summary created for this alert",
+                      "order": 17,
+                      "title": "AI Doc Summary",
+                      "type": "string"
+                    },
+                    "alert_summary": {
+                      "description": "The summary of the alert",
+                      "order": 3,
+                      "title": "Alert Summary",
+                      "type": "string"
+                    },
+                    "alert_type": {
+                      "description": "The type of this alert. Possible values are Compromised Credentials, Domain Discovery, Forum Post, Message, Paste, Shop Listing, Tweet, and Web Content",
+                      "order": 4,
+                      "title": "Alert Type",
+                      "type": "string"
+                    },
+                    "confidence": {
+                      "description": "The estimated confidence that the value was properly idenitified",
+                      "order": 8,
+                      "title": "Confidence",
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "description": "The time this alert was created at",
+                      "order": 12,
+                      "title": "Created At",
+                      "type": "string"
+                    },
+                    "doc_url": {
+                      "description": "The URL to the document that triggered this alert",
+                      "order": 16,
+                      "title": "Doc URL",
+                      "type": "string"
+                    },
+                    "email_sent_at": {
+                      "description": "If email notifications are used for this alert, the timestamp the alert email was sent",
+                      "order": 6,
+                      "title": "Email Sent At",
+                      "type": "string"
+                    },
+                    "has_analysis": {
+                      "description": "A boolean indicating if the child alert has analysis or file attachments",
+                      "order": 9,
+                      "title": "Has Analysis",
+                      "type": "boolean"
+                    },
+                    "id": {
+                      "description": "The ID of the alert",
+                      "order": 1,
+                      "title": "ID",
+                      "type": "string"
+                    },
+                    "indicator_mscore": {
+                      "description": "Indicates the MScore of this alert",
+                      "order": 18,
+                      "title": "Indicator MScore",
+                      "type": "string"
+                    },
+                    "labels_url": {
+                      "description": "The URL to the labels identified in the document that triggered this alert",
+                      "order": 14,
+                      "title": "Labels URL",
+                      "type": "string"
+                    },
+                    "monitor_id": {
+                      "description": "The ID of the monitor that generated this alert",
+                      "order": 2,
+                      "title": "Monitor ID",
+                      "type": "string"
+                    },
+                    "severity": {
+                      "description": "The severity level of the alert. Possible values are low, medium, and high",
+                      "order": 7,
+                      "title": "Severity",
+                      "type": "string"
+                    },
+                    "status": {
+                      "description": "The status of this alert.",
+                      "order": 10,
+                      "title": "Status",
+                      "type": "string"
+                    },
+                    "tags": {
+                      "description": "The tags set for this alert",
+                      "order": 11,
+                      "title": "Tags",
+                      "type": "string"
+                    },
+                    "title": {
+                      "description": "The title of this alert",
+                      "order": 5,
+                      "title": "Title",
+                      "type": "string"
+                    },
+                    "topics_url": {
+                      "description": "The URL to the topics identified in the document that triggered this alert",
+                      "order": 15,
+                      "title": "Topics URL",
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "description": "The time this alert was last updated at",
+                      "order": 13,
+                      "title": "Updated At",
+                      "type": "string"
+                    }
+                  },
+                  "title": "Dtm Alert",
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "dtm_alerts": {
+                  "description": "List of DTM alerts that match the input filter criteria, including metadata such as alert type, severity, status, and associated document details.",
+                  "items": {
+                    "$ref": "#/definitions/dtm_alert"
+                  },
+                  "order": 1,
+                  "title": "DTM Alerts",
+                  "type": "array"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "670e6fad-077e-48ec-8e88-7dad5076db6f": {
+            "nodeId": "670e6fad-077e-48ec-8e88-7dad5076db6f",
+            "name": "DTM Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "95a4b89a-957d-4af7-b5a8-cbf5cb6739e8",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "76ff924b-bdf1-46f7-b903-add285faba40": {
+            "nodeId": "76ff924b-bdf1-46f7-b903-add285faba40",
+            "name": "DTM Alerts Found ?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "2bdcdb32-3e72-471b-88f4-44341528d1c0",
+              "stepControlParams": [
+                {
+                  "edgeId": "517d5b2d-318d-4df3-9b82-a4367f08c531",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "1f4d20aa-1639-4e3d-96d6-75b2fbedee24.dtm_alerts",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[1f4d20aa-1639-4e3d-96d6-75b2fbedee24].[dtm_alerts]}}) > 0"
+                },
+                {
+                  "edgeId": "2bdcdb32-3e72-471b-88f4-44341528d1c0",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "DTM Alerts"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "Digital Threat Monitoring (DTM) continuously ingests documents from the deep and dark web to search for mentions of topics or entities that you designate in Monitors. When content in a collected document matches the conditions that you define in one of your Monitors, an Alert is created. The new Alert is displayed in the DTM Alerts tab on Google Threat Intelligence."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "95a4b89a-957d-4af7-b5a8-cbf5cb6739e8",
+        "identifier": "periodic",
+        "name": "DTM Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "kom": {
+    "komandVersion": "1.183.2-566936bb4",
+    "komFileVersion": "2.0.0",
+    "exportedAt": "2025-06-11T11:55:42.659095702Z",
+    "workflowVersions": [
+      {
+        "name": "Get Phishing Threat List from GTI",
+        "type": "runnable",
+        "version": "",
+        "description": "",
+        "graph": {
+          "edges": {
+            "0ff4ae08-5656-4a67-a5bf-eab10ce14c54": {
+              "id": "0ff4ae08-5656-4a67-a5bf-eab10ce14c54",
+              "name": "Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "1a623530-fb15-4eed-933c-555ad00553b8",
+              "toNodeId": "e6aa1d79-6789-4f0c-9598-d479845b507d"
+            },
+            "11054c7e-96d8-47dd-8dc1-65e6f4507cef": {
+              "id": "11054c7e-96d8-47dd-8dc1-65e6f4507cef",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "c4157c9b-562d-4d84-a4c8-ee855f4247d7",
+              "toNodeId": "1a623530-fb15-4eed-933c-555ad00553b8"
+            },
+            "12f6bcc6-cf13-49b5-9cc5-78d898ad315a": {
+              "id": "12f6bcc6-cf13-49b5-9cc5-78d898ad315a",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "ed4758ac-f399-4468-885b-ef84e8088092",
+              "toNodeId": "c4157c9b-562d-4d84-a4c8-ee855f4247d7"
+            },
+            "8095200e-a53c-4782-a700-e0aaf0661812": {
+              "id": "8095200e-a53c-4782-a700-e0aaf0661812",
+              "name": "",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "e6aa1d79-6789-4f0c-9598-d479845b507d",
+              "toNodeId": ""
+            },
+            "cac318d9-157e-4703-a0e1-c97985fd8f58": {
+              "id": "cac318d9-157e-4703-a0e1-c97985fd8f58",
+              "name": "Not Found",
+              "description": "",
+              "parentNodeId": "",
+              "fromNodeId": "1a623530-fb15-4eed-933c-555ad00553b8",
+              "toNodeId": ""
+            }
+          },
+          "nodes": {
+            "1a623530-fb15-4eed-933c-555ad00553b8": {
+              "id": "1a623530-fb15-4eed-933c-555ad00553b8",
+              "parentNodeId": ""
+            },
+            "c4157c9b-562d-4d84-a4c8-ee855f4247d7": {
+              "id": "c4157c9b-562d-4d84-a4c8-ee855f4247d7",
+              "parentNodeId": ""
+            },
+            "e6aa1d79-6789-4f0c-9598-d479845b507d": {
+              "id": "e6aa1d79-6789-4f0c-9598-d479845b507d",
+              "parentNodeId": ""
+            },
+            "ed4758ac-f399-4468-885b-ef84e8088092": {
+              "id": "ed4758ac-f399-4468-885b-ef84e8088092",
+              "parentNodeId": ""
+            }
+          }
+        },
+        "steps": {
+          "1a623530-fb15-4eed-933c-555ad00553b8": {
+            "nodeId": "1a623530-fb15-4eed-933c-555ad00553b8",
+            "name": "Threat List Found?",
+            "type": "automated_decision",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "defaultEdgeId": "cac318d9-157e-4703-a0e1-c97985fd8f58",
+              "stepControlParams": [
+                {
+                  "edgeId": "0ff4ae08-5656-4a67-a5bf-eab10ce14c54",
+                  "expression": {
+                    "left": {
+                      "args": [
+                        {
+                          "name": "c4157c9b-562d-4d84-a4c8-ee855f4247d7.phishing_threat_list_response.iocs",
+                          "type": "variable"
+                        }
+                      ],
+                      "name": "length",
+                      "type": "function"
+                    },
+                    "op": ">",
+                    "right": {
+                      "type": "literal",
+                      "value": 0
+                    },
+                    "type": "binary"
+                  },
+                  "expressionText": "length({{[c4157c9b-562d-4d84-a4c8-ee855f4247d7].[phishing_threat_list_response].[iocs]}}) > 0"
+                },
+                {
+                  "edgeId": "cac318d9-157e-4703-a0e1-c97985fd8f58",
+                  "expression": {},
+                  "expressionText": ""
+                }
+              ]
+            },
+            "defaultInputJSONSchema": null,
+            "defaultOutputJSONSchema": null,
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/automated-decision.svg",
+            "connectionType": "NONE",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "c4157c9b-562d-4d84-a4c8-ee855f4247d7": {
+            "nodeId": "c4157c9b-562d-4d84-a4c8-ee855f4247d7",
+            "name": "Phishing Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "phishing_threat_list",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "query": "-",
+                "time": "{{[ed4758ac-f399-4468-885b-ef84e8088092].[time]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "query": {
+                  "default": "-",
+                  "description": "Enter the query parameters for filtering the threat list IOCs",
+                  "order": 1,
+                  "title": "Query",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "Specify the time from which threat information should be retrieved",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "phishing_threat_list_response": {
+                  "description": "Phishing threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Phishing Threat List Response",
+                  "type": "object"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": {
+              "definitions": {
+                "phishing_threat_list_response": {
+                  "properties": {
+                    "iocs": {
+                      "items": {
+                        "$ref": "#/definitions/phishing_threat_list_response_iocs"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "phishing_threat_list_response_iocs": {
+                  "properties": {},
+                  "type": "object"
+                }
+              },
+              "properties": {
+                "phishing_threat_list_response": {
+                  "$ref": "#/definitions/phishing_threat_list_response",
+                  "description": "Phishing threat list data from the specified hour to the current hour",
+                  "order": 1,
+                  "title": "Phishing Threat List Response"
+                }
+              },
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "e6aa1d79-6789-4f0c-9598-d479845b507d": {
+            "nodeId": "e6aa1d79-6789-4f0c-9598-d479845b507d",
+            "name": "Send Phishing Threat List",
+            "type": "action",
+            "plugin": {
+              "name": "Google Threat Intelligence",
+              "slugVendor": "google_threat_intelligence",
+              "slugName": "google_threat_intelligence",
+              "slugVersion": "2.0.0",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg"
+            },
+            "identifier": "send_events_via_webhook",
+            "continueOnFailure": true,
+            "isDisabled": false,
+            "isCloud": false,
+            "parameters": {
+              "input": {
+                "send_events": "{{[c4157c9b-562d-4d84-a4c8-ee855f4247d7].[phishing_threat_list_response].[iocs]}}"
+              }
+            },
+            "defaultInputJSONSchema": {
+              "properties": {
+                "send_events": {
+                  "description": "Provide the event in the form of array",
+                  "items": {
+                    "type": "object"
+                  },
+                  "order": 1,
+                  "title": "Send Events",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "send_events"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "CONNECTION",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          },
+          "ed4758ac-f399-4468-885b-ef84e8088092": {
+            "nodeId": "ed4758ac-f399-4468-885b-ef84e8088092",
+            "name": "Timer Trigger",
+            "type": "trigger",
+            "plugin": {
+              "name": "Timers",
+              "slugVendor": "rapid7",
+              "slugName": "timers",
+              "slugVersion": "3.0.3",
+              "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+            },
+            "identifier": "periodic",
+            "continueOnFailure": false,
+            "isDisabled": false,
+            "parameters": {
+              "input": {
+                "message": "",
+                "period": 60
+              }
+            },
+            "triggerId": "3ba74caf-4429-43f4-b96a-cf5a78a0c729",
+            "defaultInputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message to send (optional)",
+                  "order": 2,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "period": {
+                  "default": 60,
+                  "description": "Minutes between events",
+                  "order": 1,
+                  "title": "Period",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "period"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "defaultOutputJSONSchema": {
+              "properties": {
+                "message": {
+                  "description": "The message sent",
+                  "order": 1,
+                  "title": "Message",
+                  "type": "string"
+                },
+                "time": {
+                  "description": "The UTC time of event returned in ISO format",
+                  "displayType": "date",
+                  "format": "date-time",
+                  "order": 2,
+                  "title": "Time",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message",
+                "time"
+              ],
+              "title": "Variables",
+              "type": "object"
+            },
+            "outputJSONSchema": null,
+            "defaultImageData": "https://us3.cdn-assets.connect.insight.rapid7.com/step-type-icons/default.svg",
+            "connectionType": "ORCHESTRATOR",
+            "caseManagementInputJsonSchema": null,
+            "caseManagementOutputJsonSchema": null
+          }
+        },
+        "tags": [
+          "Phishing",
+          "Threat List"
+        ],
+        "humanCostSeconds": 1200,
+        "humanCostDisplayUnit": "minutes",
+        "parameters": {
+          "definitionSchema": null
+        },
+        "summary": "This is a polling based workflow running at an interval of 1 hr retrieves network related IOCs which Google Threat Intelligence security engine partners have classified as Phishing."
+      }
+    ],
+    "triggers": [
+      {
+        "id": "3ba74caf-4429-43f4-b96a-cf5a78a0c729",
+        "identifier": "periodic",
+        "name": "Timer Trigger",
+        "description": "",
+        "input": {
+          "message": "",
+          "period": 60
+        },
+        "inputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message to send (optional)",
+              "order": 2,
+              "title": "Message",
+              "type": "string"
+            },
+            "period": {
+              "default": 60,
+              "description": "Minutes between events",
+              "order": 1,
+              "title": "Period",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "period"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "outputJsonSchema": {
+          "properties": {
+            "message": {
+              "description": "The message sent",
+              "order": 1,
+              "title": "Message",
+              "type": "string"
+            },
+            "time": {
+              "description": "The UTC time of event returned in ISO format",
+              "displayType": "date",
+              "format": "date-time",
+              "order": 2,
+              "title": "Time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "message",
+            "time"
+          ],
+          "title": "Variables",
+          "type": "object"
+        },
+        "tags": [],
+        "type": "trigger_plugin",
+        "plugin": {
+          "name": "Timers",
+          "slugVendor": "rapid7",
+          "slugName": "timers",
+          "slugVersion": "3.0.3",
+          "imageData": "https://us3.cdn-assets.connect.insight.rapid7.com/icons/rapid7/timers/3.0.3/icon.png"
+        }
+      }
+    ]
+  }
+}
