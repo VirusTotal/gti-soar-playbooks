@@ -54,6 +54,10 @@ This playbook performs a private scan of a URL using Google Threat Intelligence,
 
 This playbook performs a private scan of a URL using Google Threat Intelligence, evaluates the scan result, and applies enforcement and documentation based on maliciousness.
 
+### 13. Close RS Alert
+
+This playbook automatically updates the status of the an RS alert to **Resolved** on the Google Threat Intelligence platform when a container is closed in Splunk SOAR.
+
 
 
 
